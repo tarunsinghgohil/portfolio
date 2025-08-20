@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DealFlow - Business Acquisition Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #1a1a1a;
+        }
+
+        .app-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 50px rgba(0,0,0,0.1);
+        }
+
+        /* Navigation */
+        .nav-header {
+            background: white;
+            padding: 20px 30px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-tab {
+            padding: 10px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border: none;
+            background: none;
+            font-size: 15px;
+        }
+
+        .nav-tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .nav-tab:not(.active):hover {
+            background: #f8f9ff;
+            color: #667eea;
+        }
+
+        .profile-menu {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 30px;
+            display: none;
+        }
+
+        .main-content.active {
+            display: block;
+        }
+
+        /* Onboarding Styles */
+        .onboarding-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .onboarding-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .onboarding-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .onboarding-subtitle {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: #f0f0f0;
+            border-radius: 3px;
+            margin: 30px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .question-group {
+            margin-bottom: 30px;
+        }
+
+        .question-label {
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .question-input {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+
+        .question-input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+        }
+
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .option-card {
+            padding: 16px 12px;
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #fafafa;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .option-card:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .option-card.selected {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .continue-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            margin-top: 30px;
+        }
+
+        .continue-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Buyer Cards */
+        .buyers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .buyer-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .buyer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .buyer-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .buyer-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+
+        .buyer-info h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .buyer-type {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .buyer-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-weight: 700;
+            font-size: 18px;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .buyer-interests {
+            margin-bottom: 20px;
+        }
+
+        .interests-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .interest-tag {
+            padding: 6px 12px;
+            background: #f8f9ff;
+            color: #667eea;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .reject-btn {
+            background: #fff5f5;
+            color: #e53e3e;
+        }
+
+        .accept-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Deal Flow Process */
+        .deal-flow {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .deal-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .deal-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .deal-subtitle {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .milestone-tracker {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .milestone-tracker::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #f0f0f0;
+            z-index: 1;
+        }
+
+        .milestone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .milestone-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .milestone.completed .milestone-icon {
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            color: white;
+        }
+
+        .milestone.active .milestone-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .milestone-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            color: #666;
+        }
+
+        .deal-sections {
+            display: grid;
+            gap: 25px;
+        }
+
+        .deal-section {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ai-badge {
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .upload-zone {
+            border: 2px dashed #d0d0d0;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            background: #fafafa;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .upload-zone:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .upload-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 15px;
+            background: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .chat-interface {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .chat-message {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .message-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #667eea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .message-bubble {
+            background: white;
+            padding: 12px 16px;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 70%;
+        }
+
+        .message-input {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .message-field {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            outline: none;
+        }
+
+        .send-btn {
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-tabs {
+                display: none;
+            }
+            
+            .buyers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .milestone-tracker {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .milestone-tracker::before {
+                display: none;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .buyer-card {
+            animation: slideIn 0.6s ease forwards;
+        }
+
+        .deal-section {
+            animation: slideIn 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <header class="nav-header">
+            <div class="logo">DealFlow</div>
+            <nav class="nav-tabs">
+                <button class="nav-tab active" onclick="switchTab('onboarding')">Onboarding</button>
+                <button class="nav-tab" onclick="switchTab('buyers')">Buyers</button>
+                <button class="nav-tab" onclick="switchTab('deals')">Deal Flow</button>
+            </nav>
+            <div class="profile-menu">JS</div>
+        </header>
+
+        <!-- Onboarding Content -->
+        <main class="main-content active" id="onboarding">
+            <div class="onboarding-container">
+                <div class="onboarding-header">
+                    <h1 class="onboarding-title">Welcome to DealFlow</h1>
+                    <p class="onboarding-subtitle">Let's set up your seller profile to connect with the right buyers</p>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%"></div>
+                </div>
+
+                <div class="question-group">
+                    <label class="question-label">What type of business are you selling?</label>
+                    <div class="option-grid">
+                        <div class="option-card selected">Tech/SaaS</div>
+                        <div class="option-card">E-commerce</div>
+                        <div class="option-card">Manufacturing</div>
+                        <div class="option-card">Services</div>
+                        <div class="option-card">Restaurant</div>
+                        <div class="option-card">Other</div>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <label class="question-label">What's your expected sale price range?</label>
+                    <div class="option-grid">
+                        <div class="option-card">$100K - $500K</div>
+                        <div class="option-card selected">$500K - $2M</div>
+                        <div class="option-card">$2M - $10M</div>
+                        <div class="option-card">$10M+</div>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <label class="question-label">What's your primary motivation for selling?</label>
+                    <input type="text" class="question-input" placeholder="E.g., Retirement, new venture, market consolidation..." value="Looking to retire and pass business to the right hands">
+                </div>
+
+                <div class="question-group">
+                    <label class="question-label">How would you describe your business in one sentence?</label>
+                    <input type="text" class="question-input" placeholder="Brief description that captures what makes your business unique" value="B2B SaaS platform serving 500+ small businesses with automated workflow solutions">
+                </div>
+
+                <button class="continue-btn" onclick="switchTab('buyers')">Continue to Browse Buyers</button>
+            </div>
+        </main>
+
+        <!-- Buyers Content -->
+        <main class="main-content" id="buyers">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1 style="font-size: 32px; font-weight: 700; margin-bottom: 10px;">Potential Buyers</h1>
+                <p style="color: #666; font-size: 16px;">Review and connect with buyers who match your business profile</p>
+            </div>
+
+            <div class="buyers-grid">
+                <div class="buyer-card">
+                    <div class="buyer-header">
+                        <div class="buyer-avatar">MP</div>
+                        <div class="buyer-info">
+                            <h3>Marcus Peterson</h3>
+                            <div class="buyer-type">Strategic Acquirer</div>
+                        </div>
+                    </div>
+
+                    <div class="buyer-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">$5M</div>
+                            <div class="stat-label">Budget</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Acquisitions</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">45</div>
+                            <div class="stat-label">Days Avg.</div>
+                        </div>
+                    </div>
+
+                    <div class="buyer-interests">
+                        <strong style="font-size: 14px;">Looking for:</strong>
+                        <div class="interests-tags">
+                            <span class="interest-tag">B2B SaaS</span>
+                            <span class="interest-tag">Recurring Revenue</span>
+                            <span class="interest-tag">Tech Integration</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 15px; font-size: 14px; color: #666;">
+                        "Seeking profitable SaaS businesses with strong customer retention to integrate into our workflow automation suite."
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="action-btn reject-btn">Pass</button>
+                        <button class="action-btn accept-btn" onclick="switchTab('deals')">Connect</button>
+                    </div>
+                </div>
+
+                <div class="buyer-card">
+                    <div class="buyer-header">
+                        <div class="buyer-avatar" style="background: linear-gradient(135deg, #48bb78, #38a169);">SL</div>
+                        <div class="buyer-info">
+                            <h3>Sarah Liu</h3>
+                            <div class="buyer-type">Private Equity</div>
+                        </div>
+                    </div>
+
+                    <div class="buyer-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">$12M</div>
+                            <div class="stat-label">Budget</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">8</div>
+                            <div class="stat-label">Acquisitions</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">60</div>
+                            <div class="stat-label">Days Avg.</div>
+                        </div>
+                    </div>
+
+                    <div class="buyer-interests">
+                        <strong style="font-size: 14px;">Looking for:</strong>
+                        <div class="interests-tags">
+                            <span class="interest-tag">Growth Stage</span>
+                            <span class="interest-tag">Scalable Tech</span>
+                            <span class="interest-tag">SMB Market</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 15px; font-size: 14px; color: #666;">
+                        "Focused on acquiring profitable tech companies serving SMBs with potential for rapid scaling and market expansion."
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="action-btn reject-btn">Pass</button>
+                        <button class="action-btn accept-btn">Connect</button>
+                    </div>
+                </div>
+
+                <div class="buyer-card">
+                    <div class="buyer-header">
+                        <div class="buyer-avatar" style="background: linear-gradient(135deg, #9f7aea, #805ad5);">DK</div>
+                        <div class="buyer-info">
+                            <h3>David Kim</h3>
+                            <div class="buyer-type">Individual Investor</div>
+                        </div>
+                    </div>
+
+                    <div class="buyer-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">$2M</div>
+                            <div class="stat-label">Budget</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">1</div>
+                            <div class="stat-label">Acquisitions</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">90</div>
+                            <div class="stat-label">Days Avg.</div>
+                        </div>
+                    </div>
+
+                    <div class="buyer-interests">
+                        <strong style="font-size: 14px;">Looking for:</strong>
+                        <div class="interests-tags">
+                            <span class="interest-tag">Owner Operated</span>
+                            <span class="interest-tag">Hands-on</span>
+                            <span class="interest-tag">Local Business</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 15px; font-size: 14px; color: #666;">
+                        "Serial entrepreneur looking to acquire and personally operate established businesses with growth potential."
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="action-btn reject-btn">Pass</button>
+                        <button class="action-btn accept-btn">Connect</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Deal Flow Content -->
+        <main class="main-content" id="deals">
+            <div class="deal-flow">
+                <div class="deal-header">
+                    <h1 class="deal-title">Deal Progress: Marcus Peterson</h1>
+                    <p class="deal-subtitle">Streamlined acquisition process with AI-powered assistance</p>
+                </div>
+
+                <div class="milestone-tracker">
+                    <div class="milestone completed">
+                        <div class="milestone-icon">✓</div>
+                        <div class="milestone-label">Initial<br>Match</div>
+                    </div>
+                    <div class="milestone completed">
+                        <div class="milestone-icon">✓</div>
+                        <div class="milestone-label">NDA &<br>Teaser</div>
+                    </div>
+                    <div class="milestone active">
+                        <div class="milestone-icon">3</div>
+                        <div class="milestone-label">Due<br>Diligence</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-icon">4</div>
+                        <div class="milestone-label">Letter of<br>Intent</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-icon">5</div>
+                        <div class="milestone-label">Final<br>Agreement</div>
+                    </div>
+                </div>
+
+                <div class="deal-sections">
+                    <div class="deal-section">
+                        <div class="section-header">
+                            <h3 class="section-title">
+                                📊 Financial Documents
+                                <span class="ai-badge">AI POWERED</span>
+                            </h3>
+                        </div>
+                        <div class="upload-zone">
+                            <div class="upload-icon">📎</div>
+                            <h4>Upload Financial Statements</h4>
+                            <p style="color: #666; margin-top: 8px;">AI will automatically analyze and summarize key metrics</p>
+                            <div style="margin-top: 15px; padding: 15px; background: #f0f8ff; border-radius: 8px; border-left: 4px solid #667eea;">
+                                <strong style="color: #667eea;">AI Analysis Complete:</strong><br>
+                                <span style="font-size: 14px;">Revenue growth: 34% YoY | Profit margin: 28% | Cash flow: Strong</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deal-section">
+                        <div class="section-header">
+                            <h3 class="section-title">💬 Secure Communication</h3>
+                        </div>
+                        <div class="chat-interface">
+                            <div class="chat-message">
+                                <div class="message-avatar">MP</div>
+                                <div class="message-bubble">
+                                    Thanks for sharing the financials. The AI summary is very helpful. I'd like to discuss the customer concentration risk mentioned in the analysis.
+                                </div>
+                            </div>
+                            <div class="chat-message">
+                                <div class="message-avatar" style="background: #48bb78;">You</div>
+                                <div class="message-bubble">
+                                    Absolutely. Our top 3 customers represent 45% of revenue, but we've been diversifying. Let me share our customer acquisition strategy...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-input">
+                            <input type="text" class="message-field" placeholder="Type your message...">
+                            <button class="send-btn">Send</button>
+                        </div>
+                    </div>
+
+                    <div class="deal-section">
+                        <div class="section-header">
+                            <h3 class="section-title">
+                                🤖 AI Deal Assistant
+                                <span class="ai-badge">SMART SUGGESTIONS</span>
+                            </h3>
+                        </div>
+                        <div style="background: #f8f9ff; padding: 20px; border-radius: 12px; border: 1px solid #e6f0ff;">
+                            <h4 style="color: #667eea; margin-bottom: 15px;">Recommended Next Steps:</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 10px; padding: 10px; background: white; border-radius: 8px; border-left: 4px solid #48bb78;">
+                                    ✅ <strong>Schedule customer reference calls</strong> - Buyer shows strong interest in customer retention metrics
+                                </li>
+                                <li style="margin-bottom: 10px; padding: 10px; background: white; border-radius: 8px; border-left: 4px solid #ffa726;">
+                                    ⏱️ <strong>Prepare technology stack overview</strong> - Based on buyer's technical due diligence focus
+                                </li>
+                                <li style="margin-bottom: 10px; padding: 10px; background: white; border-radius: 8px; border-left: 4px solid #667eea;">
+                                    💡 <strong>Consider earnout structure</strong> - May bridge valuation gap based on growth projections
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="deal-section">
+                        <div class="section-header">
+                            <h3 class="section-title">📋 Action Items</h3
