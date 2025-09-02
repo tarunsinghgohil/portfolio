@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Interview Prep Kit</title>
+    <style>
+        body {
+            background: #f7f9fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            padding: 32px 24px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0078d7;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 32px;
+        }
+
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .question {
+            font-weight: bold;
+            color: #0078d7;
+            margin-top: 18px;
+        }
+
+        .answer {
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        ul,
+        ol {
+            margin-left: 24px;
+        }
+
+        .bonus {
+            background: #e6f7ff;
+            border-left: 4px solid #0078d7;
+            padding: 12px 18px;
+            margin-top: 24px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="margin-top:32px;">
+        <h2>📚 Study Material for Front-End Developer Interview</h2>
+        <div class="section">
+            <h3>1. Core JavaScript & ES6+ Concepts</h3>
+            <ul>
+                <li>Variables: let, const, var (scope & hoisting)</li>
+                <li>Functions: Arrow functions, default params</li>
+                <li>Destructuring (objects & arrays)</li>
+                <li>Spread & Rest operators</li>
+                <li>Classes & this keyword</li>
+                <li>Promises, async/await</li>
+                <li>Closures & higher-order functions</li>
+                <li>Event loop, call stack, microtask vs macrotask queue</li>
+                <li>DOM manipulation & event bubbling/capturing</li>
+            </ul>
+            <div class="answer">🔗 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN
+                    - ES6+ Concepts</a></div>
+            <div class="answer">🔗 <a href="https://javascript.info/" target="_blank">JavaScript Info - Modern
+                    JavaScript</a></div>
+        </div>
+        <div class="section">
+            <h3>2. React.js Essentials</h3>
+            <ul>
+                <li>JSX & Virtual DOM</li>
+                <li>Functional vs Class Components</li>
+                <li>React Hooks (useState, useEffect, useContext, useRef, useMemo, useCallback)</li>
+                <li>State management (Redux, Context API, Zustand basics)</li>
+                <li>Higher-Order Components (HOC)</li>
+                <li>Controlled vs Uncontrolled components</li>
+                <li>Forms & validation</li>
+                <li>Error boundaries</li>
+                <li>Component lifecycle (old vs hooks)</li>
+            </ul>
+            <div class="answer">🔗 <a href="https://react.dev/" target="_blank">React Docs</a></div>
+            <div class="answer">🔗 <a href="https://www.freecodecamp.org/news/react-hooks-tutorial/"
+                    target="_blank">FreeCodeCamp React Hooks Tutorial</a></div>
+        </div>
+        <div class="section">
+            <h3>3. React Workflows & Libraries</h3>
+            <ul>
+                <li>Redux basics (actions, reducers, store, middleware)</li>
+                <li>Flux architecture</li>
+                <li>React Router (v6+ basics: routes, nested routes, useNavigate)</li>
+                <li>REST API integration (fetch, axios)</li>
+                <li>JSON Web Tokens (JWT) for authentication</li>
+            </ul>
+            <div class="answer">🔗 <a href="https://redux-toolkit.js.org/" target="_blank">Redux Toolkit Docs</a></div>
+            <div class="answer">🔗 <a href="https://jwt.io/introduction/" target="_blank">JWT Authentication Guide</a>
+            </div>
+        </div>
+        <div class="section">
+            <h3>4. Frontend Build Tools</h3>
+            <ul>
+                <li>Babel (transpiling ES6+ to ES5)</li>
+                <li>Webpack (bundling, loaders, plugins)</li>
+                <li>NPM/Yarn (scripts, dependencies)</li>
+            </ul>
+            <div class="answer">🔗 <a href="https://www.youtube.com/watch?v=IZGNcSuwBZs" target="_blank">Webpack Crash
+                    Course</a></div>
+        </div>
+        <div class="section">
+            <h3>5. Testing & Debugging</h3>
+            <ul>
+                <li>Unit testing with Jest & React Testing Library</li>
+                <li>Mocha basics</li>
+                <li>Debugging in Chrome DevTools (breakpoints, network tab, performance tab)</li>
+            </ul>
+            <div class="answer">🔗 <a href="https://jestjs.io/docs/getting-started" target="_blank">Jest Docs</a></div>
+        </div>
+        <div class="section">
+            <h3>6. HTML & CSS</h3>
+            <ul>
+                <li>Semantic HTML</li>
+                <li>Flexbox, Grid</li>
+                <li>Responsive design (media queries, mobile-first)</li>
+                <li>CSS preprocessors (Sass basics)</li>
+                <li>Tailwind/Bootstrap (if asked)</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h3>7. AWS (Basics for Frontend Developers)</h3>
+            <ul>
+                <li>S3 (static website hosting)</li>
+                <li>CloudFront (CDN basics)</li>
+                <li>Amplify (React app deployment basics)</li>
+                <li>Lambda (serverless functions concept)</li>
+            </ul>
+            <div class="answer">🔗 <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html"
+                    target="_blank">AWS S3 + CloudFront Deployment</a></div>
+        </div>
+        <div class="section">
+            <h3>8. Soft Skills & Interview Prep</h3>
+            <ul>
+                <li>Be ready to explain your past projects:</li>
+                <li>Which stack you used</li>
+                <li>How you managed state & API integration</li>
+                <li>Performance optimization</li>
+                <li>Any AWS hosting/deployment experience</li>
+                <li>Troubleshooting approach: How you debug issues, fix performance problems</li>
+            </ul>
+        </div>
+        <h2>🎯 1-Day Smart Revision Plan (before interview)</h2>
+        <div class="section">
+            <strong>Morning (2–3 hrs)</strong>
+            <ul>
+                <li>Revise JavaScript ES6+ concepts</li>
+                <li>Event loop + async/await</li>
+            </ul>
+            <strong>Afternoon (2–3 hrs)</strong>
+            <ul>
+                <li>React Hooks & lifecycle</li>
+                <li>Redux basics + API integration</li>
+                <li>JWT authentication flow</li>
+            </ul>
+            <strong>Evening (2 hrs)</strong>
+            <ul>
+                <li>Webpack/Babel basics</li>
+                <li>Testing (Jest basics)</li>
+                <li>AWS deployment (S3 + CloudFront)</li>
+            </ul>
+            <strong>Before bed</strong>
+            <ul>
+                <li>Revise projects you worked on</li>
+                <li>Practice 2–3 coding challenges (array, string, async handling)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Front-End Interview Q&A Prep Kit</h1>
+        <p>Let’s make this interview Q&A prep kit for your Front-End Developer role (React + JavaScript + AWS).<br>
+            I’ll cover technical questions, coding, project explanation, and HR-style questions so you’re confident for
+            tomorrow.</p>
+
+        <h2>JavaScript & ES6+</h2>
+        <div class="section">
+            <div class="question">Q1. What’s the difference between var, let, and const?</div>
+            <div class="answer">var: function scoped, hoisted, can be redeclared.<br>let: block scoped, not hoisted, can
+                be reassigned.<br>const: block scoped, cannot be reassigned.</div>
+
+            <div class="question">Q2. Explain the event loop in JavaScript.</div>
+            <div class="answer">JS is single-threaded.<br>Event loop manages execution stack and callback
+                queue.<br>setTimeout, Promises, async tasks are handled via microtask & macrotask queues.</div>
+
+            <div class="question">Q3. Explain spread vs rest operator.</div>
+            <div class="answer">Spread (...) expands an array/object.<br>Rest (...) collects remaining arguments into an
+                array.</div>
+
+            <div class="question">Q4. What are closures?</div>
+            <div class="answer">A closure is when a function remembers variables from its outer scope, even after that
+                scope has finished executing.</div>
+        </div>
+
+        <h2>React.js</h2>
+        <div class="section">
+            <div class="question">Q5. Difference between functional and class components?</div>
+            <div class="answer">Functional: lightweight, hooks, easier to test.<br>Class: lifecycle methods, this, more
+                verbose.</div>
+
+            <div class="question">Q6. Explain React Hooks you use most.</div>
+            <div class="answer">useState: manage local state<br>useEffect: side effects (API calls,
+                subscriptions)<br>useContext: global state without prop drilling<br>useRef: access DOM or store mutable
+                values<br>useMemo/useCallback: performance optimization</div>
+
+            <div class="question">Q7. What are Higher Order Components (HOC)?</div>
+            <div class="answer">A function that takes a component and returns a new component with extra props/logic.
+                Example: withAuth.</div>
+
+            <div class="question">Q8. What are controlled vs uncontrolled components?</div>
+            <div class="answer">Controlled: React state controls input value.<br>Uncontrolled: value managed by DOM
+                (using ref).</div>
+
+            <div class="question">Q9. How to optimize performance in React?</div>
+            <div class="answer">React.memo, useMemo, useCallback<br>Code splitting (lazy + suspense)<br>Avoid
+                unnecessary re-renders<br>Virtualization (for long lists)</div>
+        </div>
+
+        <h2>State Management</h2>
+        <div class="section">
+            <div class="question">Q10. Difference between Redux and Context API?</div>
+            <div class="answer">Redux: predictable, strict structure (actions, reducers, middleware). Good for large
+                apps.<br>Context API: simpler, less boilerplate, but can cause re-renders if not optimized.</div>
+
+            <div class="question">Q11. Can you explain the Redux flow?</div>
+            <div class="answer">UI → dispatch(action) → reducer → store → UI re-renders</div>
+        </div>
+
+        <h2>APIs & Authentication</h2>
+        <div class="section">
+            <div class="question">Q12. How to call a REST API in React?</div>
+            <div class="answer">Using fetch or axios inside useEffect.<br>Handle loading & error states.</div>
+
+            <div class="question">Q13. What is JWT (JSON Web Token)?</div>
+            <div class="answer">A compact, URL-safe way to transfer user claims securely.<br>Flow: User logs in → server
+                returns JWT → client stores (localStorage/cookies) → sends token in headers → server verifies.</div>
+        </div>
+
+        <h2>Build Tools</h2>
+        <div class="section">
+            <div class="question">Q14. What’s the role of Babel?</div>
+            <div class="answer">Transpiles modern JS (ES6+) to older versions for browser compatibility.</div>
+
+            <div class="question">Q15. What’s Webpack?</div>
+            <div class="answer">A module bundler. Bundles JS, CSS, images, etc.<br>Uses loaders & plugins to process
+                code.</div>
+        </div>
+
+        <h2>Testing & Debugging</h2>
+        <div class="section">
+            <div class="question">Q16. Have you used Jest or Mocha?</div>
+            <div class="answer">Jest: unit testing framework for React (with React Testing Library).<br>Mocha: flexible
+                test framework (more setup needed).</div>
+
+            <div class="question">Q17. How do you debug a React app?</div>
+            <div class="answer">Chrome DevTools (breakpoints, network tab).<br>React Developer Tools (inspect
+                props/state).<br>Console logging / Error boundaries.</div>
+        </div>
+
+        <h2>AWS Basics (Frontend Perspective)</h2>
+        <div class="section">
+            <div class="question">Q18. How do you deploy a React app on AWS?</div>
+            <div class="answer">Build React app → upload to S3 bucket → enable static website hosting → use CloudFront
+                for CDN.</div>
+
+            <div class="question">Q19. What is AWS Amplify?</div>
+            <div class="answer">A service for hosting full-stack apps. Provides auth, APIs, hosting, and storage with
+                minimal setup.</div>
+        </div>
+
+        <h2>Project-Based Questions</h2>
+        <div class="section">
+            <div class="question">Q20. Can you explain a project you worked on using React?</div>
+            <div class="answer">Start with problem → your role → tech stack → challenges →
+                solution.<br><em>Example:</em> “I worked on an e-commerce dashboard built with React, Redux, and
+                Tailwind. I integrated REST APIs for product data and authentication using JWT. For state management, I
+                used Redux Toolkit. One challenge was performance in large product lists, which I solved with React
+                Virtualized.”</div>
+
+            <div class="question">Q21. How did you manage CSS in your projects?</div>
+            <div class="answer">Tailwind CSS, Sass, or CSS modules for modular styles.<br>Followed BEM methodology for
+                maintainability.</div>
+        </div>
+
+        <h2>HR / Soft Skills</h2>
+        <div class="section">
+            <div class="question">Q22. Why do you want to join us?</div>
+            <div class="answer">“I admire your work in IT services & consulting. With my 4.5 years of frontend
+                experience in React and UI/UX, I can contribute to building scalable apps and ensure top-quality user
+                experiences.”</div>
+
+            <div class="question">Q23. How do you keep yourself updated?</div>
+            <div class="answer">Blogs (SmashingMag, Dev.to), MDN, React docs, coding challenges, AI tools (Copilot,
+                ChatGPT).</div>
+
+            <div class="question">Q24. What’s your biggest strength?</div>
+            <div class="answer">Clean code, UI/UX focus, debugging, teamwork.</div>
+
+            <div class="question">Q25. What’s your weakness?</div>
+            <div class="answer">Perfectionism / spending too much time on pixel details — but improving with timeboxing.
+            </div>
+        </div>
+
+        <div class="bonus">
+            <strong>Bonus: They may give a small coding test.</strong><br>
+            Be ready for:
+            <ul>
+                <li>Reverse a string</li>
+                <li>Find duplicates in array</li>
+                <li>Fetch API data &amp; render in React</li>
+                <li>Implement a counter with useState</li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>
+</body>
+
+</html>
