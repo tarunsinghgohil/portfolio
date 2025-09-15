@@ -1,24 +1,8 @@
-<h2>Counter <span id="counter">0</span> </h2>
-<button onclick="increment()">+</button>
-<button onclick="decrement()">-</button>
-<button onclick="reset()">reset</button>
-
 <script>
-
-    let count = 0;
-    function increment() {
-        count++;
-        document.getElementById("counter").innerText = count;
-    }
-
-    function decrement() {
-        count--;
-        document.getElementById("counter").innerText = count;
-    }
-
-    function reset() {
-        count = 0;
-        document.getElementById("counter").innerText = count;
-    }
+    (async () => {
+  console.log("Start");
+  await sleep(500);
+  console.log("End after 500ms");
+})();
 
 </script>
