@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ReactJS/Ember Developer Study Material & Crash Plan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #f6f8fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      color: #222;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      padding: 2rem 2.5rem;
+    }
+    h1, h2, h3 {
+      color: #2563eb;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 0.3rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.2rem;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    .tip {
+      background: #e0f2fe;
+      border-left: 4px solid #2563eb;
+      padding: 0.8rem 1rem;
+      margin: 1.2rem 0;
+      border-radius: 6px;
+      font-style: italic;
+    }
+    .practice, .tasks {
+      background: #fef9c3;
+      border-left: 4px solid #f59e42;
+      padding: 0.7rem 1rem;
+      margin: 1rem 0;
+      border-radius: 6px;
+    }
+    .qa {
+      background: #f3f4f6;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.2rem 0;
+      border: 1px solid #e5e7eb;
+    }
+    .qa strong {
+      color: #2563eb;
+    }
+    pre, code {
+      background: #f1f5f9;
+      font-family: 'Fira Mono', 'Consolas', monospace;
+      font-size: 0.98em;
+      padding: 0.5em 0.8em;
+      border-radius: 6px;
+      display: block;
+      margin: 0.7em 0;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background: #f9fafb;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 0.7em;
+      text-align: left;
+    }
+    th {
+      background: #e0e7ff;
+      color: #2563eb;
+    }
+    .day {
+      background: #e0e7ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.7rem 1rem;
+      margin: 1.2rem 0;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 1rem; }
+      h1 { font-size: 1.3rem; }
+      h2 { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📘 Study Material for ReactJS/Ember Developer (Jaipur Role)</h1>
+    <h2>1. Core JavaScript (Must-Have)</h2>
+    <p>Since both React & Ember are built on top of JavaScript, strong JS fundamentals are critical.</p>
+    <h3>Topics to Cover:</h3>
+    <ul>
+      <li>ES6+ features: <strong>let/const</strong>, arrow functions, template literals, destructuring, spread/rest operators.</li>
+      <li>DOM manipulation (<code>querySelector</code>, events, delegation).</li>
+      <li>Scope, closures, hoisting, lexical environment.</li>
+      <li>Event loop, microtasks vs macrotasks.</li>
+      <li><code>this</code> keyword, <code>bind/call/apply</code>.</li>
+      <li>Async programming (Promises, async/await, fetch).</li>
+      <li>Array & Object methods (<code>map</code>, <code>filter</code>, <code>reduce</code>, <code>find</code>, <code>some</code>, <code>every</code>).</li>
+      <li>Error handling (try/catch, custom errors).</li>
+    </ul>
+    <div class="practice">
+      <strong>Quick Practice:</strong>
+      <ul>
+        <li>Build a function that debounces an API call.</li>
+        <li>Write a deep clone function for objects/arrays.</li>
+        <li>Explain event loop with <code>setTimeout</code> and <code>Promise</code>.</li>
+      </ul>
+    </div>
+
+    <h2>2. ReactJS</h2>
+    <p>Since React is explicitly required, prepare deeply.</p>
+    <h3>Topics to Cover:</h3>
+    <ul>
+      <li>JSX & Virtual DOM</li>
+      <li>Functional Components vs Class Components</li>
+      <li>React Hooks: <code>useState</code>, <code>useEffect</code>, <code>useContext</code>, <code>useReducer</code>, <code>useMemo</code>, <code>useCallback</code></li>
+      <li>Custom hooks</li>
+      <li>Controlled vs Uncontrolled Components</li>
+      <li>Props vs State</li>
+      <li>Context API vs Redux vs Zustand (state management basics)</li>
+      <li>React Router (v6+)</li>
+      <li>Error Boundaries</li>
+      <li>Performance optimization (<code>React.memo</code>, code splitting, lazy loading)</li>
+      <li>Testing basics (Jest, React Testing Library)</li>
+    </ul>
+    <div class="practice">
+      <strong>Quick Practice:</strong>
+      <ul>
+        <li>Create a todo app with <code>useReducer</code> and <code>useContext</code>.</li>
+        <li>Implement infinite scroll with API calls.</li>
+        <li>Optimize a component using <code>useMemo</code> and <code>useCallback</code>.</li>
+      </ul>
+    </div>
+
+    <h2>3. Ember.js (if required by project)</h2>
+    <p>Many companies mention Ember but focus is mostly on React. Still, know basics.</p>
+    <h3>Topics to Cover:</h3>
+    <ul>
+      <li>Ember CLI & Project Structure</li>
+      <li>Ember Components & Templates (Handlebars)</li>
+      <li>Ember Data (Models, Store, Adapters, Serializers)</li>
+      <li>Ember Routing</li>
+      <li>Services in Ember</li>
+      <li>Ember Addons & Testing</li>
+    </ul>
+    <div class="practice">
+      <strong>Quick Practice:</strong>
+      <ul>
+        <li>Build a small Ember app that fetches and lists users.</li>
+        <li>Create an Ember component with two-way data binding.</li>
+      </ul>
+    </div>
+
+    <h2>4. APIs & Integration</h2>
+    <ul>
+      <li>REST APIs (CRUD operations)</li>
+      <li>Fetching data with <code>fetch</code> / <code>axios</code></li>
+      <li>Error handling & retries</li>
+      <li>Basic GraphQL knowledge (bonus)</li>
+    </ul>
+
+    <h2>5. Version Control (Git)</h2>
+    <ul>
+      <li>Git basics (clone, commit, branch, merge, rebase, pull, push)</li>
+      <li>Handling conflicts</li>
+      <li>Writing good commit messages</li>
+    </ul>
+
+    <h2>6. UI/UX Collaboration</h2>
+    <ul>
+      <li>Convert a Figma/Adobe XD design into pixel-perfect code</li>
+      <li>CSS frameworks: Tailwind CSS, Bootstrap, Sass</li>
+      <li>Responsive design (media queries, flexbox, grid)</li>
+      <li>Accessibility (ARIA roles, alt tags, keyboard navigation)</li>
+    </ul>
+
+    <h2>7. System & Best Practices</h2>
+    <ul>
+      <li>Code reviews: identifying anti-patterns</li>
+      <li>Writing clean code & comments</li>
+      <li>Component reusability</li>
+      <li>Performance debugging (React DevTools, Lighthouse)</li>
+    </ul>
+
+    <h2>8. Interview Prep (Likely Questions)</h2>
+    <div class="qa">
+      <strong>React:</strong>
+      <ul>
+        <li>Explain Virtual DOM and how React updates UI.</li>
+        <li>What are hooks? How does useEffect differ from lifecycle methods?</li>
+        <li>Difference between Redux and Context API.</li>
+        <li>How do you optimize React performance?</li>
+        <li>Controlled vs uncontrolled components.</li>
+      </ul>
+      <strong>JavaScript:</strong>
+      <ul>
+        <li>Event loop with example.</li>
+        <li>Difference between == and ===.</li>
+        <li>Explain closure with example.</li>
+        <li>Promise vs async/await.</li>
+        <li>Deep copy vs shallow copy.</li>
+      </ul>
+      <strong>Ember:</strong>
+      <ul>
+        <li>Ember Data & Routing.</li>
+        <li>How Ember differs from React.</li>
+        <li>What is Ember CLI?</li>
+      </ul>
+    </div>
+
+    <h2>9. Mini Projects for Practice</h2>
+    <ul>
+      <li>React Todo App (with useReducer and API integration)</li>
+      <li>Weather App (fetch data from OpenWeather API, add loading/error states)</li>
+      <li>E-commerce Product Listing (filter, sort, pagination, cart using Context/Redux)</li>
+      <li>Ember Blog App (basic CRUD using Ember Data)</li>
+    </ul>
+
+    <div class="tip">
+      <strong>Tip:</strong> Since your experience is mostly React, focus 70% on React + JavaScript, 20% APIs & UI/UX, 10% Ember basics (just in case).
+    </div>
+
+    <h2>🗓️ 7-Day Crash Study Plan</h2>
+    <div class="day">Day 1 – Core JavaScript Refresher</div>
+    <ul>
+      <li>ES6+ features (let/const, arrow functions, destructuring, spread/rest)</li>
+      <li>Closures, lexical scope, hoisting</li>
+      <li>Event loop (microtask vs macrotask)</li>
+      <li>this, bind/call/apply</li>
+      <li>Array & Object methods</li>
+    </ul>
+    <div class="tasks">
+      <strong>Tasks:</strong>
+      <ul>
+        <li>Write a debounce and throttle function.</li>
+        <li>Explain closure with a live coding example.</li>
+        <li>Sort an array of objects (by age, by name).</li>
+      </ul>
+    </div>
+
+    <div class="day">Day 2 – React Basics</div>
+    <ul>
+      <li>JSX & Virtual DOM</li>
+      <li>Functional vs Class Components</li>
+      <li>Props & State</li>
+      <li>Lists & Keys</li>
+      <li>Controlled vs Uncontrolled Components</li>
+    </ul>
+    <div class="tasks">
+      <strong>Tasks:</strong>
+      <ul>
+        <li>Build a counter app with increment/decrement.</li>
+        <li>Create a form with validation (controlled inputs).</li>
+        <li>Explain difference between props and state.</li>
+      </ul>
+    </div>
+
+    <div class="day">Day 3 – React Hooks Deep Dive</div>
+    <ul>
+      <li>useState, useEffect (dependencies array tricks)</li>
+      <li>useRef, useMemo, useCallback</li>
+      <li>useContext and custom hooks</li>
+      <li>Lifecycle mapping (componentDidMount → useEffect)</li>
+    </ul>
+    <div class="tasks">
+      <strong>Tasks:</strong>
+      <ul>
+        <li>Create a todo app with useReducer + useContext.</li>
+        <li>Build a stopwatch with useRef.</li>
+        <li>Optimize a component using useMemo and useCallback.</li>
+      </ul>
+    </div>
+
+    <div class="day">Day 4 – Advanced React & State Management</div>
+    <ul>
+      <li>React Router (v6)</li>
+      <li>Error Boundaries</li>
+      <li>Redux basics (actions, reducers, middleware)</li>
+      <li>Zustand (lightweight state management)</li>
+      <li>Performance: React.memo, lazy loading, code splitting</li>
+    </ul>
+    <div class="tasks">
+      <strong>Tasks:</strong>
+      <ul>
+        <li>Create a multi-page app (Home, About, Contact).</li>
+        <li>Add Redux to manage global state (like cart items).</li>
+        <li>Implement lazy loading for a page.</li>
+      </ul>
+    </div>
+
+    <div class="day">Day 5 – APIs, Git & Collaboration</div>
+    <ul>
+      <li>REST API integration (fetch, axios)</li>
+      <li>Error handling & retries</li>
+      <li>Git basics (branching, merging, rebasing)</li>
+      <li>Writing clean commits</li>
+    </ul>
+    <div class="tasks">
+      <strong>Tasks:</strong>
+      <ul>
+        <li>Fetch data from an API (e.g., JSONPlaceholder).</li>
+        <li>Display with loading and error states.</li>
+        <li>Push project to GitHub and practice PR.</li>
+      </ul>
+    </div>
+
+    <div class="day">Day 6 – Ember.js Fundamentals</div>
+    <ul>
+      <li>Ember CLI & Project Structure</li>
+      <li>Ember Components & Handlebars Templates</li>
+      <li>Ember Routing</li>
+      <li>Ember Data (Models, Store)</li>
+      <li>Services & Addons</li>
+    </ul>
+    <div class="tasks">
+      <strong>Tasks:</strong>
+      <ul>
+        <li>Create an Ember project with CLI.</li>
+        <li>Build a users list from API.</li>
+        <li>Create a reusable Ember component.</li>
+      </ul>
+    </div>
+
+    <div class="day">Day 7 – Mock Interview & Mini Project</div>
+    <ul>
+      <li>Mini Project (choose one):</li>
+      <ul>
+        <li>React E-commerce Listing: Fetch products from API, Add to Cart (use Context/Redux), Search & Filter</li>
+        <li>Ember Blog App: CRUD posts with Ember Data</li>
+      </ul>
+      <li>Mock Interview Prep:</li>
+      <ul>
+        <li>Practice 5 React questions, 5 JS questions, 2 Ember questions</li>
+        <li>Review past projects → be ready to explain decisions, challenges, optimizations.</li>
+      </ul>
+    </ul>
+
+    <h2>🎯 20 Mock Interview Questions & Answers</h2>
+    <div class="qa">
+      <strong>JavaScript (6 Qs)</strong>
+      <ol>
+        <li>
+          <strong>Q1. What is the difference between == and === in JavaScript?</strong><br>
+          <span>== checks value equality after type coercion, while === checks strict equality (value + type).</span>
+        </li>
+        <li>
+          <strong>Q2. Explain closure with an example.</strong><br>
+          <span>A closure is when an inner function remembers variables from its outer scope even after the outer function has finished.</span>
+          <pre><code>function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    return count;
+  };
+}
+const counter = outer();
+console.log(counter()); // 1
+console.log(counter()); // 2
+</code></pre>
+        </li>
+        <li>
+          <strong>Q3. What is the event loop in JavaScript?</strong><br>
+          <span>The event loop manages async tasks. It picks tasks from the callback queue (macrotasks) and microtask queue (Promises, MutationObservers) and pushes them to the call stack when empty.</span>
+        </li>
+        <li>
+          <strong>Q4. Difference between var, let, and const?</strong>
+          <ul>
+            <li><strong>var:</strong> function-scoped, hoisted, can be redeclared.</li>
+            <li><strong>let:</strong> block-scoped, not hoisted the same way, reassignable.</li>
+            <li><strong>const:</strong> block-scoped, cannot be reassigned.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Q5. What is the difference between shallow copy and deep copy?</strong>
+          <ul>
+            <li>Shallow copy → copies only references for nested objects (e.g., Object.assign, spread).</li>
+            <li>Deep copy → copies everything (e.g., structuredClone, lodash.cloneDeep).</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Q6. Explain this keyword in JavaScript.</strong>
+          <span>this refers to the execution context:<br>
+          In global scope → window (or undefined in strict mode).<br>
+          In object → the object itself.<br>
+          In arrow functions → lexical scope (does not bind its own this).</span>
+        </li>
+      </ol>
+      <strong>React (10 Qs)</strong>
+      <ol start="7">
+        <li>
+          <strong>Q7. What is the Virtual DOM?</strong><br>
+          <span>A lightweight representation of the real DOM in memory. React updates the Virtual DOM first, then efficiently updates only the changed parts in the real DOM (reconciliation).</span>
+        </li>
+        <li>
+          <strong>Q8. Difference between functional components and class components?</strong>
+          <ul>
+            <li>Class → lifecycle methods (componentDidMount, etc.), this.state.</li>
+            <li>Function → use hooks (useState, useEffect) for state and lifecycle.</li>
+          </ul>
+          <span>Functional components are simpler, cleaner, and preferred in modern React.</span>
+        </li>
+        <li>
+          <strong>Q9. Explain useEffect hook with dependency array.</strong>
+          <pre><code>useEffect(() =&gt; { ... }, [deps])
+// [] → runs once after mount.
+// [x] → runs when x changes.
+// No deps → runs after every render.
+</code></pre>
+        </li>
+        <li>
+          <strong>Q10. Difference between useMemo and useCallback?</strong>
+          <ul>
+            <li>useMemo(fn, deps) → memoizes computed value.</li>
+            <li>useCallback(fn, deps) → memoizes function reference.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Q11. How do you handle state management in React?</strong>
+          <span>Local state (useState), Context API (for prop drilling), or external libraries (Redux, Zustand, MobX) depending on complexity.</span>
+        </li>
+        <li>
+          <strong>Q12. What is the difference between controlled and uncontrolled components?</strong>
+          <ul>
+            <li>Controlled → React manages the state of input (value comes from state).</li>
+            <li>Uncontrolled → DOM manages state (ref to access value).</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Q13. What are Error Boundaries in React?</strong>
+          <span>Special class components with componentDidCatch to catch errors in child components and prevent app crash.</span>
+        </li>
+        <li>
+          <strong>Q14. How does React Router v6 differ from v5?</strong>
+          <span>Uses <code>&lt;Routes&gt;</code> instead of <code>&lt;Switch&gt;</code>, nested routing is simplified, hooks like useNavigate, useParams.</span>
+        </li>
+        <li>
+          <strong>Q15. How do you optimize React performance?</strong>
+          <ul>
+            <li>React.memo to prevent unnecessary re-renders</li>
+            <li>useMemo & useCallback for expensive computations/functions</li>
+            <li>Code splitting & lazy loading</li>
+            <li>Avoiding inline functions in JSX unnecessarily</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Q16. Explain Redux flow.</strong>
+          <span>UI dispatches an action → reducer updates store → store notifies components → UI updates.</span>
+        </li>
+      </ol>
+      <strong>Ember.js (3 Qs)</strong>
+      <ol start="17">
+        <li>
+          <strong>Q17. What is Ember CLI?</strong>
+          <span>A command-line tool for creating, building, testing, and serving Ember applications. Provides project structure and conventions.</span>
+        </li>
+        <li>
+          <strong>Q18. What is Ember Data?</strong>
+          <span>Ember’s data persistence library. It provides a store that manages records via models, adapters, and serializers.</span>
+        </li>
+        <li>
+          <strong>Q19. Explain Ember’s routing system.</strong>
+          <span>Ember has a powerful router where each route maps to a URL, a model hook, and a template. Nested routes allow complex UIs.</span>
+        </li>
+      </ol>
+      <strong>General / Best Practices (1 Q)</strong>
+      <ol start="20">
+        <li>
+          <strong>Q20. How do you ensure code quality in front-end projects?</strong>
+          <ul>
+            <li>Writing clean, modular, and reusable components</li>
+            <li>Using ESLint/Prettier for consistency</li>
+            <li>Writing unit tests (Jest/RTL)</li>
+            <li>Code reviews & pair programming</li>
+            <li>Performance monitoring (Lighthouse, React DevTools)</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>
