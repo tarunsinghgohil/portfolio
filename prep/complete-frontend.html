@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complete Frontend Roadmap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #f7fafc;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      color: #222;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      padding: 2rem 2.5rem;
+    }
+    h1 {
+      color: #2563eb;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    h2 {
+      color: #2563eb;
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 0.3rem;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .emoji {
+      font-size: 1.3em;
+      margin-right: 0.3em;
+    }
+    .summary {
+      background: #e0f2fe;
+      border-left: 4px solid #2563eb;
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .optional {
+      background: #fef9c3;
+      border-left: 4px solid #f59e42;
+      padding: 0.7rem 1rem;
+      margin: 1rem 0;
+      border-radius: 6px;
+    }
+    .tools {
+      background: #f3f4f6;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.2rem 0;
+      border: 1px solid #e5e7eb;
+    }
+    code {
+      background: #f1f5f9;
+      font-family: 'Fira Mono', 'Consolas', monospace;
+      font-size: 0.98em;
+      padding: 0.2em 0.5em;
+      border-radius: 6px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 1rem; }
+      h1 { font-size: 1.3rem; }
+      h2 { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Complete Frontend Roadmap</h1>
+
+    <div class="section">
+      <h2><span class="emoji">🧱</span>1. Core Foundations</h2>
+      <ul>
+        <li><strong>HTML5</strong> — semantic structure, forms, accessibility</li>
+        <li><strong>CSS3</strong> — selectors, layout (<code>Flexbox</code>, <code>Grid</code>), animations, media queries</li>
+        <li><strong>JavaScript (ES6+)</strong> — Variables, functions, loops, DOM, async/await, promises, destructuring, arrow functions, modules</li>
+        <li><strong>TypeScript</strong> — types, interfaces, generics, enums, utility types</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">⚛️</span>2. Front-End Frameworks & Libraries</h2>
+      <ul>
+        <li><strong>React.js</strong> ✅ — Functional components, hooks, lifecycle, React Router, Context API, Performance optimization (<code>memo</code>, lazy loading, suspense)</li>
+        <li><strong>Svelte</strong> (Optional but Valuable) — Syntax, reactivity, stores, transitions, component props</li>
+        <li><strong>State Management</strong> — Redux Toolkit, Zustand or Context API</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">🎨</span>3. Styling & UI Development</h2>
+      <ul>
+        <li><strong>Tailwind CSS</strong> — utility-first styling, responsive classes</li>
+        <li><strong>CSS Preprocessors:</strong> Sass (optional)</li>
+        <li><strong>Responsive Design</strong> — mobile-first, media queries, grid/flexbox</li>
+        <li><strong>Animation / Transitions</strong> — CSS animations, Framer Motion (for React), Svelte transitions (if using Svelte)</li>
+        <li><strong>Design Tools</strong> — Photoshop, Figma, Adobe XD (for UI mockups, assets)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">🌐</span>4. Data Handling & APIs</h2>
+      <ul>
+        <li><strong>RESTful APIs</strong> — fetch, axios, error handling, CRUD</li>
+        <li><strong>GraphQL</strong> — Apollo Client basics, queries, mutations, caching</li>
+        <li><strong>Real-Time Data</strong> — WebSockets, SignalR, Socket.io</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">⚙️</span>5. Build Tools & Optimization</h2>
+      <ul>
+        <li><strong>Vite</strong> — fast development/build tool</li>
+        <li><strong>Webpack / Babel</strong> (learn fundamentals only)</li>
+        <li><strong>Performance Optimization</strong> — Code splitting, lazy loading, debouncing/throttling, React Profiler, Lighthouse audits</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">🧩</span>6. Collaboration & Version Control</h2>
+      <ul>
+        <li><strong>Git + GitHub</strong> — branching, merging, pull requests</li>
+        <li><strong>CI/CD Workflows</strong> — GitHub Actions, Netlify, Vercel</li>
+        <li><strong>Code Reviews & Documentation</strong> — clean commits, README, comments</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">☁️</span>7. Backend & Full Stack Exposure</h2>
+      <ul>
+        <li><strong>Node.js + Express.js</strong> — basic REST APIs</li>
+        <li><strong>Database Basics</strong> — MongoDB or PostgreSQL</li>
+        <li><strong>Docker</strong> — containerization basics</li>
+        <li><strong>Cloud Deployment</strong> — AWS / GCP / Vercel</li>
+      </ul>
+    </div>
+
+    <div class="section optional">
+      <h2><span class="emoji">🗺️</span>8. Advanced & Optional Specializations</h2>
+      <ul>
+        <li>Geospatial Visualization: Mapbox, Leaflet, CesiumJS</li>
+        <li>Video Streaming: WebRTC, HLS</li>
+        <li>Testing: Jest, React Testing Library</li>
+        <li>UI Performance Debugging: Chrome DevTools, Lighthouse</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="emoji">🧠</span>9. Soft Skills & Team Practices</h2>
+      <ul>
+        <li>Agile methodology (Scrum, Jira)</li>
+        <li>Mentoring and reviewing others’ code</li>
+        <li>Collaboration with UI/UX designers</li>
+        <li>Basic project architecture planning</li>
+      </ul>
+    </div>
+
+    <div class="summary">
+      ✅ <strong>Full Learning List Summary (Short Version)</strong><br>
+      Core: HTML5, CSS3, JavaScript (ES6+), TypeScript<br>
+      Frameworks: React.js, Svelte<br>
+      State Management: Redux, Zustand<br>
+      Styling: Tailwind CSS, Responsive Design, Animations<br>
+      APIs: REST, GraphQL, WebSockets<br>
+      Tools: Vite, Webpack, GitHub, CI/CD<br>
+      Design: Photoshop, Figma<br>
+      Optimization: Performance Tuning, Lazy Loading<br>
+      Backend Basics: Node.js, Express.js, MongoDB<br>
+      Advanced: Mapbox, WebRTC, Docker, AWS
+    </div>
+  </div>
+</body>
+</html>

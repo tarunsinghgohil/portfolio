@@ -241,6 +241,8 @@
 // )
 
 
-document.getElementById("btn").addEventListener("click", function() {
-      alert("button clicked 🚀");
-    });
+// document.getElementById("btn").addEventListener("click", function() {
+//       alert("button clicked 🚀");
+//     });
+
+console.log("hello")
