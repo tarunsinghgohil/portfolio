@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>React Techniques & Checklist</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+        :root {
+            --bg: #f7fafc;
+            --card: #ffffff;
+            --muted: #6b7280;
+            --primary: #2563eb;
+            --accent: #f59e0b;
+            --success: #16a34a;
+            --code: #0f172a;
+            --radius: 10px;
+            --max: 980px;
+            font-synthesis: none;
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            min-height: 100%;
+            background: linear-gradient(180deg, var(--bg), #ffffff);
+            font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+            color: #0f172a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrap {
+            max-width: var(--max);
+            margin: 28px auto;
+            padding: 28px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+            font-size: 1.75rem;
+            color: var(--primary);
+            letter-spacing: -0.4px;
+        }
+
+        header p {
+            margin: 0;
+            color: var(--muted)
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+            padding: 18px;
+            border: 1px solid rgba(15, 23, 42, 0.04);
+        }
+
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 1.05rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lead {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 12px
+        }
+
+        ul,
+        ol {
+            margin: 0 0 12px 18px;
+            padding: 0
+        }
+
+        li {
+            margin: 8px 0;
+            color: #111827;
+            font-size: 0.95rem
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #eef2ff;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-left: auto;
+        }
+
+        pre,
+        code {
+            display: block;
+            background: #0f172a;
+            color: #e6eef8;
+            padding: 12px;
+            border-radius: 8px;
+            font-family: "Fira Mono", "Courier New", monospace;
+            font-size: 0.88rem;
+            overflow: auto;
+            white-space: pre;
+        }
+
+        .accent {
+            background: #fff7ed;
+            border-left: 4px solid var(--accent);
+            padding: 10px 12px;
+            border-radius: 6px;
+            color: #92400e;
+            margin-top: 10px;
+        }
+
+        .green {
+            background: #ecfdf5;
+            border-left: 4px solid var(--success);
+            padding: 10px 12px;
+            border-radius: 6px;
+            color: #065f46;
+            margin-top: 10px;
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+        .small {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        @media (max-width:900px) {
+            .grid {
+                grid-template-columns: 1fr;
+                padding: 0
+            }
+
+            .wrap {
+                padding: 18px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>React Techniques & Checklist</h1>
+            <p class="lead">Concise, actionable checklist covering fundamentals, hooks, data, state, performance and
+                tooling.</p>
+        </header>
+
+        <section class="grid">
+            <article class="card">
+                <h2>🧠 Core React Fundamentals <span class="badge">Essential</span></h2>
+                <ul>
+                    <li>JSX and Virtual DOM</li>
+
+                    <li>Props, State, and Lifecycle methods</li>
+
+                    <li>Conditional Rendering</li>
+
+                    <li>Lists and Keys</li>
+
+                    <li>Controlled vs Uncontrolled Components</li>
+
+                    <li>Refs and Forward Refs</li>
+
+                    <li>React Fragments, Portals, and StrictMode</li>
+                </ul>
+                <div class="small">Focus: clear mental model of render, reconciliation, and component boundaries.</div>
+            </article>
+
+            <article class="card">
+                <h2>⚙️ Hooks (Deep) <span class="badge">High Priority</span></h2>
+                <ul>
+                    <li><code>useState</code>, <code>useEffect</code>, <code>useRef</code></li>
+                    <li><code>useContext</code>, <code>useReducer</code></li>
+                    <li><code>useMemo</code>, <code>useCallback</code>, <code>useLayoutEffect</code></li>
+                    <li>Custom hooks: composition, separation of concerns</li>
+                    <li>Hook-related performance patterns</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>🌐 API Handling & Data Fetching</h2>
+                <ul>
+                    <li>fetch / axios; async/await & try/catch</li>
+                    <li>Loading, error states & global error handling</li>
+                    <li>Debounce/throttle, AbortController for cancellations</li>
+                    <li>Caching, pagination; use React Query / SWR for robustness</li>
+                </ul>
+                <div class="accent">Tip: centralize API logic and handle token refresh & retries explicitly.</div>
+            </article>
+
+            <article class="card">
+                <h2>🧩 State Management</h2>
+                <ul>
+                    <li>Local state vs Context API</li>
+                    <li>Redux Toolkit, Zustand, Jotai — choose by complexity</li>
+                    <li>Middlewares: thunk, saga (when side-effects grow)</li>
+                    <li>Immutability, pure reducers, normalized state</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>🎨 Styling & UI</h2>
+                <ul>
+                    <li>Tailwind CSS, Sass, CSS Modules</li>
+                    <li>Styled Components / Emotion</li>
+                    <li>Theme management (dark/light) and CSS variables</li>
+                    <li>Responsive design & accessibility (ARIA)</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>🧱 Routing & Navigation</h2>
+                <ul>
+                    <li>React Router v6+: dynamic & nested routes</li>
+                    <li>Protected routes / route guards</li>
+                    <li>Lazy loading with <code>React.lazy</code> and <code>Suspense</code></li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>🔐 Error Handling</h2>
+                <ul>
+                    <li>Error Boundaries / <code>componentDidCatch</code></li>
+                    <li>Try/catch in async flows and global error contexts</li>
+                    <li>Fallback UIs and retry logic for transient failures</li>
+                </ul>
+            </article>
+
+            <article class="card full">
+                <h2>🧪 Testing</h2>
+                <ul>
+                    <li>Unit tests with Jest & React Testing Library</li>
+                    <li>Mocking API calls and snapshot testing</li>
+                    <li>Integration & E2E tests (Cypress)</li>
+                    <li>Measure coverage and test critical flows</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>⚡ Performance</h2>
+                <ul>
+                    <li>Memoization: <code>React.memo</code>, <code>useMemo</code>, <code>useCallback</code></li>
+                    <li>Code splitting, lazy loading, tree shaking</li>
+                    <li>Virtualization: react-window / react-virtualized / virtuoso</li>
+                    <li>Use React Profiler and Lighthouse to find bottlenecks</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>📦 Build Tools & Env</h2>
+                <ul>
+                    <li>Vite / Webpack basics; Babel for transpilation</li>
+                    <li>Environment variables (.env) and build config</li>
+                    <li>ESLint, Prettier, lint-staged and Husky for quality</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>🚀 Next.js / SSR Concepts</h2>
+                <ul>
+                    <li>SSR vs CSR vs SSG</li>
+                    <li>Next.js routing, App Router, API routes</li>
+                    <li>Image optimization, middleware, incremental static regen</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>🔄 Version Control & CI/CD</h2>
+                <ul>
+                    <li>Git branching strategies, PR reviews</li>
+                    <li>CI basics: GitHub Actions, Vercel, Netlify</li>
+                    <li>Automated tests and deploy previews</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>☁️ Advanced / Real-World Topics</h2>
+                <ul>
+                    <li>Auth: JWT, OAuth, Firebase Auth, RBAC</li>
+                    <li>Real-time: WebSockets, optimistic updates</li>
+                    <li>Form handling: Formik, React Hook Form, Yup</li>
+                    <li>File uploads, streaming, performance tuning</li>
+                </ul>
+            </article>
+
+            <article class="card full">
+                <h2>🧰 TypeScript (Optional)</h2>
+                <ul>
+                    <li>Typing props, hooks, state; interfaces vs types</li>
+                    <li>Generic components and API typing</li>
+                    <li>Use <code>tsconfig</code> strict modes for safety</li>
+                </ul>
+                <div class="green">When to adopt: medium+ codebases or teams needing stronger guarantees.</div>
+            </article>
+
+            <article class="card full">
+                <h2>🧠 System Design for Frontend</h2>
+                <ul>
+                    <li>Component architecture & folder structure</li>
+                    <li>Reusable, composable component design</li>
+                    <li>API layer abstraction, container/presenter patterns</li>
+                    <li>Document decisions: trade-offs, scaling considerations</li>
+                </ul>
+                <pre><code>// Quick snippet: debounce example
+function debounce(fn, wait=200){
+  let t;
+  return (...args)=>{
+    clearTimeout(t);
+    t = setTimeout(()=>fn(...args), wait);
+  }
+}</code></pre>
+            </article>
+        </section>
+    </div>
+
+    <br><br>
+    🧠 1. Core React Fundamentals
+
+    React Component types (Functional vs Class)
+
+    JSX and Virtual DOM
+
+    Props, State, and Lifecycle methods
+
+    Conditional Rendering
+
+    Lists and Keys
+
+    Controlled vs Uncontrolled Components
+
+    Refs and Forward Refs
+
+    React Fragments, Portals, and StrictMode
+    <br><br>
+
+    ⚙️ 2. Hooks (Deep Understanding)
+
+    useState, useEffect, useRef
+
+    useContext, useReducer
+
+    useMemo, useCallback
+
+    useLayoutEffect
+
+    Custom Hooks — when and how to build them
+
+    Performance optimization with hooks
+    <br><br>
+
+    🌐 3. API Handling and Data Fetching
+
+    Fetch API / Axios integration
+
+    Async/Await and Promises
+
+    Loading and Error states
+
+    Caching & Pagination
+
+    Debouncing & Throttling API calls
+
+    AbortController for request cancellation
+
+    Global API handling using Context or Redux
+
+    Using React Query / SWR for data fetching
+    <br><br>
+    🧩 4. State Management
+
+    Local component state
+
+    Context API
+
+    Redux Toolkit / Zustand / Jotai
+
+    Redux middleware: Thunk / Saga
+
+    Immutability and Pure Functions
+
+    State normalization and structure
+    <br><br>
+    🎨 5. Styling and UI Management
+
+    Tailwind CSS, Sass, CSS Modules
+
+    Styled Components / Emotion
+
+    Theme management (Dark/Light)
+
+    Responsive Design & Accessibility (ARIA)
+    <br><br>
+    🧱 6. Routing and Navigation
+
+    React Router (v6+)
+
+    Dynamic & Nested Routes
+
+    Route Guards / Protected Routes
+
+    Lazy loading with React.lazy() and Suspense
+    <br><br>
+    🔐 7. Error Handling
+
+    ErrorBoundary and componentDidCatch
+
+    Try/Catch in async functions
+
+    Handling API errors gracefully
+
+    Global error context
+
+    Fallback UI and Retry logic
+    <br><br>
+    🧪 8. Testing
+
+    Unit Testing with Jest and React Testing Library
+
+    Mocking API calls
+
+    Snapshot Testing
+
+    Integration and Component Tests
+
+    Test coverage and best practices
+    <br><br>
+    ⚡ 9. Performance Optimization
+
+    Memoization (React.memo, useMemo, useCallback)
+
+    Lazy Loading & Code Splitting
+
+    React Profiler
+
+    Avoiding unnecessary re-renders
+
+    Infinite Scrolling & Virtualization (React Window / Virtuoso)
+    <br><br>
+    📦 10. Build Tools & Environment
+
+    Webpack / Vite basics
+
+    Babel — JSX and ES6 transpilation
+
+    Environment Variables (.env)
+
+    ESLint, Prettier setup
+    <br><br>
+    🚀 11. Next.js / SSR Concepts (Optional but Valuable)
+
+    SSR vs CSR vs SSG
+
+    API Routes in Next.js
+
+    Image optimization & metadata
+
+    Middleware and Routing in Next.js 13+ (App Router)
+    <br><br>
+    🔄 12. Version Control & CI/CD
+
+    Git branching strategies
+
+    Pull Request and Code Review best practices
+
+    Basic CI/CD with GitHub Actions / Vercel
+    <br><br>
+    ☁️ 13. Advanced / Real-World Topics
+
+    Authentication (JWT, OAuth, Firebase Auth)
+
+    Role-based Access Control
+
+    File uploads
+
+    Infinite scroll / pagination
+
+    Optimistic UI updates
+
+    WebSockets / Real-time data
+
+    Form Handling (Formik, React Hook Form, Yup validation)
+    <br><br>
+    🧰 14. TypeScript (If applicable)
+
+    Typing props, state, hooks
+
+    Interface vs Type
+
+    Generic components
+
+    Type safety with API responses
+    <br><br>
+    🧠 15. System Design for Frontend
+
+    Component architecture & folder structure
+
+    Reusable and scalable component design
+
+    API layer abstraction
+
+    Design patterns (Container-Presenter, Compound Components)s
+</body>
+
+</html>

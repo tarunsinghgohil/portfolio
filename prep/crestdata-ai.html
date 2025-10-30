@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React.js Interview Preparation Roadmap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #f7fafc;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      color: #222;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      padding: 2rem 2.5rem;
+    }
+    h1 {
+      color: #2563eb;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    h2 {
+      color: #2563eb;
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 0.3rem;
+    }
+    h3 {
+      color: #1e293b;
+      font-size: 1.1rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    .phase {
+      margin-bottom: 2rem;
+      background: #f3f4f6;
+      border-radius: 8px;
+      padding: 1.2rem;
+      border: 1px solid #e5e7eb;
+    }
+    .practice, .projects {
+      background: #e0f2fe;
+      border-left: 4px solid #2563eb;
+      padding: 0.8rem 1rem;
+      margin: 1.2rem 0;
+      border-radius: 6px;
+      font-style: italic;
+    }
+    .bonus {
+      background: #fef9c3;
+      border-left: 4px solid #f59e42;
+      padding: 0.7rem 1rem;
+      margin: 1rem 0;
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: #f9fafb;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 0.7em;
+      text-align: left;
+    }
+    th {
+      background: #e0e7ff;
+      color: #2563eb;
+    }
+    code {
+      background: #f1f5f9;
+      font-family: 'Fira Mono', 'Consolas', monospace;
+      font-size: 0.98em;
+      padding: 0.2em 0.5em;
+      border-radius: 6px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 1rem; }
+      h1 { font-size: 1.3rem; }
+      h2 { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🗺️ React.js Interview Preparation Roadmap</h1>
+
+    <div class="phase">
+      <h2>Phase 1: Core Foundations (Week 1)</h2>
+      <p>Revisit and master fundamentals — they’re always tested.</p>
+      <h3>Topics:</h3>
+      <ul>
+        <li><strong>JavaScript (ES6+):</strong>
+          <ul>
+            <li><code>let</code>/<code>const</code>, arrow functions, destructuring, spread/rest, template literals</li>
+            <li>Async JS: promises, async/await, fetch, error handling</li>
+            <li>Closures, scopes, prototypes, <code>this</code>, event loop, hoisting</li>
+            <li>Array & object methods (<code>map</code>, <code>filter</code>, <code>reduce</code>, etc.)</li>
+          </ul>
+        </li>
+        <li><strong>HTML5 & CSS3:</strong>
+          <ul>
+            <li>Semantic HTML, accessibility (a11y)</li>
+            <li>Flexbox, Grid, animations, media queries</li>
+            <li>CSS architecture: BEM, utility-first (Tailwind CSS)</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="practice">
+        <strong>Practice:</strong>
+        <ul>
+          <li>Rebuild small components (Navbar, Cards, Modals) using only HTML/CSS/JS</li>
+          <li>Platform: Frontend Mentor, CodeSandbox</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>Phase 2: React.js Deep Dive (Week 2)</h2>
+      <p>Get very comfortable with core and advanced React patterns.</p>
+      <h3>Topics:</h3>
+      <ul>
+        <li>Functional components, Hooks (<code>useState</code>, <code>useEffect</code>, <code>useMemo</code>, <code>useCallback</code>, <code>useRef</code>)</li>
+        <li>Context API and custom hooks</li>
+        <li>Component lifecycle (before & after hooks)</li>
+        <li>React Router v6</li>
+        <li>Conditional rendering and list rendering</li>
+        <li>Error boundaries and Suspense</li>
+        <li>Controlled vs uncontrolled components</li>
+        <li>Lazy loading & code splitting</li>
+      </ul>
+      <div class="projects">
+        <strong>Projects/Practice:</strong>
+        <ul>
+          <li>Build a Dashboard or Task Tracker app with CRUD</li>
+          <li>Use React Router, Context API, and lazy loading</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>Phase 3: State Management & Architecture (Week 3)</h2>
+      <p>Show your ability to design scalable front-end systems.</p>
+      <h3>Topics:</h3>
+      <ul>
+        <li>Redux Toolkit: slices, store, middleware, async thunks</li>
+        <li>Zustand / Recoil: when to prefer them over Redux</li>
+        <li>Data fetching: React Query, SWR</li>
+        <li>Architecture:
+          <ul>
+            <li>Folder structure and modular components</li>
+            <li>Component-driven development (Storybook)</li>
+            <li>Micro frontends basics (Module Federation)</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="projects">
+        <strong>Projects/Practice:</strong>
+        <ul>
+          <li>Rebuild your app using Redux Toolkit and React Query</li>
+          <li>Create reusable UI components (buttons, dropdowns, modals)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>Phase 4: Performance, Testing, & Integration (Week 4)</h2>
+      <p>This phase makes you stand out as a senior engineer.</p>
+      <h3>Topics:</h3>
+      <ul>
+        <li><strong>Performance Optimization:</strong>
+          <ul>
+            <li><code>React.memo</code>, <code>useMemo</code>, <code>useCallback</code></li>
+            <li>Virtualization (<code>react-window</code>, <code>react-virtualized</code>)</li>
+            <li>Bundle optimization (Webpack, Vite)</li>
+            <li>Lazy loading and tree-shaking</li>
+          </ul>
+        </li>
+        <li><strong>Testing:</strong>
+          <ul>
+            <li>Jest basics (mocking, snapshot testing)</li>
+            <li>React Testing Library: unit & integration tests</li>
+            <li>Cypress: end-to-end tests</li>
+          </ul>
+        </li>
+        <li><strong>Integration:</strong>
+          <ul>
+            <li>REST API + GraphQL (Apollo Client basics)</li>
+            <li>Error handling and toast notifications</li>
+            <li>Secure API communication (tokens, headers)</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="practice">
+        <strong>Practice:</strong>
+        <ul>
+          <li>Add test coverage and API integration to your project</li>
+          <li>Measure performance with React DevTools & Lighthouse</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h2>Phase 5: Advanced Topics & DevOps (Week 5–6)</h2>
+      <p>Prepares you for system design and leadership-oriented questions.</p>
+      <h3>Topics:</h3>
+      <ul>
+        <li>Next.js: SSR, SSG, API routes, middleware</li>
+        <li>Node.js + Express (Basics): simple backend for APIs</li>
+        <li>CI/CD: GitHub Actions or GitLab CI basics</li>
+        <li><strong>Cloud & Deployment:</strong>
+          <ul>
+            <li>Deploy on Vercel, AWS Amplify, or Netlify</li>
+            <li>Environment variables, secrets, and scaling</li>
+            <li>Docker (Optional): containerize your app</li>
+          </ul>
+        </li>
+        <li><strong>Agile & Team Practices:</strong>
+          <ul>
+            <li>Code reviews, version control, branching strategies</li>
+            <li>Mentoring juniors and conducting code reviews</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bonus">
+      <h2>🧩 Bonus Preparation</h2>
+      <ul>
+        <li><strong>Interview-Focused Practice:</strong>
+          <ul>
+            <li>System design for front-end (component hierarchy, data flow)</li>
+            <li>Behavioral questions (mentoring, decision-making, trade-offs)</li>
+            <li>Past project deep dive: explain why you used a specific stack.</li>
+          </ul>
+        </li>
+        <li><strong>Mock Resources:</strong>
+          <ul>
+            <li>Frontend Interview Handbook</li>
+            <li>React Patterns</li>
+            <li>System Design for Frontend</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <h2>🕒 Suggested Weekly Plan (Example)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>Focus</th>
+          <th>Output</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>JS + HTML + CSS</td>
+          <td>Mini component library</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>React Core</td>
+          <td>Task Tracker App</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Redux + Architecture</td>
+          <td>Scalable Dashboard</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Performance + Testing</td>
+          <td>Add Jest/Cypress</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Next.js + CI/CD</td>
+          <td>Deployed full-stack project</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
