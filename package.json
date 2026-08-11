@@ -1,0 +1,11 @@
+{
+  "name": "new-start",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,ts,css,html,json,md}\""
+  }
+}

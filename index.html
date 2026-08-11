@@ -1,1086 +1,1333 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tarun Singh Gohil</title>
+    <meta
+      name="description"
+      content="Tarun Singh Gohil — Frontend Developer & UI/UX Designer with 4.8+ years of experience building responsive, user-friendly websites and web applications."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tarun Singh Gohil</title>
-  <meta name="description"
-    content="Tarun Singh Gohil — Frontend Developer & UI/UX Designer with 4.8+ years of experience building responsive, user-friendly websites and web applications.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <style>
-    :root {
-      --primary: #2196f3;
-      --primary-dark: #0f72c1;
-      --sidebar: #36a3f7;
-      --sidebar-dark: #2491f0;
-      --primary-soft: rgba(33, 150, 243, 0.08);
-      --heading: #343a40;
-      --body-text: #6c757d;
-      --muted: #868e96;
-      --border: #dee2e6;
-      --bg-alt: #f5f7fa;
-      --white: #fff;
-      --sidebar-w: 17rem;
-      --amber: #f0ad4e;
-      --green: #5cb85c;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: var(--body-text);
-      line-height: 1.7;
-      padding-top: 56px;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: 'Saira Extra Condensed', sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--heading);
-      line-height: 1.1;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      transition: color .25s ease;
-    }
-
-    a:hover {
-      color: var(--primary-dark);
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    .text-primary {
-      color: var(--primary) !important;
-    }
-
-    /* ============ SIDEBAR NAV ============ */
-    #sideNav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: var(--sidebar);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: .5rem 1rem;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, .15);
-    }
-
-    #sideNav .brand {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-      color: var(--white);
-      font-family: 'Saira Extra Condensed', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-    }
-
-    #sideNav .brand img.img-profile {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid rgba(255, 255, 255, .35);
-    }
-
-    #sideNav .profile-meta,
-    #sideNav .sidebar-actions {
-      display: none;
-    }
-
-    #navToggle {
-      background: transparent;
-      border: 1px solid rgba(255, 255, 255, .6);
-      border-radius: 4px;
-      color: var(--white);
-      font-size: 1.25rem;
-      padding: .3rem .7rem;
-      cursor: pointer;
-    }
-
-    #navMenu {
-      display: none;
-      list-style: none;
-      width: 100%;
-    }
-
-    #navMenu.open {
-      display: block;
-    }
-
-    #navMenu li a {
-      display: block;
-      padding: .65rem 0;
-      color: rgba(255, 255, 255, .85);
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: .85rem;
-      letter-spacing: .08em;
-    }
-
-    #navMenu li a:hover,
-    #navMenu li a.active {
-      color: var(--white);
-    }
-
-    @media (max-width: 991.98px) {
-      #sideNav {
-        flex-wrap: wrap;
+    <style>
+      :root {
+        --primary: #2196f3;
+        --primary-dark: #0f72c1;
+        --sidebar: #36a3f7;
+        --sidebar-dark: #2491f0;
+        --primary-soft: rgba(33, 150, 243, 0.08);
+        --heading: #343a40;
+        --body-text: #6c757d;
+        --muted: #868e96;
+        --border: #dee2e6;
+        --bg-alt: #f5f7fa;
+        --white: #fff;
+        --sidebar-w: 17rem;
+        --amber: #f0ad4e;
+        --green: #5cb85c;
       }
 
-      #navMenu {
-        padding: .5rem 0;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-    }
 
-    @media (min-width: 992px) {
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
-        padding-top: 0;
-        padding-left: var(--sidebar-w);
+        font-family: "Open Sans", sans-serif;
+        color: var(--body-text);
+        line-height: 1.7;
+        padding-top: 56px;
       }
 
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Saira Extra Condensed", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--heading);
+        line-height: 1.1;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        transition: color 0.25s ease;
+      }
+
+      a:hover {
+        color: var(--primary-dark);
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .text-primary {
+        color: var(--primary) !important;
+      }
+
+      /* ============ SIDEBAR NAV ============ */
       #sideNav {
-        flex-direction: column;
-        justify-content: flex-start;
-        text-align: center;
-        width: var(--sidebar-w);
-        height: 100vh;
-        right: auto;
-        padding: 2.5rem 1.25rem;
-        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: var(--sidebar);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
       }
 
       #sideNav .brand {
-        flex-direction: column;
-        gap: 1rem;
-        font-size: 1.55rem;
-        line-height: 1.2;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--white);
+        font-family: "Saira Extra Condensed", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
       }
 
       #sideNav .brand img.img-profile {
-        width: 10rem;
-        height: 10rem;
-        border: .5rem solid rgba(255, 255, 255, .25);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba(255, 255, 255, 0.35);
       }
 
-      #sideNav .profile-meta {
-        display: block;
-        color: rgba(255, 255, 255, .9);
-        font-size: .82rem;
-        margin-top: .75rem;
-      }
-
-      #sideNav .profile-meta .designation {
-        font-family: 'Saira Extra Condensed', sans-serif;
-        text-transform: uppercase;
-        letter-spacing: .1em;
-        font-size: 1rem;
-        color: var(--white);
-        margin-bottom: .5rem;
-      }
-
-      #sideNav .profile-meta p {
-        margin: .15rem 0;
-      }
-
-      #sideNav .profile-meta a {
-        color: rgba(255, 255, 255, .9);
-      }
-
-      #sideNav .profile-meta a:hover {
-        color: var(--white);
-      }
-
-      #navToggle {
+      #sideNav .profile-meta,
+      #sideNav .sidebar-actions {
         display: none;
       }
 
+      #navToggle {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 4px;
+        color: var(--white);
+        font-size: 1.25rem;
+        padding: 0.3rem 0.7rem;
+        cursor: pointer;
+      }
+
       #navMenu {
-        display: block;
-        margin-top: 1.75rem;
+        display: none;
+        list-style: none;
         width: 100%;
+      }
+
+      #navMenu.open {
+        display: block;
       }
 
       #navMenu li a {
-        padding: .5rem 0;
-        font-size: .82rem;
-        position: relative;
-      }
-
-      #navMenu li a.active::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: 2px;
-        transform: translateX(-50%);
-        width: 26px;
-        height: 2px;
-        background: var(--white);
-      }
-
-      #sideNav .sidebar-actions {
         display: block;
-        margin-top: auto;
-        padding-top: 1.5rem;
-        width: 100%;
+        padding: 0.65rem 0;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.08em;
       }
 
-      #sideNav .social-icons {
+      #navMenu li a:hover,
+      #navMenu li a.active {
+        color: var(--white);
+      }
+
+      @media (max-width: 991.98px) {
+        #sideNav {
+          flex-wrap: wrap;
+        }
+
+        #navMenu {
+          padding: 0.5rem 0;
+        }
+      }
+
+      @media (min-width: 992px) {
+        body {
+          padding-top: 0;
+          padding-left: var(--sidebar-w);
+        }
+
+        #sideNav {
+          flex-direction: column;
+          justify-content: flex-start;
+          text-align: center;
+          width: var(--sidebar-w);
+          height: 100vh;
+          right: auto;
+          padding: 2.5rem 1.25rem;
+          overflow-y: auto;
+        }
+
+        #sideNav .brand {
+          flex-direction: column;
+          gap: 1rem;
+          font-size: 1.55rem;
+          line-height: 1.2;
+        }
+
+        #sideNav .brand img.img-profile {
+          width: 10rem;
+          height: 10rem;
+          border: 0.5rem solid rgba(255, 255, 255, 0.25);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        #sideNav .profile-meta {
+          display: block;
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 0.82rem;
+          margin-top: 0.75rem;
+        }
+
+        #sideNav .profile-meta .designation {
+          font-family: "Saira Extra Condensed", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-size: 1rem;
+          color: var(--white);
+          margin-bottom: 0.5rem;
+        }
+
+        #sideNav .profile-meta p {
+          margin: 0.15rem 0;
+        }
+
+        #sideNav .profile-meta a {
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        #sideNav .profile-meta a:hover {
+          color: var(--white);
+        }
+
+        #navToggle {
+          display: none;
+        }
+
+        #navMenu {
+          display: block;
+          margin-top: 1.75rem;
+          width: 100%;
+        }
+
+        #navMenu li a {
+          padding: 0.5rem 0;
+          font-size: 0.82rem;
+          position: relative;
+        }
+
+        #navMenu li a.active::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: 2px;
+          transform: translateX(-50%);
+          width: 26px;
+          height: 2px;
+          background: var(--white);
+        }
+
+        #sideNav .sidebar-actions {
+          display: block;
+          margin-top: auto;
+          padding-top: 1.5rem;
+          width: 100%;
+        }
+
+        #sideNav .social-icons {
+          margin-bottom: 1rem;
+        }
+
+        #sideNav .social-icons a {
+          color: rgba(255, 255, 255, 0.85);
+          font-size: 1.15rem;
+          margin: 0 0.5rem;
+        }
+
+        #sideNav .social-icons a:hover {
+          color: var(--white);
+        }
+
+        #sideNav .btn-resume {
+          display: inline-block;
+          width: 100%;
+          border: 1px solid var(--white);
+          color: var(--white);
+          padding: 0.55rem 1rem;
+          text-transform: uppercase;
+          font-size: 0.78rem;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          transition: all 0.25s ease;
+        }
+
+        #sideNav .btn-resume:hover {
+          background: var(--white);
+          color: var(--primary);
+        }
+      }
+
+      /* ============ SECTIONS ============ */
+      section.resume-section {
+        padding: 4rem 1.25rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      @media (min-width: 992px) {
+        section.resume-section {
+          padding: 5rem 3.5rem;
+        }
+      }
+
+      .section-inner {
+        max-width: 70rem;
+        margin: 0 auto;
+      }
+
+      .section-head {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-head h2 {
+        font-size: clamp(2.4rem, 5vw, 3.5rem);
+      }
+
+      .heading-border {
+        width: 60px;
+        height: 6px;
+        background: var(--primary);
+        margin: 0.75rem auto 0;
+        border-radius: 4px;
+      }
+
+      /* fade-in on scroll */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+
+      /* ============ ABOUT / HERO ============ */
+      #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background:
+          radial-gradient(
+            circle at 88% 12%,
+            rgba(33, 150, 243, 0.12) 0%,
+            transparent 42%
+          ),
+          radial-gradient(
+            circle at 8% 92%,
+            rgba(33, 150, 243, 0.1) 0%,
+            transparent 40%
+          );
+      }
+
+      @media (min-width: 992px) {
+        #about {
+          min-height: 100vh;
+        }
+      }
+
+      #about .hero-inner {
+        max-width: 100%;
+      }
+
+      #about h1 {
+        font-size: clamp(3.2rem, 9vw, 6rem);
+        line-height: 0.95;
+      }
+
+      .subheading {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: "Saira Extra Condensed", sans-serif;
+        font-size: 1.5rem;
+        color: var(--heading);
+        letter-spacing: 0.06em;
+        margin: 0.75rem 0 2rem;
+      }
+
+      #about p.lead {
+        margin-bottom: 1.25rem;
+      }
+
+      .btn {
+        display: inline-block;
+        border: 1px solid var(--primary);
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        transition: all 0.25s ease;
+        cursor: pointer;
+        background: transparent;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .btn-solid {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .btn-solid:hover {
+        background: transparent;
+        color: var(--primary);
+      }
+
+      .btn-outline {
+        color: var(--primary);
+      }
+
+      .btn-outline:hover {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        margin: 1.5rem 0;
+      }
+
+      .social-row a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--primary);
+        color: var(--white);
+        font-size: 1.1rem;
+        margin-right: 0.6rem;
+        transition: all 0.25s ease;
+      }
+
+      .social-row a:hover {
+        background: var(--primary-dark);
+        color: var(--white);
+        transform: translateY(-3px);
+      }
+
+      /* ============ EXPERIENCE ============ */
+      #experience {
+        background: var(--bg-alt);
+      }
+
+      .exp-grid {
+        display: grid;
+        /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
+        gap: 1.5rem;
+      }
+
+      .exp-card {
+        position: relative;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--accent, var(--primary));
+        border-radius: 8px;
+        padding: 1.5rem 1.75rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .exp-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 30px rgba(33, 150, 243, 0.12);
+      }
+
+      .exp-top {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        margin-bottom: 0.9rem;
+      }
+
+      .exp-icon {
+        flex-shrink: 0;
+        width: 46px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: color-mix(
+          in srgb,
+          var(--accent, var(--primary)) 12%,
+          white
+        );
+        color: var(--accent, var(--primary));
+        font-size: 1.3rem;
+      }
+
+      .exp-top h3 {
+        font-size: 1.5rem;
+      }
+
+      .exp-top .company {
+        display: block;
+        font-family: "Saira Extra Condensed", sans-serif;
+        text-transform: uppercase;
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: var(--muted);
+        letter-spacing: 0.04em;
+      }
+
+      .exp-card ul {
+        padding-left: 1.1rem;
         margin-bottom: 1rem;
       }
 
-      #sideNav .social-icons a {
-        color: rgba(255, 255, 255, .85);
-        font-size: 1.15rem;
-        margin: 0 .5rem;
+      .exp-card ul li {
+        margin-bottom: 0.35rem;
+        font-size: 0.9rem;
       }
 
-      #sideNav .social-icons a:hover {
-        color: var(--white);
-      }
-
-      #sideNav .btn-resume {
-        display: inline-block;
-        width: 100%;
-        border: 1px solid var(--white);
-        color: var(--white);
-        padding: .55rem 1rem;
+      .exp-date {
+        margin-top: auto;
+        text-align: right;
+        font-family: "Saira Extra Condensed", sans-serif;
         text-transform: uppercase;
-        font-size: .78rem;
         font-weight: 600;
-        letter-spacing: .1em;
-        transition: all .25s ease;
+        font-size: 1.05rem;
+        letter-spacing: 0.03em;
+        color: var(--accent, var(--primary));
       }
 
-      #sideNav .btn-resume:hover {
+      /* ============ PORTFOLIO ============ */
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .portfolio-item {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
         background: var(--white);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+        display: block;
+      }
+
+      .portfolio-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 28px rgba(33, 150, 243, 0.15);
+      }
+
+      .portfolio-link {
+        position: relative;
+        display: block;
+      }
+
+      .portfolio-link img {
+        width: 100%;
+        height: 13rem;
+        object-fit: cover;
+        object-position: top;
+        display: block;
+      }
+
+      .caption-port {
+        position: absolute;
+        inset: 0;
+        background: rgba(54, 160, 245, 0.78);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 1.6rem;
+      }
+
+      .portfolio-link:hover .caption-port {
+        opacity: 1;
+      }
+
+      .portfolio-item .item-title {
+        padding: 0.85rem 1rem;
+        text-align: center;
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--heading);
+      }
+
+      .section-more {
+        text-align: center;
+        margin-top: 2.5rem;
+      }
+
+      /* ============ LINKS ============ */
+      .links-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        gap: 0.6rem 1.25rem;
+      }
+
+      .links-grid a {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.55rem 0.85rem;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        color: var(--body-text);
+        font-size: 0.88rem;
+        word-break: break-all;
+        transition: all 0.25s ease;
+        background: var(--white);
+      }
+
+      .links-grid a i {
+        color: var(--primary);
+        flex-shrink: 0;
+      }
+
+      .links-grid a:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+        background: var(--primary-soft);
+        transform: translateY(-2px);
+      }
+
+      /* ============ SKILLS ============ */
+      #skills {
+        background: var(--bg-alt);
+      }
+
+      .skill-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.25rem;
+        margin-bottom: 3rem;
+      }
+
+      .stat-card {
+        text-align: center;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 1.75rem 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 30px rgba(33, 150, 243, 0.14);
+      }
+
+      .stat-card .ic {
+        font-size: 2.4rem;
+        color: var(--primary);
+        margin-bottom: 0.6rem;
+      }
+
+      .stat-card .pct {
+        font-family: "Saira Extra Condensed", sans-serif;
+        font-size: 2.6rem;
+        font-weight: 800;
+        color: var(--heading);
+        line-height: 1;
+      }
+
+      .stat-card .nm {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        font-weight: 600;
+        color: var(--muted);
+        margin-top: 0.4rem;
+      }
+
+      .skill-groups {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .skill-group {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.25rem 1.4rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .skill-group:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(33, 150, 243, 0.12);
+      }
+
+      .skill-group h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
         color: var(--primary);
       }
-    }
 
-    /* ============ SECTIONS ============ */
-    section.resume-section {
-      padding: 4rem 1.25rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    @media (min-width: 992px) {
-      section.resume-section {
-        padding: 5rem 3.5rem;
-      }
-    }
-
-    .section-inner {
-      max-width: 70rem;
-      margin: 0 auto;
-    }
-
-    .section-head {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .section-head h2 {
-      font-size: clamp(2.4rem, 5vw, 3.5rem);
-    }
-
-    .heading-border {
-      width: 60px;
-      height: 6px;
-      background: var(--primary);
-      margin: .75rem auto 0;
-      border-radius: 4px;
-    }
-
-    /* fade-in on scroll */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: none;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
       }
 
-      .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
+      .badge {
+        display: inline-block;
+        padding: 0.3rem 0.7rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--heading);
+        background: var(--primary-soft);
+        border: 1px solid rgba(33, 150, 243, 0.25);
+        border-radius: 999px;
+        transition: all 0.25s ease;
       }
-    }
 
-    /* ============ ABOUT / HERO ============ */
-    #about {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background:
-        radial-gradient(circle at 88% 12%, rgba(33, 150, 243, .12) 0%, transparent 42%),
-        radial-gradient(circle at 8% 92%, rgba(33, 150, 243, .1) 0%, transparent 40%);
-    }
-
-    @media (min-width: 992px) {
-      #about {
-        min-height: 100vh;
+      .badge:hover {
+        background: var(--primary);
+        color: var(--white);
       }
-    }
 
-    #about .hero-inner {
-      max-width: 720px;
-    }
+      /* ============ EDUCATION (alternating timeline) ============ */
+      #education {
+        background: var(--white);
+      }
 
-    #about h1 {
-      font-size: clamp(3.2rem, 9vw, 6rem);
-      line-height: .95;
-    }
+      .alt-timeline {
+        position: relative;
+        max-width: 920px;
+        margin: 0 auto;
+      }
 
-    .subheading {
-      text-transform: uppercase;
-      font-weight: 500;
-      font-family: 'Saira Extra Condensed', sans-serif;
-      font-size: 1.5rem;
-      color: var(--heading);
-      letter-spacing: .06em;
-      margin: .75rem 0 2rem;
-    }
-
-    #about p.lead {
-      margin-bottom: 1.25rem;
-    }
-
-    .btn {
-      display: inline-block;
-      border: 1px solid var(--primary);
-      padding: .7rem 1.5rem;
-      font-size: .85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      transition: all .25s ease;
-      cursor: pointer;
-      background: transparent;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    .btn-solid {
-      background: var(--primary);
-      color: var(--white);
-    }
-
-    .btn-solid:hover {
-      background: transparent;
-      color: var(--primary);
-    }
-
-    .btn-outline {
-      color: var(--primary);
-    }
-
-    .btn-outline:hover {
-      background: var(--primary);
-      color: var(--white);
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .85rem;
-      margin: 1.5rem 0;
-    }
-
-    .social-row a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--primary);
-      color: var(--white);
-      font-size: 1.1rem;
-      margin-right: .6rem;
-      transition: all .25s ease;
-    }
-
-    .social-row a:hover {
-      background: var(--primary-dark);
-      color: var(--white);
-      transform: translateY(-3px);
-    }
-
-    /* ============ EXPERIENCE ============ */
-    #experience {
-      background: var(--bg-alt);
-    }
-
-    .exp-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .exp-card {
-      position: relative;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--accent, var(--primary));
-      border-radius: 8px;
-      padding: 1.5rem 1.75rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
-      transition: transform .25s ease, box-shadow .25s ease;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .exp-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 30px rgba(33, 150, 243, .12);
-    }
-
-    .exp-top {
-      display: flex;
-      align-items: center;
-      gap: .9rem;
-      margin-bottom: .9rem;
-    }
-
-    .exp-icon {
-      flex-shrink: 0;
-      width: 46px;
-      height: 46px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-      background: color-mix(in srgb, var(--accent, var(--primary)) 12%, white);
-      color: var(--accent, var(--primary));
-      font-size: 1.3rem;
-    }
-
-    .exp-top h3 {
-      font-size: 1.5rem;
-    }
-
-    .exp-top .company {
-      display: block;
-      font-family: 'Saira Extra Condensed', sans-serif;
-      text-transform: uppercase;
-      font-size: 1.05rem;
-      font-weight: 500;
-      color: var(--muted);
-      letter-spacing: .04em;
-    }
-
-    .exp-card ul {
-      padding-left: 1.1rem;
-      margin-bottom: 1rem;
-    }
-
-    .exp-card ul li {
-      margin-bottom: .35rem;
-      font-size: .9rem;
-    }
-
-    .exp-date {
-      margin-top: auto;
-      text-align: right;
-      font-family: 'Saira Extra Condensed', sans-serif;
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 1.05rem;
-      letter-spacing: .03em;
-      color: var(--accent, var(--primary));
-    }
-
-    /* ============ PORTFOLIO ============ */
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .portfolio-item {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      background: var(--white);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
-      transition: transform .25s ease, box-shadow .25s ease;
-      display: block;
-    }
-
-    .portfolio-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 28px rgba(33, 150, 243, .15);
-    }
-
-    .portfolio-link {
-      position: relative;
-      display: block;
-    }
-
-    .portfolio-link img {
-      width: 100%;
-      height: 13rem;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-    }
-
-    .caption-port {
-      position: absolute;
-      inset: 0;
-      background: rgba(54, 160, 245, .78);
-      opacity: 0;
-      transition: opacity .4s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-size: 1.6rem;
-    }
-
-    .portfolio-link:hover .caption-port {
-      opacity: 1;
-    }
-
-    .portfolio-item .item-title {
-      padding: .85rem 1rem;
-      text-align: center;
-      font-size: .92rem;
-      font-weight: 600;
-      color: var(--heading);
-    }
-
-    .section-more {
-      text-align: center;
-      margin-top: 2.5rem;
-    }
-
-    /* ============ LINKS ============ */
-    .links-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-      gap: .6rem 1.25rem;
-    }
-
-    .links-grid a {
-      display: flex;
-      align-items: center;
-      gap: .6rem;
-      padding: .55rem .85rem;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      color: var(--body-text);
-      font-size: .88rem;
-      word-break: break-all;
-      transition: all .25s ease;
-      background: var(--white);
-    }
-
-    .links-grid a i {
-      color: var(--primary);
-      flex-shrink: 0;
-    }
-
-    .links-grid a:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-      background: var(--primary-soft);
-      transform: translateY(-2px);
-    }
-
-    /* ============ SKILLS ============ */
-    #skills {
-      background: var(--bg-alt);
-    }
-
-    .skill-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1.25rem;
-      margin-bottom: 3rem;
-    }
-
-    .stat-card {
-      text-align: center;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.75rem 1rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-
-    .stat-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 30px rgba(33, 150, 243, .14);
-    }
-
-    .stat-card .ic {
-      font-size: 2.4rem;
-      color: var(--primary);
-      margin-bottom: .6rem;
-    }
-
-    .stat-card .pct {
-      font-family: 'Saira Extra Condensed', sans-serif;
-      font-size: 2.6rem;
-      font-weight: 800;
-      color: var(--heading);
-      line-height: 1;
-    }
-
-    .stat-card .nm {
-      text-transform: uppercase;
-      font-size: .8rem;
-      letter-spacing: .06em;
-      font-weight: 600;
-      color: var(--muted);
-      margin-top: .4rem;
-    }
-
-    .skill-groups {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .skill-group {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.25rem 1.4rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-
-    .skill-group:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(33, 150, 243, .12);
-    }
-
-    .skill-group h3 {
-      font-size: 1.3rem;
-      margin-bottom: .75rem;
-      color: var(--primary);
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .45rem;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: .3rem .7rem;
-      font-size: .78rem;
-      font-weight: 600;
-      color: var(--heading);
-      background: var(--primary-soft);
-      border: 1px solid rgba(33, 150, 243, .25);
-      border-radius: 999px;
-      transition: all .25s ease;
-    }
-
-    .badge:hover {
-      background: var(--primary);
-      color: var(--white);
-    }
-
-    /* ============ EDUCATION (alternating timeline) ============ */
-    #education {
-      background: var(--white);
-    }
-
-    .alt-timeline {
-      position: relative;
-      max-width: 920px;
-      margin: 0 auto;
-    }
-
-    .alt-timeline::before {
-      content: "";
-      position: absolute;
-      left: 18px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--border);
-    }
-
-    .alt-item {
-      position: relative;
-      padding-left: 52px;
-      margin-bottom: 2rem;
-    }
-
-    .alt-item::before {
-      content: "";
-      position: absolute;
-      left: 9px;
-      top: 18px;
-      width: 18px;
-      height: 18px;
-      background: var(--white);
-      border: 3px solid var(--primary);
-      transform: rotate(45deg);
-    }
-
-    .edu-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem 1.75rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-
-    .edu-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 26px rgba(33, 150, 243, .12);
-    }
-
-    .edu-card .edu-date {
-      color: var(--primary);
-      font-family: 'Saira Extra Condensed', sans-serif;
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 1.05rem;
-      letter-spacing: .03em;
-    }
-
-    .edu-card h3 {
-      font-size: 1.45rem;
-      margin: .25rem 0;
-    }
-
-    .edu-card .school {
-      font-weight: 600;
-      color: var(--heading);
-    }
-
-    @media (min-width: 768px) {
       .alt-timeline::before {
-        left: 50%;
-        transform: translateX(-50%);
+        content: "";
+        position: absolute;
+        left: 18px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--border);
       }
 
       .alt-item {
-        width: 50%;
-        padding-left: 0;
-        margin-bottom: 1rem;
-      }
-
-      .alt-item:nth-child(odd) {
-        left: 0;
-        padding-right: 42px;
-        text-align: right;
-      }
-
-      .alt-item:nth-child(even) {
-        left: 50%;
-        padding-left: 42px;
-        text-align: left;
+        position: relative;
+        padding-left: 52px;
+        margin-bottom: 2rem;
       }
 
       .alt-item::before {
-        top: 22px;
+        content: "";
+        position: absolute;
+        left: 9px;
+        top: 18px;
+        width: 18px;
+        height: 18px;
+        background: var(--white);
+        border: 3px solid var(--primary);
+        transform: rotate(45deg);
       }
 
-      .alt-item:nth-child(odd)::before {
-        left: auto;
-        right: -9px;
+      .edu-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.5rem 1.75rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
       }
 
-      .alt-item:nth-child(even)::before {
-        left: -9px;
+      .edu-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 26px rgba(33, 150, 243, 0.12);
       }
-    }
 
-    /* ============ CONTACT ============ */
-    .contact-wrap {
-      display: grid;
-      gap: 2.5rem;
-    }
+      .edu-card .edu-date {
+        color: var(--primary);
+        font-family: "Saira Extra Condensed", sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.05rem;
+        letter-spacing: 0.03em;
+      }
 
-    @media (min-width: 768px) {
+      .edu-card h3 {
+        font-size: 1.45rem;
+        margin: 0.25rem 0;
+      }
+
+      .edu-card .school {
+        font-weight: 600;
+        color: var(--heading);
+      }
+
+      @media (min-width: 768px) {
+        .alt-timeline::before {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .alt-item {
+          width: 50%;
+          padding-left: 0;
+          margin-bottom: 1rem;
+        }
+
+        .alt-item:nth-child(odd) {
+          left: 0;
+          padding-right: 42px;
+          text-align: right;
+        }
+
+        .alt-item:nth-child(even) {
+          left: 50%;
+          padding-left: 42px;
+          text-align: left;
+        }
+
+        .alt-item::before {
+          top: 22px;
+        }
+
+        .alt-item:nth-child(odd)::before {
+          left: auto;
+          right: -9px;
+        }
+
+        .alt-item:nth-child(even)::before {
+          left: -9px;
+        }
+      }
+
+      /* ============ CONTACT ============ */
       .contact-wrap {
-        grid-template-columns: 1.2fr 1fr;
+        display: grid;
+        gap: 2.5rem;
       }
-    }
 
-    .contact-detail {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1.4rem;
-    }
+      @media (min-width: 768px) {
+        .contact-wrap {
+          grid-template-columns: 1.2fr 1fr;
+        }
+      }
 
-    .contact-detail .icon {
-      width: 46px;
-      height: 46px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: var(--primary-soft);
-      color: var(--primary);
-      font-size: 1.15rem;
-    }
+      .contact-detail {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.4rem;
+      }
 
-    .contact-detail h4 {
-      font-size: 1.1rem;
-      letter-spacing: .05em;
-    }
+      .contact-detail .icon {
+        width: 46px;
+        height: 46px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: var(--primary-soft);
+        color: var(--primary);
+        font-size: 1.15rem;
+      }
 
-    .contact-brand {
-      max-width: 200px;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
+      .contact-detail h4 {
+        font-size: 1.1rem;
+        letter-spacing: 0.05em;
+      }
 
-    .contact-form .field {
-      margin-bottom: 1.1rem;
-    }
+      .contact-brand {
+        max-width: 200px;
+        border-radius: 8px;
+        margin-top: 1rem;
+      }
 
-    .contact-form label {
-      display: block;
-      font-size: .8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      color: var(--heading);
-      margin-bottom: .35rem;
-    }
+      .contact-form .field {
+        margin-bottom: 1.1rem;
+      }
 
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: .7rem .9rem;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-family: 'Open Sans', sans-serif;
-      font-size: .92rem;
-      color: var(--heading);
-      transition: border-color .25s ease, box-shadow .25s ease;
-    }
+      .contact-form label {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--heading);
+        margin-bottom: 0.35rem;
+      }
 
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px var(--primary-soft);
-    }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 0.7rem 0.9rem;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.92rem;
+        color: var(--heading);
+        transition:
+          border-color 0.25s ease,
+          box-shadow 0.25s ease;
+      }
 
-    /* ============ FOOTER ============ */
-    footer {
-      background: var(--heading);
-      color: rgba(255, 255, 255, .7);
-      text-align: center;
-      padding: 2.5rem 1rem;
-    }
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px var(--primary-soft);
+      }
 
-    footer .social-row {
-      margin-bottom: 1rem;
-    }
+      /* ============ FOOTER ============ */
+      footer {
+        background: var(--heading);
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        padding: 2.5rem 1rem;
+      }
 
-    footer .social-row a {
-      background: rgba(255, 255, 255, .12);
-      color: var(--white);
-      margin: 0 .35rem;
-    }
+      footer .social-row {
+        margin-bottom: 1rem;
+      }
 
-    footer .social-row a:hover {
-      background: var(--primary);
-    }
+      footer .social-row a {
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--white);
+        margin: 0 0.35rem;
+      }
 
-    footer p {
-      font-size: .85rem;
-    }
-  </style>
-</head>
+      footer .social-row a:hover {
+        background: var(--primary);
+      }
 
-<body id="page-top">
+      footer p {
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
 
-  <!-- Sidebar (desktop) / Top bar (mobile) -->
-  <nav id="sideNav" aria-label="Main navigation">
-    <a class="brand" href="#page-top">
-      <img class="img-profile" src="img/logo.jpeg" alt="Tarun Singh Gohil">
-      <span>Tarun Singh Gohil</span>
-    </a>
-
-    <div class="profile-meta">
-      <div class="designation">Frontend Developer | React.js | Python | AI Healthcare Solutions</div>
-      <p><i class="fa fa-map-marker"></i> <a href="https://maps.app.goo.gl/9YWaLD8CTRCgMsoV6" target="_blank"
-          rel="noopener">Jaipur, Rajasthan, India</a></p>
-      <p><i class="fa fa-envelope"></i> <a href="mailto:tarungohil80@gmail.com">tarungohil80@gmail.com</a></p>
-    </div>
-
-    <button id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
-      <i class="fa fa-bars"></i>
-    </button>
-
-    <ul id="navMenu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#links">Links</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <div class="sidebar-actions">
-      <div class="social-icons">
-        <a href="https://www.instagram.com/tarunsingh80/" target="_blank" rel="noopener" aria-label="Instagram"><i
-            class="fa fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/tarun-singh-gohil-98b592195/" target="_blank" rel="noopener"
-          aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/tarunsinghgohil" target="_blank" rel="noopener" aria-label="GitHub"><i
-            class="fa fa-github"></i></a>
-      </div>
-      <a class="btn-resume" download href="Tarun-Singh-Gohil-Resume-2025.pdf">
-        <i class="fa fa-download"></i> Download Resume
+  <body id="page-top">
+    <!-- Sidebar (desktop) / Top bar (mobile) -->
+    <nav id="sideNav" aria-label="Main navigation">
+      <a class="brand" href="#page-top">
+        <img class="img-profile" src="img/logo.jpeg" alt="Tarun Singh Gohil" />
+        <span>Tarun Singh Gohil</span>
       </a>
-    </div>
-  </nav>
 
-  <!-- ============ ABOUT / HERO ============ -->
-  <section class="resume-section" id="about">
-    <div class="hero-inner">
-      <h1>Tarun Singh <span class="text-primary">Gohil</span></h1>
-      <div class="subheading">Frontend Developer | React.js | Python | AI Healthcare Solutions</div>
+      <div class="profile-meta">
+        <div class="designation">
+          FRONTEND | BACKEND | UI/UX | MERN DEVELOPER
+        </div>
+        <p>
+          <i class="fa fa-map-marker"></i>
+          <a
+            href="https://maps.app.goo.gl/9YWaLD8CTRCgMsoV6"
+            target="_blank"
+            rel="noopener"
+            >Jaipur, Rajasthan, India</a
+          >
+        </p>
+        <p>
+          <i class="fa fa-envelope"></i>
+          <a href="mailto:tarungohil80@gmail.com">tarungohil80@gmail.com</a>
+        </p>
+      </div>
 
-      <p class="lead">Highly motivated and resourceful Front-End Developer / React.js / UI/UX with 5.5+ years of
-        experience in building
-        responsive, scalable, and user-friendly web applications. Experienced in building scalable, responsive, and high
-        performance web applications with modern UI/UX principles. Proficient in leveraging AI-powered tools such as
-        GitHub Copilot, ChatGPT, and Claude AI to accelerate development workflows. Strong understanding of frontend
-        architecture, backend integration, RESTful APIs, database design, and performance optimization. Understanding of
-        modern front-end / Backend / Database ecosystems, principles and performance optimization. </p>
+      <button
+        id="navToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navMenu"
+      >
+        <i class="fa fa-bars"></i>
+      </button>
 
-      <p class="lead">Passionate about collaborating with senior developers, I actively seek mentorship and continually
-        enhance my skills to stay at the forefront of industry trends. Dedicated to creating intuitive user interfaces
-        and optimizing user experiences, I am proficient in modern web technologies and best practices that drive
-        success. My goal is to continue expanding my expertise while making impactful contributions to innovative and
-        cutting-edge projects.</p>
+      <ul id="navMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-      <div class="cta-row">
-        <a class="btn btn-solid" download href="Tarun-Singh-Gohil-Resume-2025.pdf">
+      <div class="sidebar-actions">
+        <div class="social-icons">
+          <a
+            href="https://www.instagram.com/tarunsingh80/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/tarun-singh-gohil-98b592195/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/tarunsinghgohil"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><i class="fa fa-github"></i
+          ></a>
+        </div>
+        <a class="btn-resume" download href="Tarun-Singh-Gohil-Resume-2025.pdf">
           <i class="fa fa-download"></i> Download Resume
         </a>
-        <a class="btn btn-outline" href="#contact">
-          <i class="fa fa-paper-plane"></i> Contact Me
-        </a>
       </div>
+    </nav>
 
-      <div class="social-row">
-        <a href="https://www.instagram.com/tarunsingh80/" target="_blank" rel="noopener" aria-label="Instagram"><i
-            class="fa fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/tarun-singh-gohil-98b592195/" target="_blank" rel="noopener"
-          aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/tarunsinghgohil" target="_blank" rel="noopener" aria-label="GitHub"><i
-            class="fa fa-github"></i></a>
-      </div>
-    </div>
-  </section>
+    <!-- ============ ABOUT / HERO ============ -->
+    <section class="resume-section" id="about">
+      <div class="hero-inner">
+        <h1>Tarun Singh <span class="text-primary">Gohil</span></h1>
+        <div class="subheading">
+          FRONTEND | BACKEND | UI/UX | MERN DEVELOPER
+        </div>
+        <p class="Lead">
 
-  <!-- ============ EXPERIENCE ============ -->
-  <section class="resume-section" id="experience">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <h2>Experience</h2>
-        <div class="heading-border"></div>
-      </div>
+Highly motivated and resourceful Front-End Developer / React.js Developer / UI/UX Professional with 6+ years of experience building responsive, scalable, high-performance, user-friendly, and business-focused web applications. Strong expertise in modern UI/UX principles, frontend architecture, reusable component development, backend integration, RESTful APIs, database design, and performance optimization. </p>
+<br />
 
-      <div class="exp-grid">
-        <div class="exp-card reveal" style="--accent: #2196f3">
-          <div class="exp-top">
-            <span class="exp-icon"><i class="fa fa-code"></i></span>
-            <div>
-              <h3>Lead Developer</h3>
-              <span class="company">Growit.ai Technology Pvt. Ltd.</span>
-            </div>
-          </div>
-          <ul>
-            <li>Leading the development of AI-powered healthcare applications focused on improving hospital management,
-              patient workflows, and digital healthcare experiences.</li>
 
-            <li>Built scalable frontend applications using React.js, JavaScript, TypeScript, Tailwind CSS, Bootstrap,
-              and
-              modern UI architectures.</li>
+<p class="Lead">
+Proficient in React.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Bootstrap, Material UI, Chart.js, and modern component architecture. Experienced in translating Figma designs into polished, pixel-perfect production interfaces and developing enterprise dashboards, reporting interfaces, data-driven products, customer-facing applications, marketing pages, and complex business workflows.</p>
+<br />
+<p class="Lead">
+Strong background in developing enterprise applications, analytics interfaces, dashboards, KPI cards, data tables, charts, filters, reporting systems, role-based interfaces, and workflow-driven experiences. Hands-on experience with Chart.js and data visualization, focusing on clear presentation of business metrics, trends, KPIs, analytics, and reporting data for enterprise users.
+</p>
+<br />
+<p class="Lead">
+Proven track record of managing and optimizing multiple high-traffic websites and applications while delivering scalable enterprise modules across healthcare, retail, CRM, and business platforms. Experienced in improving dashboard usability, information hierarchy, workflow design, responsive behavior, interaction patterns, accessibility, visual consistency, application performance, and overall user experience.
+</p>
+<br />
+<p class="Lead">
+Strong exposure to HubSpot, Zendesk, and Mailchimp, with experience developing customer-facing interfaces, marketing pages, dashboards, reporting interfaces, and business workflows. Experienced in working with established design systems and collaborating with product managers, UI/UX designers, senior developers, backend engineers, QA teams, and business stakeholders within Agile/Scrum environments.
+</p>
+<br />
+<p class="Lead">
+Proficient in leveraging AI-powered development tools including Cursor, Claude, GitHub Copilot, and ChatGPT to accelerate development workflows and improve coding, debugging, refactoring, documentation, testing, code quality, productivity, and feature delivery.
+</p>
+<br />
+<p class="Lead">
+Passionate about continuously expanding technical and design expertise, seeking mentorship, staying current with modern industry trends and technologies, and applying frontend best practices to create intuitive user interfaces and optimized user experiences. Dedicated to making impactful contributions to innovative, scalable, cutting-edge, and business-driven products while continuing to grow expertise across frontend development, UI/UX, backend integration, databases, AI-powered development, and modern web technologies.
+</p>
 
-            <li>Developed and maintained backend services using Python, Node.js, Express.js, and REST APIs for secure
-              and
-              high-performance healthcare systems.</li>
-
-            <li>Integrated AI-driven features, real-time data handling, and intelligent workflows to improve automation
-              and operational efficiency.</li>
-
-            <li>Designed responsive, user-centric dashboards and healthcare interfaces with strong focus on usability,
-              accessibility, and performance optimization.</li>
-
-            <li>Worked with MongoDB and database optimization techniques to improve scalability, query performance, and
-              system reliability.</li>
-
-            <li>Collaborated closely with product managers, designers, and cross-functional teams to deliver end-to-end
-              healthcare solutions.</li>
-
-            <li>Implemented reusable component systems, state management solutions, and scalable project structures for
-              faster development cycles.</li>
-
-            <li>Optimized application performance using lazy loading, code splitting, caching strategies, and API
-              performance enhancements.</li>
-
-            <li>Managed deployment workflows, Git version control, debugging, production fixes, and continuous feature
-              improvements across multiple healthcare platforms.</li>
-          </ul>
-          <div class="exp-date">Sep 2025 – Present</div>
+        <div class="cta-row">
+          <a
+            class="btn btn-solid"
+            download
+            href="Tarun-Singh-Gohil-Resume-2025.pdf"
+          >
+            <i class="fa fa-download"></i> Download Resume
+          </a>
+          <a class="btn btn-outline" href="#contact">
+            <i class="fa fa-paper-plane"></i> Contact Me
+          </a>
         </div>
 
-        <div class="exp-card reveal" style="--accent: #f0ad4e">
+        <div class="social-row">
+          <a
+            href="https://www.instagram.com/tarunsingh80/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/tarun-singh-gohil-98b592195/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/tarunsinghgohil"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><i class="fa fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="resume-section" id="experience">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <h2>Experience</h2>
+          <div class="heading-border"></div>
+        </div>
+
+        <div class="exp-grid">
+          <div class="exp-card reveal" style="--accent: #2196f3">
+  <div class="exp-top">
+    <span class="exp-icon"><i class="fa fa-code"></i></span>
+    <div>
+      <h3>Lead Developer</h3>
+      <span class="company">Growit.ai Technology Pvt. Ltd.</span>
+    </div>
+  </div>
+
+  <ul>
+    <li>
+      Led frontend development for enterprise web applications and an
+      AI-powered, multi-tenant Hospital Information Management System (HIMS),
+      focusing on usability, scalability, responsive behavior, and business
+      workflow efficiency.
+    </li>
+
+    <li>
+      Spearheaded frontend development for an AI-powered, multi-tenant
+      Hospital Information Management System (HMS), significantly enhancing
+      healthcare operations, patient workflows, and digital healthcare
+      experiences.
+    </li>
+
+    <li>
+      Architected and implemented scalable React.js applications and reusable
+      UI components using React.js, TypeScript, Redux Toolkit, Tailwind CSS,
+      JavaScript, Bootstrap, and modern component architecture.
+    </li>
+
+    <li>
+      Built scalable frontend applications using React.js, JavaScript,
+      TypeScript, Tailwind CSS, Bootstrap, and modern UI architectures,
+      improving consistency, maintainability, and development efficiency
+      across multiple modules.
+    </li>
+
+    <li>
+      Designed and developed complex enterprise dashboards, analytics
+      interfaces, reporting screens, KPI cards, data tables, filters, charts,
+      and workflow-driven UI components.
+    </li>
+
+    <li>
+      Developed visualization-heavy interfaces for operational, financial,
+      clinical, and management reporting, focusing on clear data hierarchy,
+      chart readability, interaction behavior, and business-user
+      comprehension.
+    </li>
+
+    <li>
+      Worked with charting and visualization libraries including Chart.js and
+      Recharts to effectively present business metrics, trends, KPIs, and
+      analytical data.
+    </li>
+
+    <li>
+      Enhanced dashboard experiences by improving layout structure,
+      information hierarchy, responsive behavior, filtering, search,
+      pagination, table interactions, and workflow navigation.
+    </li>
+
+    <li>
+      Designed responsive, user-centric dashboards and healthcare interfaces
+      with a strong focus on usability, accessibility, responsive behavior,
+      and performance optimization.
+    </li>
+
+    <li>
+      Developed and delivered comprehensive enterprise healthcare modules
+      including Patient Management, OPD, IPD, Laboratory, Radiology, Pharmacy,
+      Billing, Inventory, Reporting, and NABH Compliance workflows, ensuring
+      streamlined patient and business experiences.
+    </li>
+
+    <li>
+      Integrated secure JWT authentication, role-based access control (RBAC),
+      protected workflows, dynamic navigation, and permission-based UI
+      behavior to enhance security, user management, and enterprise workflow
+      control.
+    </li>
+
+    <li>
+      Collaborated closely with backend engineers to connect hundreds of REST
+      API endpoints and Django REST backend services, transforming complex API
+      responses into user-friendly dashboards, business workflows, and
+      data-driven interfaces.
+    </li>
+
+    <li>
+      Integrated REST APIs and backend services to improve application
+      performance, maintainability, scalability, and real-time data handling
+      across enterprise healthcare systems.
+    </li>
+
+    <li>
+      Developed AI-powered features including OCR-based document processing,
+      intelligent workflows, real-time data handling, automation capabilities,
+      and analytics dashboards, significantly improving operational efficiency.
+    </li>
+
+    <li>
+      Integrated AI-driven features, real-time data handling, and intelligent
+      workflows to improve automation, healthcare operations, and overall
+      operational efficiency.
+    </li>
+
+    <li>
+      Enhanced frontend and application performance through advanced
+      techniques including code splitting, lazy loading, caching strategies,
+      reusable architecture, API optimization, efficient rendering, and
+      performance-focused development.
+    </li>
+
+    <li>
+      Developed and maintained backend services using Python, Node.js,
+      Express.js, and REST APIs for secure and high-performance healthcare
+      systems.
+    </li>
+
+    <li>
+      Worked with MongoDB and database optimization techniques to improve
+      scalability, query performance, and overall system reliability.
+    </li>
+
+    <li>
+      Developed and maintained enterprise healthcare applications with
+      scalable architecture, reusable components, state management solutions,
+      and structured project organization for faster development cycles.
+    </li>
+
+    <li>
+      Implemented reusable component systems, state management solutions, and
+      scalable project structures to improve development efficiency,
+      maintainability, consistency, and scalability across multiple
+      applications.
+    </li>
+
+    <li>
+      Contributed to key enterprise projects including Zonov Hospital
+      Management System, RetailX ERP, and Charge My EV, delivering scalable
+      interfaces, business workflows, and responsive application experiences.
+    </li>
+
+    <li>
+      Key project contribution — Zonov Hospital Management System: Developed
+      enterprise healthcare modules, integrated AI-powered features, implemented
+      complex healthcare workflows, and optimized frontend performance for a
+      scalable multi-tenant application.
+    </li>
+
+    <li>
+      Key project contribution — RetailX ERP: Drove the development of POS
+      Billing, Inventory Management, and Reporting modules, focusing on
+      responsive interfaces, scalable architecture, data-driven workflows,
+      and business-user experience.
+    </li>
+
+    <li>
+      Key project contribution — Charge My EV: Developed features for an EV
+      charging platform using React Native, enhancing mobile interfaces,
+      responsive experiences, and real-time communication capabilities.
+    </li>
+
+    <li>
+      Collaborated effectively with product managers, UI/UX designers, backend
+      engineers, QA engineers, business stakeholders, and cross-functional
+      teams to deliver high-quality enterprise solutions following Agile and
+      Scrum methodologies.
+    </li>
+
+    <li>
+      Worked closely with cross-functional teams to understand business
+      requirements, translate them into scalable frontend solutions, and
+      deliver comprehensive features aligned with product and user needs.
+    </li>
+
+    <li>
+      Contributed to deployment workflows, Git-based version control, code
+      reviews, debugging, production issue resolution, rapid issue fixing,
+      and continuous platform improvements and feature enhancements.
+    </li>
+
+    <li>
+      Managed deployment workflows, version control management, debugging,
+      production fixes, and continuous feature improvements across multiple
+      healthcare and enterprise platforms.
+    </li>
+  </ul>
+
+  <div class="exp-date">Aug 2025 – Present</div>
+</div>
+
+          <div class="exp-card reveal" style="--accent: #f0ad4e">
           <div class="exp-top">
             <span class="exp-icon"><i class="fa fa-laptop"></i></span>
             <div>
@@ -1088,381 +1335,772 @@
               <span class="company">Formidium India Pvt. Ltd., Jaipur</span>
             </div>
           </div>
-          <ul>
-            <li>Built and maintained scalable React.js applications with reusable and high-performance UI components.
-            </li>
-            <li>Converted Figma designs into pixel-perfect, responsive interfaces using Tailwind CSS, Bootstrap, HTML,
-              CSS, and JavaScript.</li>
-            <li>Integrated REST APIs and third-party services to deliver dynamic, real-time, and data-driven user
-              experiences.</li>
-            <li>Managed and optimized 12+ high-traffic websites and production applications, improving performance,
-              scalability, and reliability.</li>
-            <li>Enhanced application speed and efficiency through code splitting, lazy loading, API optimization, and
-              database query improvements.</li>
-            <li>Designed and developed modern product pages and dashboards, improving user engagement and overall UX.
-            </li>
-            <li>Collaborated with cross-functional teams including designers, backend developers, and product managers
-              to deliver end-to-end solutions.</li>
-            <li>Contributed to feature development, UI enhancements, deployment processes, and performance optimization
-              across multiple projects.</li>
-          </ul>
-          <div class="exp-date">Feb 2022 – Jul 2025</div>
-        </div>
 
-        <div class="exp-card reveal" style="--accent: #5cb85c">
-          <div class="exp-top">
-            <span class="exp-icon"><i class="fa fa-paint-brush"></i></span>
-            <div>
-              <h3>Web Designer</h3>
-              <span class="company">Uplogiks, Jaipur</span>
-            </div>
-          </div>
-          <ul>
-            <li>Developed and maintained 50+ responsive WordPress websites with a strong focus on performance,
-              accessibility, and user experience.
-            </li>
-            <li>Converted PSD designs into pixel-perfect, SEO-friendly HTML/CSS layouts aligned with modern web
-              standards.
-            </li>
-            <li>Customized and extended WordPress themes and plugins to deliver enhanced functionality and
-              client-specific features.
-            </li>
-            <li>Designed and implemented mobile-first, responsive UIs using Elementor, Gorilla Forms, and custom
-              form integrations.
-            </li>
-            <li>Ensured cross-browser and cross-device compatibility, maintaining a consistent look and feel across
-              all platforms.
-            </li>
-            <li>Created and maintained reusable components and code libraries to streamline future development
-              and ensure scalability.
-            </li>
-          </ul>
-          <div class="exp-date">Nov 2020 – Feb 2022</div>
-        </div>
+  <ul>
+    <li>
+      Developed and maintained scalable enterprise React.js applications
+      using reusable, modular, and high-performance component architecture.
+    </li>
 
-        <div class="exp-card reveal" style="--accent: #2196f3">
-          <div class="exp-top">
-            <span class="exp-icon"><i class="fa fa-pencil"></i></span>
-            <div>
-              <h3>Trainee, Web Development</h3>
-              <span class="company">Uplogiks, Jaipur</span>
+    <li>
+      Built responsive and pixel-perfect user interfaces by transforming
+      Figma designs into production-ready applications using React.js,
+      TypeScript, Tailwind CSS, Material UI, Bootstrap, HTML5, and CSS3.
+    </li>
+
+    <li>
+      Designed and maintained reusable UI components with efficient state
+      management using Redux and Context API, improving frontend
+      architecture, consistency, and maintainability.
+    </li>
+
+    <li>
+      Developed enterprise dashboards, reporting interfaces, customer-facing
+      applications, product pages, and business workflows using React.js,
+      JavaScript, TypeScript, and modern UI frameworks.
+    </li>
+
+    <li>
+      Built interactive data-driven dashboards featuring KPIs, charts,
+      tables, filters, search, pagination, cards, and business analytics
+      using Chart.js and modern data visualization techniques.
+    </li>
+
+    <li>
+      Enhanced existing dashboards and interfaces by improving information
+      hierarchy, spacing, visual hierarchy, interaction patterns, responsive
+      layouts, and overall data presentation.
+    </li>
+
+    <li>
+      Integrated custom and third-party REST APIs to build dynamic,
+      real-time, and data-driven web applications and customer-facing
+      experiences.
+    </li>
+
+    <li>
+      Managed and optimized 12+ high-traffic production websites and
+      applications, focusing on performance, scalability, reliability,
+      usability, and long-term maintainability.
+    </li>
+
+    <li>
+      Improved application performance through code splitting, lazy loading,
+      API optimization, caching strategies, optimized rendering, and
+      database query improvements.
+    </li>
+
+    <li>
+      Collaborated with backend developers to optimize API response times,
+      database queries, and data-loading workflows for improved application
+      efficiency and user experience.
+    </li>
+
+    <li>
+      Worked extensively with HubSpot CRM and Zendesk from 2022–2025,
+      supporting customer-facing interfaces, marketing pages, business
+      workflows, and CRM-related web experiences.
+    </li>
+
+    <li>
+      Contributed to Pharma applications by developing enterprise interfaces,
+      reporting workflows, dashboards, data-driven experiences, and
+      business-user applications.
+    </li>
+
+    <li>
+      Ensured responsive design, mobile-first layouts, cross-browser
+      compatibility, accessibility, and consistent user experiences across
+      desktop, tablet, and mobile devices.
+    </li>
+
+    <li>
+      Proposed and implemented UI/UX improvements based on modern design
+      principles, improving visual consistency, usability, interaction
+      patterns, and overall customer experience.
+    </li>
+
+    <li>
+      Collaborated closely with UI/UX designers, backend developers, QA
+      engineers, product managers, and business stakeholders in an
+      Agile/Scrum environment to deliver end-to-end features.
+    </li>
+
+    <li>
+      Leveraged AI-powered development tools including Cursor, GitHub
+      Copilot, Claude, and ChatGPT to accelerate development, debugging,
+      refactoring, code optimization, and feature delivery.
+    </li>
+
+    <li>
+      Participated in Git-based version control, code reviews, debugging,
+      deployment, production support, and continuous application
+      enhancements across multiple projects.
+    </li>
+
+    <li>
+      Delivered clean, maintainable, reusable, and well-documented code
+      following frontend best practices, coding standards, and scalable
+      development principles.
+    </li>
+  </ul>
+
+  <div class="exp-date">Feb 2022 – Jul 2025</div>
+</div>
+
+          <div class="exp-card reveal" style="--accent: #5cb85c">
+            <div class="exp-top">
+              <span class="exp-icon"><i class="fa fa-paint-brush"></i></span>
+              <div>
+                <h3>Web Designer</h3>
+                <span class="company">Uplogiks, Jaipur</span>
+              </div>
             </div>
+            <ul>
+              <li>Developed and maintained 50+ responsive WordPress and customer-facing websites, focusing on 
+usability, visual consistency, responsive behaviours, accessibility, and performance. 
+              </li>
+              <li>Converted Figma and PSD designs into pixel-perfect production interfaces using HTML5, CSS3, 
+JavaScript, Bootstrap, and WordPress. 
+              </li>
+              <li>Developed responsive, mobile-first layouts and reusable frontend components for multiple client 
+projects.
+              </li>
+              <li>Customized WordPress themes and plugins and developed interfaces using Elementor. 
+              </li>
+              <li>Worked with CRM Mailchimp from for marketing/customer communication workflows and campaign
+related web experiences.
+              </li>
+              <li>
+                Created and maintained reusable components and code libraries to
+                streamline future development and ensure scalability.
+              </li>
+              <li>Collaborated with designers and clients to refine layouts, user journeys, content presentation, and 
+overall website usability. </li>
+            </ul>
+            <div class="exp-date">Nov 2020 – Feb 2022</div>
           </div>
-          <ul>
-            <li>Gained hands-on experience with modern web development tools, design workflows, and
-            methodologies across multiple projects.
-            </li>
-            <li>Designed visually engaging web interfaces, graphics, and mockups using Adobe XD, ensuring
-            alignment with branding and project goals.
-            </li>
-            <li>Contributed to UI/UX design initiatives, emphasizing usability, visual consistency, and modern
-            design principles to enhance user engagement.
-            </li>
-          </ul>
-          <div class="exp-date">May 2019 – Jul 2019</div>
+
+          <div class="exp-card reveal" style="--accent: #2196f3">
+            <div class="exp-top">
+              <span class="exp-icon"><i class="fa fa-pencil"></i></span>
+              <div>
+                <h3>Trainee, Web Development</h3>
+                <span class="company">Uplogiks, Jaipur</span>
+              </div>
+            </div>
+            <ul>
+              <li>
+                Gained hands-on experience with modern web development tools,
+                design workflows, and methodologies across multiple projects.
+              <li>
+                Designed visually engaging web interfaces, graphics, and mockups
+                using Adobe XD, ensuring alignment with branding and project
+                goals.
+              </li>
+              <li>
+                Contributed to UI/UX design initiatives, emphasizing usability,
+                visual consistency, and modern design principles to enhance user
+                engagement.
+              </li>
+            </ul>
+            <div class="exp-date">May 2019 – Jul 2019</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ PORTFOLIO ============ -->
-  <section class="resume-section" id="portfolio">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <h2>Portfolio</h2>
-        <div class="heading-border"></div>
-      </div>
-
-      <div class="portfolio-grid">
-        <div class="portfolio-item reveal">
-          <a class="portfolio-link" href="https://formidium.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-formidium-2025-08-01-07_41_24.png" alt="formidium.com"
-              loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="item-title">formidium.com</div>
+    <!-- ============ PORTFOLIO ============ -->
+    <section class="resume-section" id="portfolio">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <h2>Portfolio</h2>
+          <div class="heading-border"></div>
         </div>
 
-        <div class="portfolio-item reveal">
-          <a class="portfolio-link" href="https://cryptofundtax.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-cryptofundtax-2025-08-01-07_44_45.png" alt="cryptofundtax.com"
-              loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="item-title">cryptofundtax.com</div>
-        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item reveal">
+            <a
+              class="portfolio-link"
+              href="https://zonov.ai/dashboard"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="img/screenshot/screencapture-zonov-ai-dashboard-2026-08-11-10_37_44.png"
+                alt="https://zonov.ai/dashboard"
+                loading="lazy"
+              />
+              <span class="caption-port"
+                ><i class="fa fa-external-link"></i
+              ></span>
+            </a>
+            <div class="item-title">zonov.ai</div>
+          </div>
 
-        <div class="portfolio-item reveal">
-          <a class="portfolio-link" href="https://www.praxonomy.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-praxonomy-2025-08-01-07_46_47.png" alt="praxonomy.com"
-              loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="item-title">praxonomy.com</div>
-        </div>
+          <div class="portfolio-item reveal">
+            <a
+              class="portfolio-link"
+              href="https://formidium.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="img/screenshot/screencapture-formidium-2025-08-01-07_41_24.png"
+                alt="formidium.com"
+                loading="lazy"
+              />
+              <span class="caption-port"
+                ><i class="fa fa-external-link"></i
+              ></span>
+            </a>
+            <div class="item-title">formidium.com</div>
+          </div>
 
-        <div class="portfolio-item reveal">
+          <div class="portfolio-item reveal">
+            <a
+              class="portfolio-link"
+              href="https://cryptofundtax.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="img/screenshot/screencapture-cryptofundtax-2025-08-01-07_44_45.png"
+                alt="cryptofundtax.com"
+                loading="lazy"
+              />
+              <span class="caption-port"
+                ><i class="fa fa-external-link"></i
+              ></span>
+            </a>
+            <div class="item-title">cryptofundtax.com</div>
+          </div>
+
+          <div class="portfolio-item reveal">
+            <a
+              class="portfolio-link"
+              href="https://www.praxonomy.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="img/screenshot/screencapture-praxonomy-2025-08-01-07_46_47.png"
+                alt="praxonomy.com"
+                loading="lazy"
+              />
+              <span class="caption-port"
+                ><i class="fa fa-external-link"></i
+              ></span>
+            </a>
+            <div class="item-title">praxonomy.com</div>
+          </div>
+
+          <!-- <div class="portfolio-item reveal">
           <a class="portfolio-link" href="https://razorstate.com/" target="_blank" rel="noopener">
             <img src="img/screenshot/screencapture-razorstate-2025-08-01-07_48_35.png" alt="razorstate.com"
               loading="lazy">
             <span class="caption-port"><i class="fa fa-external-link"></i></span>
           </a>
           <div class="item-title">razorstate.com</div>
+        </div> -->
+        </div>
+
+        <div class="section-more reveal">
+          <a class="btn btn-solid" href="portfolio.html">
+            View Full Portfolio <i class="fa fa-arrow-right"></i>
+          </a>
         </div>
       </div>
+    </section>
 
-      <div class="section-more reveal">
-        <a class="btn btn-solid" href="portfolio.html">
-          View Full Portfolio <i class="fa fa-arrow-right"></i>
-        </a>
+    <!-- ============ LINKS ============ -->
+    <section class="resume-section" id="links">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <h2>Links</h2>
+          <div class="heading-border"></div>
+        </div>
+
+        <div class="links-grid reveal">
+          <a href="https://zonov.ai/home" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>zonov.ai</a
+          >
+          <a href="https://formidium.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>formidium.com</a
+          >
+          <a href="https://altsmarketplace.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>altsmarketplace.com</a
+          >
+          <a href="https://commonsubdoc.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>commonsubdoc.com</a
+          >
+          <a href="https://cryptobackoffice.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>cryptobackoffice.com</a
+          >
+          <a href="https://cryptotax360.io/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>cryptotax360.io</a
+          >
+          <a
+            href="https://centroscolasticocarducci.it/"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa fa-link"></i>centroscolasticocarducci.it</a
+          >
+          <a href="https://kiwanja.net/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>kiwanja.net</a
+          >
+          <a
+            href="https://tarunsinghgohil.github.io/portfolio/"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa fa-link"></i>tarunsinghgohil.github.io/portfolio/</a
+          >
+          <a
+            href="https://tarunsinghgohil.github.io/portfolio/AI-Startup.html"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa fa-link"></i
+            >tarunsinghgohil.github.io/portfolio/AI-Startup</a
+          >
+          <a
+            href="https://tarunsinghgohil.github.io/portfolio/DealFlow.html"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa fa-link"></i
+            >tarunsinghgohil.github.io/portfolio/DealFlow</a
+          >
+          <a href="TLV stem/index.html" target="_blank"
+            ><i class="fa fa-link"></i>TLV stem</a
+          >
+          <a href="https://cryptofundtax.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>cryptofundtax.com</a
+          >
+          <a href="https://finalytic.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>finalytic.com</a
+          >
+          <a href="https://hedgefundtax.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>hedgefundtax.com</a
+          >
+          <a
+            href="https://ironbasecompliance.com/"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa fa-link"></i>ironbasecompliance.com</a
+          >
+          <a href="https://oneseamless.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>oneseamless.com</a
+          >
+          <a href="https://www.threealps.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>threealps.com</a
+          >
+          <a href="https://hsrevolution.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>hsrevolution.com</a
+          >
+          <a href="https://uplogiks.co.uk/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>uplogiks.co.uk</a
+          >
+          <a href="https://www.kmmonline.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>kmmonline.com</a
+          >
+          <a
+            href="https://www.alignmediationtraining.com/"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa fa-link"></i>alignmediationtraining.com</a
+          >
+          <a href="https://www.praxonomy.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>praxonomy.com</a
+          >
+          <a
+            href="https://privateequityfundtax.com/"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa fa-link"></i>privateequityfundtax.com</a
+          >
+          <a href="https://privatefundadmin.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>privatefundadmin.com</a
+          >
+          <a href="https://plexponent.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>plexponent.com</a
+          >
+          <a href="https://venetotech.it/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>venetotech.it</a
+          >
+          <a
+            href="https://commonconfidential.com/"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa fa-link"></i>commonconfidential.com</a
+          >
+          <a
+            href="https://felicitysteadman.co.uk/"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa fa-link"></i>felicitysteadman.co.uk</a
+          >
+          <a href="https://www.cycysbakes.co.uk/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>cycysbakes.co.uk</a
+          >
+          <a href="https://www.deeplogix.co.uk/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>deeplogix.co.uk</a
+          >
+          <a
+            href="https://www.alignmediation.co.uk/"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa fa-link"></i>alignmediation.co.uk</a
+          >
+          <a href="https://razorstate.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>razorstate.com</a
+          >
+          <a href="https://seamlessalts.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>seamlessalts.com</a
+          >
+          <a href="https://spvtax.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>spvtax.com</a
+          >
+          <a href="https://venturefundtax.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>venturefundtax.com</a
+          >
+          <a href="https://www.castlelake.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>castlelake.com</a
+          >
+          <a
+            href="https://www.ruislipblinds.co.uk/"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa fa-link"></i>ruislipblinds.co.uk</a
+          >
+          <a
+            href="http://staff.allstar-aircon.co.uk/"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa fa-link"></i>staff.allstar-aircon.co.uk</a
+          >
+          <a href="https://velocitymsc.com/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>velocitymsc.com</a
+          >
+          <a href="https://www.adetiq.co.uk/" target="_blank" rel="noopener"
+            ><i class="fa fa-link"></i>adetiq.co.uk</a
+          >
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ LINKS ============ -->
-  <section class="resume-section" id="links">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <h2>Links</h2>
-        <div class="heading-border"></div>
-      </div>
+    <!-- ============ SKILLS ============ -->
+    <!-- ============ SKILLS ============ -->
+    <section class="resume-section" id="skills">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <h2>Skills</h2>
+          <div class="heading-border"></div>
+        </div>
 
-      <div class="links-grid reveal">
-        <a href="https://formidium.com/" target="_blank" rel="noopener"><i class="fa fa-link"></i>formidium.com</a>
-        <a href="https://altsmarketplace.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>altsmarketplace.com</a>
-        <a href="https://commonsubdoc.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>commonsubdoc.com</a>
-        <a href="https://cryptobackoffice.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>cryptobackoffice.com</a>
-        <a href="https://cryptotax360.io/" target="_blank" rel="noopener"><i class="fa fa-link"></i>cryptotax360.io</a>
-        <a href="https://centroscolasticocarducci.it/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>centroscolasticocarducci.it</a>
-        <a href="https://kiwanja.net/" target="_blank" rel="noopener"><i class="fa fa-link"></i>kiwanja.net</a>
-        <a href="https://tarunsinghgohil.github.io/portfolio/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>tarunsinghgohil.github.io/portfolio/</a>
-        <a href="https://tarunsinghgohil.github.io/portfolio/AI-Startup.html" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>tarunsinghgohil.github.io/portfolio/AI-Startup</a>
-        <a href="https://tarunsinghgohil.github.io/portfolio/DealFlow.html" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>tarunsinghgohil.github.io/portfolio/DealFlow</a>
-        <a href="TLV stem/index.html" target="_blank"><i class="fa fa-link"></i>TLV stem</a>
-        <a href="https://cryptofundtax.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>cryptofundtax.com</a>
-        <a href="https://finalytic.com/" target="_blank" rel="noopener"><i class="fa fa-link"></i>finalytic.com</a>
-        <a href="https://hedgefundtax.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>hedgefundtax.com</a>
-        <a href="https://ironbasecompliance.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>ironbasecompliance.com</a>
-        <a href="https://oneseamless.com/" target="_blank" rel="noopener"><i class="fa fa-link"></i>oneseamless.com</a>
-        <a href="https://www.threealps.com/" target="_blank" rel="noopener"><i class="fa fa-link"></i>threealps.com</a>
-        <a href="https://hsrevolution.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>hsrevolution.com</a>
-        <a href="https://uplogiks.co.uk/" target="_blank" rel="noopener"><i class="fa fa-link"></i>uplogiks.co.uk</a>
-        <a href="https://www.kmmonline.com/" target="_blank" rel="noopener"><i class="fa fa-link"></i>kmmonline.com</a>
-        <a href="https://www.alignmediationtraining.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>alignmediationtraining.com</a>
-        <a href="https://www.praxonomy.com/" target="_blank" rel="noopener"><i class="fa fa-link"></i>praxonomy.com</a>
-        <a href="https://privateequityfundtax.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>privateequityfundtax.com</a>
-        <a href="https://privatefundadmin.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>privatefundadmin.com</a>
-        <a href="https://plexponent.com/" target="_blank" rel="noopener"><i class="fa fa-link"></i>plexponent.com</a>
-        <a href="https://venetotech.it/" target="_blank" rel="noopener"><i class="fa fa-link"></i>venetotech.it</a>
-        <a href="https://commonconfidential.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>commonconfidential.com</a>
-        <a href="https://felicitysteadman.co.uk/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>felicitysteadman.co.uk</a>
-        <a href="https://www.cycysbakes.co.uk/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>cycysbakes.co.uk</a>
-        <a href="https://www.deeplogix.co.uk/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>deeplogix.co.uk</a>
-        <a href="https://www.alignmediation.co.uk/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>alignmediation.co.uk</a>
-        <a href="https://razorstate.com/" target="_blank" rel="noopener"><i class="fa fa-link"></i>razorstate.com</a>
-        <a href="https://seamlessalts.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>seamlessalts.com</a>
-        <a href="https://spvtax.com/" target="_blank" rel="noopener"><i class="fa fa-link"></i>spvtax.com</a>
-        <a href="https://venturefundtax.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>venturefundtax.com</a>
-        <a href="https://www.castlelake.com/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>castlelake.com</a>
-        <a href="https://www.ruislipblinds.co.uk/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>ruislipblinds.co.uk</a>
-        <a href="http://staff.allstar-aircon.co.uk/" target="_blank" rel="noopener"><i
-            class="fa fa-link"></i>staff.allstar-aircon.co.uk</a>
-        <a href="https://velocitymsc.com/" target="_blank" rel="noopener"><i class="fa fa-link"></i>velocitymsc.com</a>
-        <a href="https://www.adetiq.co.uk/" target="_blank" rel="noopener"><i class="fa fa-link"></i>adetiq.co.uk</a>
-      </div>
-    </div>
-  </section>
+        <!-- ============ SKILL STATS ============ -->
+        <div class="skill-stats">
+          <div class="stat-card reveal">
+            <div class="ic"><i class="fa fa-html5"></i></div>
+            <div class="pct" data-target="95">0</div>
+            <div class="nm">React Development</div>
+          </div>
 
-  <!-- ============ SKILLS ============ -->
-  <section class="resume-section" id="skills">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <h2>Skills</h2>
-        <div class="heading-border"></div>
-      </div>
+          <div class="stat-card reveal">
+            <div class="ic"><i class="fa fa-css3"></i></div>
+            <div class="pct" data-target="95">0</div>
+            <div class="nm">JavaScript & TypeScript</div>
+          </div>
 
-      <div class="skill-stats">
-        <div class="stat-card reveal">
-          <div class="ic"><i class="fa fa-html5"></i></div>
-          <div class="pct" data-target="95">0</div>
-          <div class="nm">HTML5</div>
-        </div>
-        <div class="stat-card reveal">
-          <div class="ic"><i class="fa fa-css3"></i></div>
-          <div class="pct" data-target="92">0</div>
-          <div class="nm">CSS3</div>
-        </div>
-        <div class="stat-card reveal">
-          <div class="ic"><i class="fa fa-code"></i></div>
-          <div class="pct" data-target="90">0</div>
-          <div class="nm">JavaScript</div>
-        </div>
-        <div class="stat-card reveal">
-          <div class="ic"><i class="fa fa-cube"></i></div>
-          <div class="pct" data-target="88">0</div>
-          <div class="nm">React.js</div>
-        </div>
-        <div class="stat-card reveal">
-          <div class="ic"><i class="fa fa-paint-brush"></i></div>
-          <div class="pct" data-target="90">0</div>
-          <div class="nm">UI/UX Design</div>
-        </div>
-        <div class="stat-card reveal">
-          <div class="ic"><i class="fa fa-mobile"></i></div>
-          <div class="pct" data-target="95">0</div>
-          <div class="nm">Responsive</div>
-        </div>
-      </div>
+          <div class="stat-card reveal">
+            <div class="ic"><i class="fa fa-paint-brush"></i></div>
+            <div class="pct" data-target="92">0</div>
+            <div class="nm">UI/UX Engineering</div>
+          </div>
 
-      <div class="skill-groups">
-        <div class="skill-group reveal">
-          <h3>Markup &amp; Styling</h3>
-          <div class="badges">
-            <span class="badge">HTML5</span>
-            <span class="badge">CSS3</span>
-            <span class="badge">Sass</span>
-            <span class="badge">LESS</span>
-            <span class="badge">Responsive Design</span>
-            <span class="badge">Cross-Browser Compatibility</span>
+          <div class="stat-card reveal">
+            <div class="ic"><i class="fa fa-cube"></i></div>
+            <div class="pct" data-target="94">0</div>
+            <div class="nm">Enterprise Dashboards</div>
+          </div>
+
+          <div class="stat-card reveal">
+            <div class="ic"><i class="fa fa-code"></i></div>
+            <div class="pct" data-target="90">0</div>
+            <div class="nm">API & Integration</div>
+          </div>
+
+          <div class="stat-card reveal">
+            <div class="ic"><i class="fa fa-mobile"></i></div>
+            <div class="pct" data-target="94">0</div>
+            <div class="nm">Performance Optimization</div>
           </div>
         </div>
 
-        <div class="skill-group reveal">
-          <h3>JavaScript &amp; Frameworks</h3>
-          <div class="badges">
-            <span class="badge">JavaScript (ES6+)</span>
-            <span class="badge">TypeScript</span>
-            <span class="badge">jQuery</span>
-            <span class="badge">React.js</span>
-            <span class="badge">Redux</span>
-            <span class="badge">Bootstrap</span>
-            <span class="badge">Tailwind CSS</span>
-          </div>
-        </div>
+        <!-- ============ SKILL GROUPS ============ -->
+        <div class="skill-groups">
+          <!-- FRONTEND -->
+          <div class="skill-group reveal">
+            <h3>Frontend &amp; Web Development</h3>
 
-        <div class="skill-group reveal">
-          <h3>Backend &amp; Databases</h3>
-          <div class="badges">
-            <span class="badge">Node.js</span>
-            <span class="badge">Express.js</span>
-            <span class="badge">RESTful APIs</span>
-            <span class="badge">GraphQL</span>
-            <span class="badge">MongoDB</span>
-            <span class="badge">MySQL</span>
-            <span class="badge">PHP</span>
-            <span class="badge">Python</span>
+            <div class="badges">
+              <span class="badge">HTML5</span>
+              <span class="badge">CSS3</span>
+              <span class="badge">JavaScript (ES6+)</span>
+              <span class="badge">TypeScript</span>
+              <span class="badge">Next.js</span>
+              <span class="badge">Nest.js</span>
+              <span class="badge">React.js</span>
+              <span class="badge">Redux</span>
+              <span class="badge">Redux Toolkit</span>
+              <span class="badge">Context API</span>
+              <span class="badge">jQuery</span>
+              <span class="badge">Bootstrap</span>
+              <span class="badge">Tailwind CSS</span>
+              <span class="badge">Sass</span>
+              <span class="badge">LESS</span>
+              <span class="badge">Responsive Design</span>
+              <span class="badge">Mobile-First Development</span>
+              <span class="badge">Cross-Browser Compatibility</span>
+              <span class="badge">Reusable Components</span>
+              <span class="badge">Component-Based Architecture</span>
+              <span class="badge">Frontend Architecture</span>
+            </div>
           </div>
-        </div>
 
-        <div class="skill-group reveal">
-          <h3>Design Tools</h3>
-          <div class="badges">
-            <span class="badge">Figma</span>
-            <span class="badge">Adobe XD</span>
-            <span class="badge">UI/UX</span>
-            <span class="badge">Adobe Photoshop</span>
-            <span class="badge">Canva</span>
+          <!-- UI/UX -->
+          <div class="skill-group reveal">
+            <h3>UI/UX &amp; Design</h3>
+
+            <div class="badges">
+              <span class="badge">UI/UX Design</span>
+              <span class="badge">Figma</span>
+              <span class="badge">Adobe XD</span>
+              <span class="badge">Adobe Photoshop</span>
+              <span class="badge">Canva</span>
+              <span class="badge">Design Systems</span>
+              <span class="badge">Reusable UI Components</span>
+              <span class="badge">Interaction Design</span>
+              <span class="badge">User Workflow Design</span>
+              <span class="badge">Information Architecture</span>
+              <span class="badge">Visual Hierarchy</span>
+              <span class="badge">Accessibility</span>
+              <span class="badge">Pixel-Perfect UI Development</span>
+              <span class="badge">Responsive UI Design</span>
+              <span class="badge">Business User Interfaces</span>
+            </div>
           </div>
-        </div>
 
-        <div class="skill-group reveal">
-          <h3>CMS</h3>
-          <div class="badges">
-            <span class="badge">WordPress</span>
-            <span class="badge">Elementor</span>
+          <!-- DASHBOARDS -->
+          <div class="skill-group reveal">
+            <h3>Dashboards &amp; Data Visualization</h3>
+
+            <div class="badges">
+              <span class="badge">Chart.js</span>
+              <span class="badge">Recharts</span>
+              <span class="badge">Enterprise Dashboards</span>
+              <span class="badge">KPI Dashboards</span>
+              <span class="badge">Analytics Interfaces</span>
+              <span class="badge">Reporting Interfaces</span>
+              <span class="badge">Data Visualization</span>
+              <span class="badge">Interactive Charts</span>
+              <span class="badge">Data Tables</span>
+              <span class="badge">Filters &amp; Search</span>
+              <span class="badge">Pagination</span>
+              <span class="badge">Drill-Down Interactions</span>
+              <span class="badge">Business Metrics Visualization</span>
+              <span class="badge">Commercial Reporting</span>
+              <span class="badge">Enterprise Reporting</span>
+              <span class="badge">Dashboard Usability</span>
+            </div>
           </div>
-        </div>
 
-        <div class="skill-group reveal">
-          <h3>Workflow &amp; Tools</h3>
-          <div class="badges">
-            <span class="badge">Git</span>
-            <span class="badge">GitHub</span>
-            <span class="badge">GitHub Copilot</span>
-            <span class="badge">Chrome DevTools</span>
-            <span class="badge">Webpack</span>
-            <span class="badge">Babel</span>
-            <span class="badge">Jira</span>
-            <span class="badge">Agile &amp; Scrum</span>
+          <!-- ENTERPRISE -->
+          <div class="skill-group reveal">
+            <h3>Enterprise &amp; Business Platforms</h3>
+
+            <div class="badges">
+              <span class="badge">HubSpot CRM</span>
+              <span class="badge">Zendesk</span>
+              <span class="badge">Mailchimp</span>
+              <span class="badge">HIMS</span>
+              <span class="badge">Pharmaceutical Applications</span>
+              <span class="badge">ERP Applications</span>
+              <span class="badge">Enterprise Software</span>
+              <span class="badge">Role-Based Interfaces</span>
+              <span class="badge">Role-Based Access Control (RBAC)</span>
+              <span class="badge">Multi-Tenant Applications</span>
+              <span class="badge">Business Workflow Design</span>
+              <span class="badge">Customer-Facing Applications</span>
+            </div>
           </div>
-        </div>
 
-        <div class="skill-group reveal">
-          <h3>AI Coding</h3>
-          <div class="badges">
-            <span class="badge">ChatGPT</span>
-            <span class="badge">Claude AI</span>
-            <span class="badge">Perplexity</span>
-            <span class="badge">AI Tools</span>
+          <!-- BACKEND -->
+          <div class="skill-group reveal">
+            <h3>Backend &amp; APIs</h3>
+
+            <div class="badges">
+              <span class="badge">Node.js</span>
+              <span class="badge">Express.js</span>
+              <span class="badge">Python</span>
+              <span class="badge">Django</span>
+              <span class="badge">PHP</span>
+              <span class="badge">RESTful APIs</span>
+              <span class="badge">GraphQL</span>
+              <span class="badge">API Integration</span>
+              <span class="badge">JWT Authentication</span>
+              <span class="badge">Backend Integration</span>
+              <span class="badge">API Data Handling</span>
+            </div>
+          </div>
+
+          <!-- DATABASE / CLOUD -->
+          <div class="skill-group reveal">
+            <h3>Databases, Cloud &amp; DevOps</h3>
+
+            <div class="badges">
+              <span class="badge">MongoDB</span>
+              <span class="badge">MySQL</span>
+              <span class="badge">PostgreSQL</span>
+              <span class="badge">AWS</span>
+              <span class="badge">Google Cloud</span>
+              <span class="badge">Docker</span>
+            </div>
+          </div>
+
+          <!-- PERFORMANCE -->
+          <div class="skill-group reveal">
+            <h3>Performance &amp; Development</h3>
+
+            <div class="badges">
+              <span class="badge">Performance Optimization</span>
+              <span class="badge">Code Splitting</span>
+              <span class="badge">Lazy Loading</span>
+              <span class="badge">API Optimization</span>
+              <span class="badge">Caching</span>
+              <span class="badge">Asset Optimization</span>
+              <span class="badge">Frontend Architecture</span>
+              <span class="badge">Reusable Component Architecture</span>
+              <span class="badge">Debugging</span>
+              <span class="badge">Responsive Testing</span>
+              <span class="badge">Cross-Browser Testing</span>
+              <span class="badge">Chrome DevTools</span>
+            </div>
+          </div>
+
+          <!-- TESTING / BUILD -->
+          <div class="skill-group reveal">
+            <h3>Build, Testing &amp; Tooling</h3>
+
+            <div class="badges">
+              <span class="badge">Vite</span>
+              <span class="badge">Webpack</span>
+              <span class="badge">Babel</span>
+              <span class="badge">NPM</span>
+              <span class="badge">Yarn</span>
+              <span class="badge">Jest</span>
+              <span class="badge">React Testing Library</span>
+              <span class="badge">Vitest</span>
+              <span class="badge">Cypress</span>
+              <span class="badge">ESLint</span>
+            </div>
+          </div>
+
+          <!-- CMS -->
+          <div class="skill-group reveal">
+            <h3>CMS &amp; Web Platforms</h3>
+
+            <div class="badges">
+              <span class="badge">WordPress</span>
+              <span class="badge">WooCommerce</span>
+              <span class="badge">Shopify</span>
+              <span class="badge">HubSpot CMS Hub</span>
+              <span class="badge">Elementor</span>
+            </div>
+          </div>
+
+          <!-- WORKFLOW -->
+          <div class="skill-group reveal">
+            <h3>Version Control &amp; Methodologies</h3>
+
+            <div class="badges">
+              <span class="badge">Git</span>
+              <span class="badge">GitHub</span>
+              <span class="badge">Git-Based Workflows</span>
+              <span class="badge">Code Reviews</span>
+              <span class="badge">Jira</span>
+              <span class="badge">Agile &amp; Scrum</span>
+            </div>
+          </div>
+
+          <!-- AI -->
+          <div class="skill-group reveal">
+            <h3>AI-Powered Development</h3>
+
+            <div class="badges">
+              <span class="badge">Claude</span>
+              <span class="badge">Cursor</span>
+              <span class="badge">Antigravity</span>
+              <span class="badge">Windsurf</span>
+              <span class="badge">GitHub Copilot</span>
+              <span class="badge">Replit</span>
+              <span class="badge">Lovable</span>
+              <span class="badge">ChatGPT</span>
+              <span class="badge">Perplexity</span>
+              <span class="badge">Kimi K3</span>
+              <span class="badge">AI-Assisted Development</span>
+              <span class="badge">AI-Powered Debugging</span>
+              <span class="badge">AI-Assisted Refactoring</span>
+              <span class="badge">AI-Assisted Documentation</span>
+              <span class="badge">AI-Assisted Testing</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ EDUCATION ============ -->
-  <section class="resume-section" id="education">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <h2>Education &amp; Certification</h2>
-        <div class="heading-border"></div>
-      </div>
-
-      <div class="alt-timeline">
-        <div class="alt-item reveal">
-          <div class="edu-card">
-            <div class="edu-date">Aug 2016 – Aug 2020</div>
-            <h3>Bachelor's Degree (CSE)</h3>
-            <p class="school">Global Institute of Technology, Jaipur</p>
-            <p>Bachelor of Technology in Computer Science &amp; Engineering.</p>
-          </div>
+    <!-- ============ EDUCATION ============ -->
+    <section class="resume-section" id="education">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <h2>Education &amp; Certification</h2>
+          <div class="heading-border"></div>
         </div>
 
-        <div class="alt-item reveal">
-          <div class="edu-card">
-            <div class="edu-date">2016</div>
-            <h3>Senior Secondary (Science)</h3>
-            <p class="school">Anand Public School, Jaipur</p>
-            <p>Higher secondary education with a focus on the science stream.</p>
+        <div class="alt-timeline">
+          <div class="alt-item reveal">
+            <div class="edu-card">
+              <div class="edu-date">Aug 2016 – Aug 2020</div>
+              <h3>Bachelor's Degree (CSE)</h3>
+              <p class="school">Global Institute of Technology, Jaipur</p>
+              <p>
+                Bachelor of Technology in Computer Science &amp; Engineering.
+              </p>
+            </div>
+          </div>
+
+          <div class="alt-item reveal">
+            <div class="edu-card">
+              <div class="edu-date">2016</div>
+              <h3>Senior Secondary (Science)</h3>
+              <p class="school">Anand Public School, Jaipur</p>
+              <p>
+                Higher secondary education with a focus on the science stream.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section class="resume-section" id="contact">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <h2>Contact Me</h2>
-        <div class="heading-border"></div>
-      </div>
+    <!-- ============ CONTACT ============ -->
+    <section class="resume-section" id="contact">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <h2>Contact Me</h2>
+          <div class="heading-border"></div>
+        </div>
 
-      <div class="contact-wrap">
-        <form class="contact-form reveal" action="mailto:tarungohil80@gmail.com" method="post" enctype="text/plain">
+        <div class="contact-wrap">
+          <!-- <form class="contact-form reveal" action="mailto:tarungohil80@gmail.com" method="post" enctype="text/plain">
           <div class="field">
             <label for="cf-name">Name</label>
             <input id="cf-name" name="name" type="text" placeholder="Your name" required>
@@ -1481,129 +2119,200 @@
               required></textarea>
           </div>
           <button class="btn btn-solid" type="submit"><i class="fa fa-paper-plane"></i> Send Message</button>
-        </form>
+        </form> -->
 
-        <div class="reveal">
-          <div class="contact-detail">
-            <div class="icon"><i class="fa fa-map-marker"></i></div>
-            <div>
-              <h4>Location</h4>
-              <a href="https://maps.app.goo.gl/9YWaLD8CTRCgMsoV6" target="_blank" rel="noopener">Jaipur, Rajasthan,
-                India</a>
+          <div class="reveal">
+            <div class="contact-detail">
+              <div class="icon"><i class="fa fa-map-marker"></i></div>
+              <div>
+                <h4>Location</h4>
+                <a
+                  href="https://maps.app.goo.gl/9YWaLD8CTRCgMsoV6"
+                  target="_blank"
+                  rel="noopener"
+                  >Jaipur, Rajasthan, India</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="icon"><i class="fa fa-phone"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+918505015184">+91 8505015184</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="icon"><i class="fa fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:tarungohil80@gmail.com"
+                  >tarungohil80@gmail.com</a
+                >
+              </div>
             </div>
           </div>
-
-          <div class="contact-detail">
-            <div class="icon"><i class="fa fa-phone"></i></div>
-            <div>
-              <h4>Phone</h4>
-              <a href="tel:+918505015184">+91 8505015184</a>
+          <div>
+            <div class="social-row">
+              <a
+                href="https://www.instagram.com/tarunsingh80/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                ><i class="fa fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/tarun-singh-gohil/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+              <a
+                href="https://github.com/tarunsinghgohil"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                ><i class="fa fa-github"></i
+              ></a>
+              <a
+                href="https://vercel.com/tarunsinghgohils-projects"
+                target="_blank"
+                rel="noopener"
+                aria-label="Vercel"
+                ><i class="fa fa-link"></i
+              ></a>
             </div>
-          </div>
 
-          <div class="contact-detail">
-            <div class="icon"><i class="fa fa-envelope"></i></div>
-            <div>
-              <h4>Email</h4>
-              <a href="mailto:tarungohil80@gmail.com">tarungohil80@gmail.com</a>
-            </div>
+            <img
+              src="img/logo.jpeg"
+              class="contact-brand"
+              alt="Tarun Singh Gohil logo"
+              loading="lazy"
+            />
           </div>
-
-          <div class="social-row">
-            <a href="https://www.instagram.com/tarunsingh80/" target="_blank" rel="noopener" aria-label="Instagram"><i
-                class="fa fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/tarun-singh-gohil-98b592195/" target="_blank" rel="noopener"
-              aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/tarunsinghgohil" target="_blank" rel="noopener" aria-label="GitHub"><i
-                class="fa fa-github"></i></a>
-          </div>
-
-          <img src="img/logo.jpeg" class="contact-brand" alt="Tarun Singh Gohil logo" loading="lazy">
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ FOOTER ============ -->
-  <footer>
-    <div class="social-row">
-      <a href="https://www.instagram.com/tarunsingh80/" target="_blank" rel="noopener" aria-label="Instagram"><i
-          class="fa fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/tarun-singh-gohil-98b592195/" target="_blank" rel="noopener"
-        aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
-      <a href="https://github.com/tarunsinghgohil" target="_blank" rel="noopener" aria-label="GitHub"><i
-          class="fa fa-github"></i></a>
-    </div>
-    <p>&copy; <span id="year"></span> Tarun Singh Gohil &mdash; Frontend Developer | React.js | Python | AI Healthcare
-      Solutions</p>
-  </footer>
+    <!-- ============ FOOTER ============ -->
+    <footer>
+      <div class="social-row">
+        <a
+          href="https://www.instagram.com/tarunsingh80/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+          ><i class="fa fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/tarun-singh-gohil-98b592195/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+        <a
+          href="https://github.com/tarunsinghgohil"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+          ><i class="fa fa-github"></i
+        ></a>
+        <a
+          href="https://vercel.com/tarunsinghgohils-projects"
+          target="_blank"
+          rel="noopener"
+          aria-label="Vercel"
+          ><i class="fa fa-link"></i
+        ></a>
+      </div>
+      <p>
+        &copy; <span id="year"></span> Tarun Singh Gohil &mdash; FRONTEND |
+        BACKEND | UI/UX | MERN DEVELOPER
+      </p>
+    </footer>
 
-  <script>
-    // Mobile nav toggle
-    var navToggle = document.getElementById('navToggle');
-    var navMenu = document.getElementById('navMenu');
-    navToggle.addEventListener('click', function () {
-      var open = navMenu.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', open);
-    });
-    navMenu.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') {
-        navMenu.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Count-up animation for skill percentages
-    function countUp(el) {
-      var target = parseInt(el.getAttribute('data-target'), 10);
-      var start = null;
-      var dur = 1200;
-      function step(ts) {
-        if (!start) start = ts;
-        var p = Math.min((ts - start) / dur, 1);
-        el.textContent = Math.round(p * target) + '%';
-        if (p < 1) requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
-    }
-
-    // Fade-in on scroll + trigger count-up
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          var pct = entry.target.querySelector('.pct[data-target]');
-          if (pct && !pct.dataset.done) {
-            pct.dataset.done = '1';
-            countUp(pct);
-          }
-          observer.unobserve(entry.target);
+    <script>
+      // Mobile nav toggle
+      var navToggle = document.getElementById("navToggle");
+      var navMenu = document.getElementById("navMenu");
+      navToggle.addEventListener("click", function () {
+        var open = navMenu.classList.toggle("open");
+        navToggle.setAttribute("aria-expanded", open);
+      });
+      navMenu.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") {
+          navMenu.classList.remove("open");
+          navToggle.setAttribute("aria-expanded", "false");
         }
       });
-    }, { threshold: 0.12 });
 
-    document.querySelectorAll('.reveal').forEach(function (el) {
-      observer.observe(el);
-    });
+      // Count-up animation for skill percentages
+      function countUp(el) {
+        var target = parseInt(el.getAttribute("data-target"), 10);
+        var start = null;
+        var dur = 1200;
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          el.textContent = Math.round(p * target) + "%";
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
 
-    // Scroll-spy: highlight active nav link (desktop sidebar)
-    var sections = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
-    var navLinks = Array.prototype.slice.call(document.querySelectorAll('#navMenu a'));
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var id = entry.target.getAttribute('id');
-          navLinks.forEach(function (a) {
-            a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      // Fade-in on scroll + trigger count-up
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              var pct = entry.target.querySelector(".pct[data-target]");
+              if (pct && !pct.dataset.done) {
+                pct.dataset.done = "1";
+                countUp(pct);
+              }
+              observer.unobserve(entry.target);
+            }
           });
-        }
+        },
+        { threshold: 0.12 },
+      );
+
+      document.querySelectorAll(".reveal").forEach(function (el) {
+        observer.observe(el);
       });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    sections.forEach(function (s) { spy.observe(s); });
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+      // Scroll-spy: highlight active nav link (desktop sidebar)
+      var sections = Array.prototype.slice.call(
+        document.querySelectorAll("section[id]"),
+      );
+      var navLinks = Array.prototype.slice.call(
+        document.querySelectorAll("#navMenu a"),
+      );
+      var spy = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var id = entry.target.getAttribute("id");
+              navLinks.forEach(function (a) {
+                a.classList.toggle(
+                  "active",
+                  a.getAttribute("href") === "#" + id,
+                );
+              });
+            }
+          });
+        },
+        { rootMargin: "-45% 0px -50% 0px" },
+      );
+      sections.forEach(function (s) {
+        spy.observe(s);
+      });
 
-</body>
-
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
