@@ -1,627 +1,1312 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio — Tarun Singh Gohil</title>
-  <meta name="description"
-    content="Full portfolio of Tarun Singh Gohil — websites built and maintained, plus UI/UX and logo design work.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <style>
-    :root {
-      --primary: #2196f3;
-      --primary-dark: #0f72c1;
-      --primary-soft: rgba(33, 150, 243, 0.08);
-      --heading: #343a40;
-      --body-text: #6c757d;
-      --muted: #868e96;
-      --border: #dee2e6;
-      --bg-alt: #f5f7fa;
-      --white: #fff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: var(--body-text);
-      line-height: 1.7;
-      background: var(--bg-alt);
-    }
-
-    h1, h2, h3 {
-      font-family: 'Saira Extra Condensed', sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--heading);
-      line-height: 1.1;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      transition: color .25s ease;
-    }
-
-    a:hover {
-      color: var(--primary-dark);
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    /* Top bar */
-    .topbar {
-      background: #36a3f7;
-      padding: .85rem 1.25rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, .15);
-    }
-
-    .topbar .back {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      color: var(--white);
-      border: 1px solid rgba(255, 255, 255, .6);
-      border-radius: 4px;
-      padding: .4rem .9rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: .8rem;
-      letter-spacing: .06em;
-      transition: all .25s ease;
-    }
-
-    .topbar .back:hover {
-      background: var(--white);
-      color: var(--primary);
-    }
-
-    .topbar .brand {
-      color: var(--white);
-      font-family: 'Saira Extra Condensed', sans-serif;
-      font-size: 1.35rem;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      font-weight: 700;
-    }
-
-    .wrap {
-      max-width: 78rem;
-      margin: 0 auto;
-      padding: 3.5rem 1.25rem 5rem;
-    }
-
-    .section-head {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .section-head h1 {
-      font-size: clamp(2.6rem, 6vw, 4rem);
-    }
-
-    .heading-border {
-      width: 60px;
-      height: 6px;
-      background: var(--primary);
-      margin: .75rem auto 0;
-      border-radius: 4px;
-    }
-
-    /* Filter tabs */
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: .75rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .tablink {
-      background: transparent;
-      border: 1px solid var(--primary);
-      color: var(--primary);
-      padding: .6rem 1.4rem;
-      border-radius: 4px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: .8rem;
-      letter-spacing: .06em;
-      cursor: pointer;
-      transition: all .25s ease;
-    }
-
-    .tablink:hover {
-      background: var(--primary-soft);
-    }
-
-    .tablink.active {
-      background: var(--primary);
-      color: var(--white);
-    }
-
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: block;
-      animation: fade .4s ease;
-    }
-
-    @keyframes fade {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: none; }
-    }
-
-    /* Website cards */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 28px rgba(33, 150, 243, .15);
-    }
-
-    .card .thumb {
-      position: relative;
-      display: block;
-    }
-
-    .card .thumb img {
-      width: 100%;
-      height: 14rem;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-    }
-
-    .card .caption-port {
-      position: absolute;
-      inset: 0;
-      background: rgba(54, 160, 245, .78);
-      opacity: 0;
-      transition: opacity .4s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-size: 1.6rem;
-    }
-
-    .card .thumb:hover .caption-port {
-      opacity: 1;
-    }
-
-    .card .title {
-      padding: .85rem 1rem;
-      text-align: center;
-      font-size: .9rem;
-      font-weight: 600;
-      color: var(--heading);
-      word-break: break-all;
-    }
-
-    /* Design gallery (masonry-style) */
-    .gallery {
-      column-count: 4;
-      column-gap: 1.25rem;
-    }
-
-    @media (max-width: 1200px) { .gallery { column-count: 3; } }
-    @media (max-width: 768px)  { .gallery { column-count: 2; } }
-    @media (max-width: 480px)  { .gallery { column-count: 1; } }
-
-    .gallery a {
-      display: block;
-      margin-bottom: 1.25rem;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: var(--white);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
-      transition: transform .25s ease, box-shadow .25s ease;
-      break-inside: avoid;
-    }
-
-    .gallery a:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 26px rgba(33, 150, 243, .15);
-    }
-
-    .gallery img {
-      width: 100%;
-      display: block;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="topbar">
-    <a class="back" href="index.html"><i class="fa fa-arrow-left"></i> Back</a>
-    <span class="brand">Tarun Singh Gohil — Portfolio</span>
-  </div>
-
-  <div class="wrap">
-    <div class="section-head">
-      <h1>Portfolio</h1>
-      <div class="heading-border"></div>
-    </div>
-
-    <div class="tabs">
-      <button class="tablink active" data-tab="websites">Websites</button>
-      <button class="tablink" data-tab="design">UI/UX &amp; Logo Design</button>
-    </div>
-
-    <!-- ===== WEBSITES ===== -->
-    <div id="websites" class="tab-content active">
-      <div class="grid">
-        <div class="card">
-          <a class="thumb" href="https://zonov.ai/home" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-zonov-ai-dashboard-2026-08-11-10_37_44.png" alt="zonov.ai" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">zonov.ai</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio of Tarun Singh Gohil, Frontend Developer - production websites built and maintained, plus UI/UX, dashboard and logo design work."
+    />
+    <meta name="theme-color" content="#07111f" />
+    <title>Portfolio | Tarun Singh Gohil, Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Design tokens mirror the frontend profile in index.html - keep in sync. */
+      :root {
+        --ink: #e8f0fa;
+        --muted: #8a9bb2;
+        --faint: #52647e;
+        --night: #07111f;
+        --line: rgba(167, 193, 224, 0.15);
+        --line-strong: rgba(167, 193, 224, 0.3);
+        --cyan: #52e9ff;
+        --violet: #9b7cff;
+        --mid: #d5f6ff;
+        --glow: rgba(82, 233, 255, 0.23);
+        --glow2: rgba(155, 124, 255, 0.2);
+        --header: 76px;
+        --display: 'Space Grotesk', sans-serif;
+        --body: 'Manrope', sans-serif;
+        --mono: 'DM Mono', monospace;
+        --ease: cubic-bezier(0.2, 0.75, 0.25, 1);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      html {
+        scroll-behavior: smooth;
+        background: var(--night);
+      }
+      body {
+        min-width: 320px;
+        margin: 0;
+        overflow-x: hidden;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 82% 8%, var(--glow), transparent 22rem),
+          radial-gradient(circle at 4% 48%, var(--glow2), transparent 29rem),
+          var(--night);
+        font-family: var(--body);
+      }
+      body::before {
+        position: fixed;
+        z-index: -3;
+        inset: 0;
+        content: '';
+        pointer-events: none;
+        opacity: 0.24;
+        background-image:
+          linear-gradient(rgba(160, 207, 244, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(160, 207, 244, 0.04) 1px, transparent 1px);
+        background-size: 44px 44px;
+        mask-image: linear-gradient(to bottom, black, transparent 86%);
+      }
+      ::selection {
+        color: #05101d;
+        background: var(--cyan);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        color: inherit;
+        font: inherit;
+      }
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+      :focus-visible {
+        outline: 2px solid var(--cyan);
+        outline-offset: 3px;
+      }
+      img {
+        max-width: 100%;
+      }
+      #starfield {
+        position: fixed;
+        z-index: -4;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+      .skip {
+        position: fixed;
+        z-index: 300;
+        top: -100%;
+        left: 1rem;
+        padding: 0.75rem 1rem;
+        color: #06101d;
+        background: var(--cyan);
+        border-radius: 0 0 8px 8px;
+      }
+      .skip:focus {
+        top: 0;
+      }
+      .header {
+        position: sticky;
+        z-index: 100;
+        top: 0;
+        height: var(--header);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 4.5vw;
+        background: rgba(7, 17, 31, 0.72);
+        border-bottom: 1px solid rgba(167, 193, 224, 0.1);
+        backdrop-filter: blur(18px);
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        flex: 0 0 auto;
+        font: 600 0.85rem/1 var(--mono);
+        letter-spacing: 0.1em;
+      }
+      .mark {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        color: var(--night);
+        background: linear-gradient(135deg, var(--cyan), var(--violet));
+        clip-path: polygon(50% 0, 100% 22%, 100% 78%, 50% 100%, 0 78%, 0 22%);
+        font: 700 0.75rem var(--display);
+        letter-spacing: -0.08em;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 1.7rem;
+        margin-left: auto;
+      }
+      .nav a {
+        position: relative;
+        padding: 0.4rem 0;
+        color: var(--muted);
+        font: 500 0.68rem var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: color 0.25s ease;
+      }
+      .nav a::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        content: '';
+        background: var(--cyan);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s var(--ease);
+      }
+      .nav a:hover {
+        color: var(--ink);
+      }
+      .nav a:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+      .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        flex: 0 0 auto;
+        padding: 0.65rem 0.85rem;
+        color: #c9d6e5;
+        background: rgba(13, 31, 52, 0.35);
+        border: 1px solid var(--line-strong);
+        border-radius: 6px;
+        font: 500 0.62rem var(--mono);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition:
+          color 0.25s ease,
+          border-color 0.25s ease,
+          background 0.25s ease;
+      }
+      .back:hover {
+        color: var(--cyan);
+        border-color: var(--cyan);
+        background: var(--glow);
+      }
+      .back svg {
+        width: 14px;
+        height: 14px;
+      }
+      main,
+      footer {
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+      section {
+        position: relative;
+        padding: 5.5rem 7vw;
+        scroll-margin-top: var(--header);
+      }
+      .eyebrow,
+      .kicker {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin: 0 0 1.15rem;
+        color: var(--cyan);
+        font: 500 0.66rem var(--mono);
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .eyebrow::before {
+        width: 22px;
+        height: 1px;
+        content: '';
+        background: currentColor;
+      }
+      .kicker span {
+        color: var(--faint);
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+      .intro {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+        align-items: end;
+        gap: 3rem;
+        padding-top: 5.5rem;
+        padding-bottom: 3rem;
+      }
+      h1 {
+        max-width: 11ch;
+        margin-bottom: 1.4rem;
+        font: 600 clamp(3.2rem, 7.4vw, 7rem)/0.9 var(--display);
+        letter-spacing: -0.08em;
+      }
+      .gradient {
+        display: block;
+        color: transparent;
+        background: linear-gradient(
+          112deg,
+          var(--cyan),
+          var(--mid) 44%,
+          var(--violet)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+      .lede {
+        max-width: 620px;
+        margin-bottom: 0;
+        color: #aebed0;
+        font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+        line-height: 1.9;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: linear-gradient(
+          100deg,
+          rgba(10, 29, 49, 0.78),
+          rgba(15, 37, 61, 0.38)
+        );
+        border: 1px solid var(--line);
+        border-radius: 11px;
+      }
+      .stat {
+        padding: 1.5rem 1.6rem;
+      }
+      .stat:nth-child(odd) {
+        border-right: 1px solid var(--line);
+      }
+      .stat:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--line);
+      }
+      .stat strong {
+        display: block;
+        margin-bottom: 0.35rem;
+        color: var(--cyan);
+        font: 600 clamp(1.9rem, 3.2vw, 3rem)/1 var(--display);
+        letter-spacing: -0.08em;
+      }
+      .stat span {
+        color: var(--muted);
+        font: 500 0.58rem var(--mono);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .gallery-section {
+        padding-top: 1.5rem;
+      }
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1.4rem;
+        border-bottom: 1px solid var(--line);
+      }
+      .tabs {
+        display: inline-grid;
+        grid-auto-flow: column;
+        gap: 3px;
+        padding: 3px;
+        background: rgba(167, 193, 224, 0.1);
+        border: 1px solid var(--line);
+        border-radius: 7px;
+      }
+      .tab {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.7rem 1rem;
+        cursor: pointer;
+        color: var(--muted);
+        background: transparent;
+        border: 0;
+        border-radius: 4px;
+        font: 500 0.64rem var(--mono);
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        transition:
+          color 0.3s ease,
+          background 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .tab b {
+        padding: 0.1rem 0.35rem;
+        color: var(--cyan);
+        background: rgba(82, 233, 255, 0.1);
+        border-radius: 3px;
+        font-weight: 500;
+      }
+      .tab[aria-selected='true'] {
+        color: var(--night);
+        background: var(--cyan);
+        box-shadow: 0 0 18px var(--glow);
+      }
+      .tab[aria-selected='true'] b {
+        color: var(--night);
+        background: rgba(7, 17, 31, 0.14);
+      }
+      .toolbar p {
+        margin: 0;
+        color: var(--muted);
+        font: 0.62rem var(--mono);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .panel:focus {
+        outline: none;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        gap: 1.1rem;
+      }
+      .site {
+        position: relative;
+        overflow: hidden;
+        background: rgba(12, 29, 49, 0.55);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        transition:
+          border-color 0.35s ease,
+          transform 0.4s var(--ease),
+          background 0.35s ease;
+      }
+      .site:hover,
+      .site:focus-within {
+        background: rgba(14, 37, 62, 0.85);
+        border-color: var(--cyan);
+        transform: translateY(-6px);
+      }
+      .site > a {
+        display: block;
+      }
+      .shot {
+        position: relative;
+        height: 14rem;
+        overflow: hidden;
+        background:
+          linear-gradient(135deg, rgba(82, 233, 255, 0.1), transparent 55%),
+          rgba(9, 22, 39, 0.9);
+        border-bottom: 1px solid var(--line);
+      }
+      .shot img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        transition: transform 0.6s var(--ease);
+      }
+      .site:hover .shot img {
+        transform: scale(1.04);
+      }
+      .shot .fallback {
+        position: absolute;
+        inset: 0;
+        display: none;
+        place-items: center;
+        align-content: center;
+        gap: 0.6rem;
+        text-align: center;
+      }
+      .shot .fallback strong {
+        display: grid;
+        width: 64px;
+        height: 64px;
+        place-items: center;
+        color: var(--night);
+        background: linear-gradient(140deg, var(--cyan), var(--violet));
+        clip-path: polygon(50% 0, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+        font: 600 1.4rem var(--display);
+        text-transform: uppercase;
+      }
+      .shot .fallback span {
+        color: var(--muted);
+        font: 0.56rem var(--mono);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .is-missing .shot img {
+        display: none;
+      }
+      .is-missing .shot .fallback {
+        display: grid;
+      }
+      .visit {
+        position: absolute;
+        right: 0.8rem;
+        bottom: 0.8rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.45rem 0.6rem;
+        color: var(--night);
+        background: var(--cyan);
+        border-radius: 4px;
+        font: 500 0.56rem var(--mono);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0;
+        transform: translateY(6px);
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s var(--ease);
+      }
+      .site:hover .visit,
+      .site:focus-within .visit {
+        opacity: 1;
+        transform: none;
+      }
+      .visit svg,
+      .meta svg {
+        width: 12px;
+        height: 12px;
+      }
+      .meta {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 0.95rem 1.05rem;
+      }
+      .meta .idx {
+        color: var(--cyan);
+        font: 500 0.58rem var(--mono);
+        letter-spacing: 0.08em;
+      }
+      .meta h3 {
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+        overflow: hidden;
+        color: #eaf2fb;
+        font: 600 0.95rem var(--display);
+        letter-spacing: -0.03em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .meta svg {
+        flex: 0 0 auto;
+        color: var(--faint);
+      }
+      .masonry {
+        column-count: 4;
+        column-gap: 1.1rem;
+      }
+      .design {
+        position: relative;
+        display: block;
+        margin: 0 0 1.1rem;
+        overflow: hidden;
+        break-inside: avoid;
+        cursor: zoom-in;
+        background: rgba(12, 29, 49, 0.55);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        transition:
+          border-color 0.35s ease,
+          transform 0.4s var(--ease);
+      }
+      .design:hover,
+      .design:focus-visible {
+        border-color: var(--cyan);
+        transform: translateY(-4px);
+      }
+      .design img {
+        display: block;
+        width: 100%;
+      }
+      .design figcaption {
+        padding: 0.7rem 0.85rem;
+        color: var(--muted);
+        border-top: 1px solid var(--line);
+        font: 0.58rem var(--mono);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .design.is-missing img {
+        display: none;
+      }
+      .design.is-missing::before {
+        display: grid;
+        height: 150px;
+        place-items: center;
+        content: 'Preview unavailable';
+        color: var(--faint);
+        background:
+          linear-gradient(135deg, rgba(155, 124, 255, 0.12), transparent 60%),
+          rgba(9, 22, 39, 0.9);
+        font: 0.56rem var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .viewer {
+        width: min(1100px, 94vw);
+        max-height: 92vh;
+        padding: 0;
+        overflow: visible;
+        color: var(--ink);
+        background: transparent;
+        border: 0;
+      }
+      .viewer::backdrop {
+        background: rgba(4, 10, 19, 0.88);
+        backdrop-filter: blur(6px);
+      }
+      .viewer figure {
+        margin: 0;
+        overflow: hidden;
+        background: rgba(12, 29, 49, 0.95);
+        border: 1px solid var(--line-strong);
+        border-radius: 12px;
+      }
+      .viewer img {
+        display: block;
+        width: 100%;
+        max-height: calc(92vh - 3.5rem);
+        object-fit: contain;
+        background: #050d18;
+      }
+      .viewer figcaption {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.9rem 1.1rem;
+        color: var(--muted);
+        font: 0.62rem var(--mono);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .viewer figcaption b {
+        color: var(--cyan);
+        font-weight: 500;
+      }
+      .viewer-btn {
+        position: absolute;
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        cursor: pointer;
+        color: var(--ink);
+        background: rgba(7, 17, 31, 0.85);
+        border: 1px solid var(--line-strong);
+        border-radius: 50%;
+        transition:
+          color 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .viewer-btn:hover {
+        color: var(--cyan);
+        border-color: var(--cyan);
+      }
+      .viewer-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+      .viewer-btn.close {
+        top: -14px;
+        right: -14px;
+      }
+      .viewer-btn.prev,
+      .viewer-btn.next {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .viewer-btn.prev {
+        left: -21px;
+      }
+      .viewer-btn.next {
+        right: -21px;
+      }
+      .cta {
+        padding-top: 3rem;
+        padding-bottom: 6.5rem;
+      }
+      .cta-shell {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 2rem;
+        padding: clamp(1.8rem, 4vw, 3.2rem);
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 12% 20%, var(--glow), transparent 38%),
+          linear-gradient(135deg, rgba(16, 42, 68, 0.9), rgba(8, 20, 36, 0.96));
+        border: 1px solid var(--line-strong);
+        border-radius: 14px;
+      }
+      .cta h2 {
+        max-width: 18ch;
+        margin: 0 0 0.9rem;
+        font: 600 clamp(1.8rem, 3.4vw, 3rem)/1 var(--display);
+        letter-spacing: -0.07em;
+      }
+      .cta p {
+        max-width: 56ch;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.8;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem;
+        min-height: 51px;
+        padding: 0.8rem 1.15rem;
+        border: 1px solid var(--line-strong);
+        border-radius: 6px;
+        font: 500 0.68rem var(--mono);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition:
+          border-color 0.3s ease,
+          color 0.3s ease,
+          background 0.3s ease,
+          transform 0.3s var(--ease);
+      }
+      .button:hover {
+        transform: translateY(-3px);
+      }
+      .button svg {
+        width: 16px;
+        height: 16px;
+      }
+      .primary {
+        color: #06101d;
+        background: var(--cyan);
+        border-color: var(--cyan);
+      }
+      .ghost {
+        color: #c9d6e5;
+        background: rgba(13, 31, 52, 0.35);
+      }
+      .ghost:hover {
+        color: var(--cyan);
+        border-color: var(--cyan);
+        background: var(--glow);
+      }
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1.8rem 7vw 2.5rem;
+        color: var(--faint);
+        border-top: 1px solid var(--line);
+        font: 0.58rem var(--mono);
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+      footer a:hover {
+        color: var(--cyan);
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.7s var(--ease),
+          transform 0.7s var(--ease);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      @media (max-width: 1200px) {
+        .masonry {
+          column-count: 3;
+        }
+      }
+      @media (max-width: 900px) {
+        .nav {
+          display: none;
+        }
+        .back {
+          margin-left: auto;
+        }
+        .intro {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        .cta-shell {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 780px) {
+        :root {
+          --header: 64px;
+        }
+        .header {
+          padding: 0 1.25rem;
+        }
+        section {
+          padding: 4.5rem 6vw;
+        }
+        .masonry {
+          column-count: 2;
+        }
+        .viewer-btn.prev {
+          left: 6px;
+        }
+        .viewer-btn.next {
+          right: 6px;
+        }
+        .viewer-btn.close {
+          top: 6px;
+          right: 6px;
+        }
+      }
+      @media (max-width: 500px) {
+        .brand > span:last-child {
+          display: none;
+        }
+        .tabs {
+          grid-auto-flow: row;
+          width: 100%;
+        }
+        .tab {
+          justify-content: space-between;
+        }
+        .masonry {
+          column-count: 1;
+        }
+        .actions {
+          display: grid;
+          width: 100%;
+        }
+        .button {
+          width: 100%;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+        #starfield {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to the portfolio</a>
+    <canvas id="starfield" aria-hidden="true"></canvas>
+    <header class="header">
+      <a
+        class="brand"
+        href="index.html?profile=frontend"
+        aria-label="Tarun Singh Gohil - frontend profile"
+      >
+        <span class="mark">TSG</span>
+        <span>TARUN.SG</span>
+      </a>
+      <nav class="nav" aria-label="Portfolio navigation">
+        <a href="#websites" data-open="websites">Websites</a>
+        <a href="#design" data-open="design">UI/UX &amp; logos</a>
+        <a href="index.html?profile=frontend#experience">Experience</a>
+        <a href="index.html?profile=frontend#skills">Skills</a>
+        <a href="#connect">Connect</a>
+      </nav>
+      <a class="back" href="index.html?profile=frontend">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M19 12H6m5-6-6 6 6 6"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Frontend profile
+      </a>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="intro">
+        <div class="reveal">
+          <p class="eyebrow">Frontend developer / Portfolio</p>
+          <h1>
+            Selected work,
+            <span class="gradient">shipped.</span>
+          </h1>
+          <p class="lede">
+            Production websites built and maintained across fintech, SaaS,
+            healthcare and business clients - plus UI/UX, dashboard and logo
+            design studies. Open any site live, or step through the design
+            gallery.
+          </p>
         </div>
-        <div class="card">
-          <a class="thumb" href="https://formidium.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-formidium-2025-08-01-07_41_24.png" alt="formidium.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">formidium.com</div>
+        <div class="stats reveal" aria-label="Portfolio at a glance">
+          <div class="stat">
+            <strong id="stat-sites">38</strong>
+            <span>Websites in gallery</span>
+          </div>
+          <div class="stat">
+            <strong id="stat-designs">40</strong>
+            <span>Design studies</span>
+          </div>
+          <div class="stat">
+            <strong>60+</strong>
+            <span>Sites &amp; apps delivered</span>
+          </div>
+          <div class="stat">
+            <strong>12+</strong>
+            <span>High-traffic products</span>
+          </div>
         </div>
-        <div class="card">
-          <a class="thumb" href="https://altsmarketplace.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-altsmarketplace-2025-08-01-07_41_48.png" alt="altsmarketplace.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">altsmarketplace.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://commonsubdoc.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-commonsubdoc-2025-08-01-07_42_32.png" alt="commonsubdoc.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">commonsubdoc.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://cryptobackoffice.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-cryptobackoffice-2025-08-01-07_43_00.png" alt="cryptobackoffice.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">cryptobackoffice.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://cryptotax360.io/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-cryptotax360-io-2025-08-01-07_44_05.png" alt="cryptotax360.io" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">cryptotax360.io</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://centroscolasticocarducci.it/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-centroscolasticocarducci-it-2025-08-01-07_54_33.png" alt="centroscolasticocarducci.it" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">centroscolasticocarducci.it</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://kiwanja.net/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-kiwanja-net-2025-08-01-07_57_24.png" alt="kiwanja.net" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">kiwanja.net</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://www.alignmediation.co.uk/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-alignmediation-co-uk-2025-08-01-08_01_28.png" alt="alignmediation.co.uk" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">alignmediation.co.uk</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://www.alignmediationtraining.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-alignmediationtraining-2025-08-01-08_01_07.png" alt="alignmediationtraining.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">alignmediationtraining.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="TLV stem/index.html" target="_blank">
-            <img src="img/screenshot/screencapture-127-0-0-1-5500-TLV-stem-index-html-2025-08-01-08_01_43.png" alt="TLV stem" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">TLV stem</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://cryptofundtax.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-cryptofundtax-2025-08-01-07_44_45.png" alt="cryptofundtax.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">cryptofundtax.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://finalytic.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-finalytic-2025-08-01-07_45_07.png" alt="finalytic.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">finalytic.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://hedgefundtax.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-hedgefundtax-2025-08-01-07_45_28.png" alt="hedgefundtax.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">hedgefundtax.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://ironbasecompliance.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-ironbasecompliance-2025-08-01-07_45_48.png" alt="ironbasecompliance.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">ironbasecompliance.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://oneseamless.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-oneseamless-2025-08-01-07_46_19.png" alt="oneseamless.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">oneseamless.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://www.threealps.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-threealps-2025-08-01-07_54_49.png" alt="threealps.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">threealps.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://hsrevolution.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-hsrevolution-2025-08-01-07_57_40.png" alt="hsrevolution.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">hsrevolution.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://uplogiks.co.uk/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-uplogiks-co-uk-2025-08-01-08_00_25.png" alt="uplogiks.co.uk" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">uplogiks.co.uk</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://www.kmmonline.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-kmmonline-2025-08-01-08_00_45.png" alt="kmmonline.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">kmmonline.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://www.praxonomy.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-praxonomy-2025-08-01-07_46_47.png" alt="praxonomy.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">praxonomy.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://privateequityfundtax.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-privateequityfundtax-2025-08-01-07_47_19.png" alt="privateequityfundtax.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">privateequityfundtax.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://privatefundadmin.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-privatefundadmin-2025-08-01-07_47_43.png" alt="privatefundadmin.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">privatefundadmin.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://plexponent.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-plexponent-2025-08-01-07_48_02.png" alt="plexponent.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">plexponent.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://venetotech.it/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-venetotech-it-2025-08-01-07_52_18.png" alt="venetotech.it" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">venetotech.it</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://commonconfidential.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-commonconfidential-2025-08-01-07_55_51.png" alt="commonconfidential.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">commonconfidential.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://felicitysteadman.co.uk/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-felicitysteadman-co-uk-2025-08-01-07_58_02.png" alt="felicitysteadman.co.uk" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">felicitysteadman.co.uk</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://www.cycysbakes.co.uk/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-cycysbakes-co-uk-2025-08-01-08_00_08.png" alt="cycysbakes.co.uk" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">cycysbakes.co.uk</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://www.deeplogix.co.uk/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-deeplogix-co-uk-2025-08-01-07_59_52.png" alt="deeplogix.co.uk" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">deeplogix.co.uk</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://razorstate.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-razorstate-2025-08-01-07_48_35.png" alt="razorstate.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">razorstate.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://seamlessalts.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-seamlessalts-2025-08-01-07_49_03.png" alt="seamlessalts.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">seamlessalts.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://spvtax.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-spvtax-2025-08-01-07_49_32.png" alt="spvtax.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">spvtax.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://venturefundtax.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-venturefundtax-2025-08-01-07_51_25.png" alt="venturefundtax.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">venturefundtax.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://www.castlelake.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-castlelake-2025-08-01-07_54_12.png" alt="castlelake.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">castlelake.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://www.ruislipblinds.co.uk/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-ruislipblinds-co-uk-2025-08-01-07_57_06.png" alt="ruislipblinds.co.uk" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">ruislipblinds.co.uk</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="http://staff.allstar-aircon.co.uk/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-staff-allstar-aircon-co-uk-2025-08-01-07_58_42.png" alt="staff.allstar-aircon.co.uk" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">staff.allstar-aircon.co.uk</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://velocitymsc.com/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-velocitymsc-2025-08-01-07_58_59.png" alt="velocitymsc.com" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">velocitymsc.com</div>
-        </div>
-        <div class="card">
-          <a class="thumb" href="https://www.adetiq.co.uk/" target="_blank" rel="noopener">
-            <img src="img/screenshot/screencapture-adetiq-co-uk-2025-08-01-07_59_27.png" alt="adetiq.co.uk" loading="lazy">
-            <span class="caption-port"><i class="fa fa-external-link"></i></span>
-          </a>
-          <div class="title">adetiq.co.uk</div>
-        </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- ===== UI/UX & LOGO DESIGN ===== -->
-    <div id="design" class="tab-content">
-      <div class="gallery">
-        <a href="img/hibru-template/חלק-עליון-ותחתוחן.jpg" target="_blank"><img src="img/hibru-template/חלק-עליון-ותחתוחן.jpg" alt="Hebrew template design" loading="lazy"></a>
-        <a href="img/old-work/1.0 dark pms.png" target="_blank"><img src="img/old-work/1.0 dark pms.png" alt="PMS dark theme" loading="lazy"></a>
-        <a href="img/old-work/1.0 light pms.png" target="_blank"><img src="img/old-work/1.0 light pms.png" alt="PMS light theme" loading="lazy"></a>
-        <a href="img/old-work/activities.png" target="_blank"><img src="img/old-work/activities.png" alt="Activities screen" loading="lazy"></a>
-        <a href="img/old-work/Add New Business.png" target="_blank"><img src="img/old-work/Add New Business.png" alt="Add new business" loading="lazy"></a>
-        <a href="img/old-work/add new task.png" target="_blank"><img src="img/old-work/add new task.png" alt="Add new task" loading="lazy"></a>
-        <a href="img/old-work/add notes.png" target="_blank"><img src="img/old-work/add notes.png" alt="Add notes" loading="lazy"></a>
-        <a href="img/old-work/basic pms.png" target="_blank"><img src="img/old-work/basic pms.png" alt="Basic PMS" loading="lazy"></a>
-        <a href="img/old-work/business list.png" target="_blank"><img src="img/old-work/business list.png" alt="Business list" loading="lazy"></a>
-        <a href="img/old-work/business.png" target="_blank"><img src="img/old-work/business.png" alt="Business" loading="lazy"></a>
-        <a href="img/old-work/chat.png" target="_blank"><img src="img/old-work/chat.png" alt="Chat UI" loading="lazy"></a>
-        <a href="img/old-work/dark pms.png" target="_blank"><img src="img/old-work/dark pms.png" alt="Dark PMS" loading="lazy"></a>
-        <a href="img/old-work/Web 1366 – 4.png" target="_blank"><img src="img/old-work/Web 1366 – 4.png" alt="Web design 4" loading="lazy"></a>
-        <a href="img/old-work/jp-1.png" target="_blank"><img src="img/old-work/jp-1.png" alt="Design jp-1" loading="lazy"></a>
-        <a href="img/old-work/jp-2.png" target="_blank"><img src="img/old-work/jp-2.png" alt="Design jp-2" loading="lazy"></a>
-        <a href="img/old-work/light pms.png" target="_blank"><img src="img/old-work/light pms.png" alt="Light PMS" loading="lazy"></a>
-        <a href="img/old-work/login page.png" target="_blank"><img src="img/old-work/login page.png" alt="Login page" loading="lazy"></a>
-        <a href="img/old-work/logo 1.jpg" target="_blank"><img src="img/old-work/logo 1.jpg" alt="Logo design 1" loading="lazy"></a>
-        <a href="img/old-work/logo 2 calibri.jpg" target="_blank"><img src="img/old-work/logo 2 calibri.jpg" alt="Logo design 2" loading="lazy"></a>
-        <a href="img/old-work/LOGOS.png" target="_blank"><img src="img/old-work/LOGOS.png" alt="Logos" loading="lazy"></a>
-        <a href="img/old-work/notes.png" target="_blank"><img src="img/old-work/notes.png" alt="Notes" loading="lazy"></a>
-        <a href="img/old-work/main pms.png" target="_blank"><img src="img/old-work/main pms.png" alt="Main PMS" loading="lazy"></a>
-        <a href="img/old-work/New Business.png" target="_blank"><img src="img/old-work/New Business.png" alt="New business" loading="lazy"></a>
-        <a href="img/old-work/project list.png" target="_blank"><img src="img/old-work/project list.png" alt="Project list" loading="lazy"></a>
-        <a href="img/old-work/project.png" target="_blank"><img src="img/old-work/project.png" alt="Project" loading="lazy"></a>
-        <a href="img/old-work/Repository.png" target="_blank"><img src="img/old-work/Repository.png" alt="Repository" loading="lazy"></a>
-        <a href="img/old-work/screenshot-techspidies.com-2021.07.14-16_09_16.png" target="_blank"><img src="img/old-work/screenshot-techspidies.com-2021.07.14-16_09_16.png" alt="Techspidies design" loading="lazy"></a>
-        <a href="img/old-work/screenshot-techspidies.com-2021.07.14-16_10_26.png" target="_blank"><img src="img/old-work/screenshot-techspidies.com-2021.07.14-16_10_26.png" alt="Techspidies design" loading="lazy"></a>
-        <a href="img/old-work/screenshot-techspidies.com-2021.07.14-16_12_30.png" target="_blank"><img src="img/old-work/screenshot-techspidies.com-2021.07.14-16_12_30.png" alt="Techspidies design" loading="lazy"></a>
-        <a href="img/old-work/sub task page.png" target="_blank"><img src="img/old-work/sub task page.png" alt="Sub task page" loading="lazy"></a>
-        <a href="img/old-work/task list.png" target="_blank"><img src="img/old-work/task list.png" alt="Task list" loading="lazy"></a>
-        <a href="img/old-work/task.png" target="_blank"><img src="img/old-work/task.png" alt="Task" loading="lazy"></a>
-        <a href="img/old-work/ui  2.jpg" target="_blank"><img src="img/old-work/ui  2.jpg" alt="UI design 2" loading="lazy"></a>
-        <a href="img/old-work/ui  4.jpg" target="_blank"><img src="img/old-work/ui  4.jpg" alt="UI design 4" loading="lazy"></a>
-        <a href="img/old-work/ui 3.jpg" target="_blank"><img src="img/old-work/ui 3.jpg" alt="UI design 3" loading="lazy"></a>
-        <a href="img/old-work/ui 5.jpg" target="_blank"><img src="img/old-work/ui 5.jpg" alt="UI design 5" loading="lazy"></a>
-        <a href="img/old-work/working time.png" target="_blank"><img src="img/old-work/working time.png" alt="Working time" loading="lazy"></a>
-        <a href="img/old-work/Web 1366 – 1.png" target="_blank"><img src="img/old-work/Web 1366 – 1.png" alt="Web design 1" loading="lazy"></a>
-        <a href="img/old-work/Web 1366 – 2.png" target="_blank"><img src="img/old-work/Web 1366 – 2.png" alt="Web design 2" loading="lazy"></a>
-        <a href="img/old-work/Web 1366 – 3.png" target="_blank"><img src="img/old-work/Web 1366 – 3.png" alt="Web design 3" loading="lazy"></a>
-      </div>
-    </div>
-  </div>
+      <section class="gallery-section" aria-label="Portfolio gallery">
+        <div class="toolbar reveal">
+          <div class="tabs" role="tablist" aria-label="Portfolio category">
+            <button
+              class="tab"
+              id="tab-websites"
+              role="tab"
+              type="button"
+              aria-selected="true"
+              aria-controls="websites"
+              data-tab="websites"
+            >
+              Websites
+              <b id="count-websites">38</b>
+            </button>
+            <button
+              class="tab"
+              id="tab-design"
+              role="tab"
+              type="button"
+              aria-selected="false"
+              aria-controls="design"
+              data-tab="design"
+              tabindex="-1"
+            >
+              UI/UX &amp; logo design
+              <b id="count-design">40</b>
+            </button>
+          </div>
+          <p id="toolbar-hint">Hover a card, then open the live site</p>
+        </div>
+        <div
+          class="panel"
+          id="websites"
+          role="tabpanel"
+          aria-labelledby="tab-websites"
+          tabindex="-1"
+        >
+          <div class="grid" id="site-grid"></div>
+        </div>
+        <div
+          class="panel"
+          id="design"
+          role="tabpanel"
+          aria-labelledby="tab-design"
+          tabindex="-1"
+          hidden
+        >
+          <div class="masonry" id="design-grid"></div>
+        </div>
+      </section>
 
-  <script>
-    var tablinks = document.querySelectorAll('.tablink');
-    var contents = document.querySelectorAll('.tab-content');
-    tablinks.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var tab = btn.getAttribute('data-tab');
-        tablinks.forEach(function (b) { b.classList.remove('active'); });
-        contents.forEach(function (c) { c.classList.remove('active'); });
-        btn.classList.add('active');
-        document.getElementById(tab).classList.add('active');
-      });
-    });
-  </script>
+      <section class="cta" id="connect">
+        <div class="cta-shell reveal">
+          <div>
+            <p class="kicker">
+              Next
+              <span>/ The full story</span>
+            </p>
+            <h2>The experience behind the gallery.</h2>
+            <p>
+              Every role, all resume points, projects and the complete
+              technical skill set live on the frontend profile.
+            </p>
+          </div>
+          <div class="actions">
+            <a class="button primary" href="index.html?profile=frontend#experience">
+              View experience
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M5 12h13M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a
+              class="button ghost"
+              href="Tarun-Singh-Gohil-Frontend-Resume-2026.pdf"
+              download
+            >
+              Download resume
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>
+        ©
+        <span id="year"></span>
+        Tarun Singh Gohil
+      </span>
+      <a href="mailto:tarungohil80@gmail.com">tarungohil80@gmail.com</a>
+      <span>Frontend portfolio / Gallery</span>
+    </footer>
 
-</body>
+    <dialog class="viewer" id="viewer" aria-label="Design preview">
+      <figure>
+        <img id="viewer-img" alt="" />
+        <figcaption>
+          <span id="viewer-cap"></span>
+          <b id="viewer-pos"></b>
+        </figcaption>
+      </figure>
+      <button
+        class="viewer-btn prev"
+        type="button"
+        data-step="-1"
+        aria-label="Previous design"
+      >
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="m15 6-6 6 6 6"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <button
+        class="viewer-btn next"
+        type="button"
+        data-step="1"
+        aria-label="Next design"
+      >
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="m9 6 6 6-6 6"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <button
+        class="viewer-btn close"
+        type="button"
+        data-close
+        aria-label="Close preview"
+      >
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="m6 6 12 12M18 6 6 18"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </dialog>
 
+    <script src="js/portfolio-items.js"></script>
+    <script>
+      (function () {
+        'use strict';
+        var data = window.PORTFOLIO || { sites: [], designs: [] },
+          reduce = matchMedia('(prefers-reduced-motion: reduce)').matches,
+          external =
+            '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6m0-6-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        var ESC = {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;',
+        };
+        function esc(s) {
+          return String(s).replace(/[&<>"']/g, function (c) {
+            return ESC[c];
+          });
+        }
+        function $(id) {
+          return document.getElementById(id);
+        }
+        function pad(n) {
+          return (n < 10 ? '0' : '') + n;
+        }
+
+        $('year').textContent = new Date().getFullYear();
+        ['stat-sites', 'count-websites'].forEach(function (id) {
+          $(id).textContent = data.sites.length;
+        });
+        ['stat-designs', 'count-design'].forEach(function (id) {
+          $(id).textContent = data.designs.length;
+        });
+
+        $('site-grid').innerHTML = data.sites
+          .map(function (s, i) {
+            var isExternal = /^https?:/.test(s[1]);
+            return (
+              '<article class="site reveal"><a href="' +
+              esc(s[1]) +
+              '"' +
+              (isExternal ? ' target="_blank" rel="noopener"' : '') +
+              ' aria-label="' +
+              esc(s[0]) +
+              (isExternal ? ' (opens in a new tab)' : '') +
+              '"><div class="shot"><img src="img/screenshot/' +
+              esc(s[2]) +
+              '" alt="" loading="lazy" /><div class="fallback" aria-hidden="true"><strong>' +
+              esc(s[0].charAt(0)) +
+              '</strong><span>Preview unavailable</span></div><span class="visit">Visit site ' +
+              external +
+              '</span></div><div class="meta"><span class="idx">' +
+              pad(i + 1) +
+              '</span><h3>' +
+              esc(s[0]) +
+              '</h3>' +
+              external +
+              '</div></a></article>'
+            );
+          })
+          .join('');
+
+        $('design-grid').innerHTML = data.designs
+          .map(function (d, i) {
+            return (
+              '<a class="design reveal" href="' +
+              esc(d[0]) +
+              '" target="_blank" rel="noopener" data-index="' +
+              i +
+              '"><figure style="margin:0"><img src="' +
+              esc(d[0]) +
+              '" alt="' +
+              esc(d[1]) +
+              '" loading="lazy" /><figcaption>' +
+              esc(d[1]) +
+              '</figcaption></figure></a>'
+            );
+          })
+          .join('');
+
+        // Screenshots that fail to load (e.g. a checkout without img/) get a
+        // themed placeholder instead of a broken-image icon.
+        document.addEventListener(
+          'error',
+          function (e) {
+            if (e.target.tagName !== 'IMG') return;
+            var card = e.target.closest('.site, .design');
+            if (card) card.classList.add('is-missing');
+          },
+          true
+        );
+
+        /* Tabs */
+        var tabs = [].slice.call(document.querySelectorAll('.tab')),
+          hints = {
+            websites: 'Hover a card, then open the live site',
+            design: 'Select a design to open the viewer',
+          };
+        function show(name, focus) {
+          if (!hints[name]) return;
+          tabs.forEach(function (t) {
+            var yes = t.dataset.tab === name;
+            t.setAttribute('aria-selected', String(yes));
+            t.tabIndex = yes ? 0 : -1;
+            $(t.dataset.tab).hidden = !yes;
+          });
+          $('toolbar-hint').textContent = hints[name];
+          if (focus) $('tab-' + name).focus();
+          reveal();
+        }
+        tabs.forEach(function (tab, index) {
+          tab.addEventListener('click', function () {
+            show(tab.dataset.tab);
+            history.replaceState(null, '', '#' + tab.dataset.tab);
+          });
+          tab.addEventListener('keydown', function (e) {
+            if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+            e.preventDefault();
+            var next = tabs[(index + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length];
+            show(next.dataset.tab, true);
+            history.replaceState(null, '', '#' + next.dataset.tab);
+          });
+        });
+        [].slice
+          .call(document.querySelectorAll('[data-open]'))
+          .forEach(function (a) {
+            a.addEventListener('click', function () {
+              show(a.dataset.open);
+            });
+          });
+        addEventListener('hashchange', function () {
+          show(location.hash.slice(1));
+        });
+
+        /* Design viewer */
+        var viewer = $('viewer'),
+          current = 0,
+          opener = null;
+        function paint() {
+          var d = data.designs[current];
+          $('viewer-img').src = d[0];
+          $('viewer-img').alt = d[1];
+          $('viewer-cap').textContent = d[1];
+          $('viewer-pos').textContent =
+            pad(current + 1) + ' / ' + pad(data.designs.length);
+        }
+        function step(by) {
+          current = (current + by + data.designs.length) % data.designs.length;
+          paint();
+        }
+        if (typeof viewer.showModal === 'function') {
+          $('design-grid').addEventListener('click', function (e) {
+            var link = e.target.closest('.design');
+            if (!link || e.ctrlKey || e.metaKey || e.shiftKey) return;
+            e.preventDefault();
+            opener = link;
+            current = Number(link.dataset.index);
+            paint();
+            viewer.showModal();
+          });
+          viewer.addEventListener('click', function (e) {
+            var btn = e.target.closest('.viewer-btn');
+            if (btn && btn.hasAttribute('data-close')) viewer.close();
+            else if (btn) step(Number(btn.dataset.step));
+            else if (e.target === viewer) viewer.close();
+          });
+          viewer.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowRight') step(1);
+            if (e.key === 'ArrowLeft') step(-1);
+          });
+          viewer.addEventListener('close', function () {
+            if (opener) opener.focus();
+          });
+        }
+
+        /* Reveal on scroll */
+        function reveal() {
+          var items = [].slice.call(
+            document.querySelectorAll('.reveal:not(.visible)')
+          );
+          if (reduce || !('IntersectionObserver' in window)) {
+            items.forEach(function (e) {
+              e.classList.add('visible');
+            });
+            return;
+          }
+          var observer = new IntersectionObserver(
+            function (es) {
+              es.forEach(function (e) {
+                if (e.isIntersecting) {
+                  e.target.classList.add('visible');
+                  observer.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.05 }
+          );
+          items.forEach(function (e) {
+            observer.observe(e);
+          });
+        }
+
+        /* Starfield (same as index.html) */
+        function stars() {
+          if (reduce) return;
+          var c = $('starfield'),
+            ctx = c.getContext('2d'),
+            w,
+            h,
+            r,
+            all = [],
+            frame;
+          function size() {
+            r = Math.min(devicePixelRatio || 1, 2);
+            w = innerWidth;
+            h = innerHeight;
+            c.width = w * r;
+            c.height = h * r;
+            c.style.width = w + 'px';
+            c.style.height = h + 'px';
+            ctx.setTransform(r, 0, 0, r, 0, 0);
+            all = Array.from(
+              { length: Math.min(92, Math.max(38, Math.round(w / 18))) },
+              function () {
+                return {
+                  x: Math.random() * w,
+                  y: Math.random() * h,
+                  s: Math.random() * 1.4 + 0.25,
+                  d: Math.random() * 0.16 + 0.025,
+                  a: Math.random() * 0.45 + 0.12,
+                };
+              }
+            );
+          }
+          function draw() {
+            ctx.clearRect(0, 0, w, h);
+            all.forEach(function (s) {
+              s.y -= s.d;
+              if (s.y < -3) {
+                s.y = h + 3;
+                s.x = Math.random() * w;
+              }
+              ctx.beginPath();
+              ctx.fillStyle = 'rgba(82,233,255,' + s.a + ')';
+              ctx.arc(s.x, s.y, s.s, 0, Math.PI * 2);
+              ctx.fill();
+            });
+            frame = requestAnimationFrame(draw);
+          }
+          size();
+          draw();
+          addEventListener('resize', size, { passive: true });
+          addEventListener(
+            'pagehide',
+            function () {
+              cancelAnimationFrame(frame);
+            },
+            { once: true }
+          );
+        }
+
+        show(location.hash === '#design' ? 'design' : 'websites');
+        stars();
+      })();
+    </script>
+  </body>
 </html>

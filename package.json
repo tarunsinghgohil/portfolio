@@ -6,6 +6,7 @@
     "prettier": "^3.0.0"
   },
   "scripts": {
-    "format": "prettier --write \"**/*.{js,ts,css,html,json,md}\""
+    "format": "prettier --write \"**/*.{js,ts,css,html,json,md}\"",
+    "check:resume": "node scripts/check-resume-coverage.js"
   }
 }
