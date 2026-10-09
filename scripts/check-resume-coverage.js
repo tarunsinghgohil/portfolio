@@ -27,7 +27,7 @@ var root = path.join(__dirname, '..');
 var WINDOW = 6;
 var SOURCES = {
   frontend: 'Tarun-Singh-Gohil-Frontend-Resume-2026.pdf',
-  fullstack: 'Tarun-Singh-Gohil-Full-Stack-Resume-2026.pdf',
+  fullstack: 'Tarun-Singh-Gohil-AI-Powered-Full-Stack-Developer-Resume-2026.pdf',
   'python-ai': 'Tarun-Singh-Gohil-Python-AI-Resume-2026.pdf',
   product: 'Tarun-Singh-Gohil-PM-Resume-2026.pdf',
 };

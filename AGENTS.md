@@ -15,7 +15,7 @@ The main page presents **four resumes as switchable profiles**:
 | Top tab (header)  | Track (sub-toggle) | Profile key | Resume PDF (repo root)                          |
 | ----------------- | ------------------ | ----------- | ----------------------------------------------- |
 | Frontend          | –                  | `frontend`  | `Tarun-Singh-Gohil-Frontend-Resume-2026.pdf`    |
-| Full stack        | MERN stack         | `fullstack` | `Tarun-Singh-Gohil-Full-Stack-Resume-2026.pdf`  |
+| Full stack        | MERN stack         | `fullstack` | `Tarun-Singh-Gohil-AI-Powered-Full-Stack-Developer-Resume-2026.pdf` |
 | Full stack        | Python & AI        | `python-ai` | `Tarun-Singh-Gohil-Python-AI-Resume-2026.pdf`   |
 | Product manager   | –                  | `product`   | `Tarun-Singh-Gohil-PM-Resume-2026.pdf`          |
 

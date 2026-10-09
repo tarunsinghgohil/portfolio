@@ -2,7 +2,8 @@
  * Profile content for index.html — one entry per resume.
  *
  *   frontend   -> Tarun-Singh-Gohil-Frontend-Resume-2026.pdf     (tab: Frontend)
- *   fullstack  -> Tarun-Singh-Gohil-Full-Stack-Resume-2026.pdf   (tab: Full stack, track: MERN)
+ *   fullstack  -> Tarun-Singh-Gohil-AI-Powered-Full-Stack-Developer-Resume-2026.pdf
+ *                                                    (tab: Full stack, track: MERN)
  *   python-ai  -> Tarun-Singh-Gohil-Python-AI-Resume-2026.pdf    (tab: Full stack, track: Python & AI)
  *   product    -> Tarun-Singh-Gohil-PM-Resume-2026.pdf           (tab: Product manager)
  *
@@ -289,7 +290,8 @@ window.PROFILES = {
   },
 
   /* ------------------------------------------------------------------ */
-  /* FULL STACK (MERN) — Tarun-Singh-Gohil-Full-Stack-Resume-2026.pdf    */
+  /* FULL STACK (MERN) —                                                 */
+  /* Tarun-Singh-Gohil-AI-Powered-Full-Stack-Developer-Resume-2026.pdf   */
   /* ------------------------------------------------------------------ */
   fullstack: {
     tab: 'fullstack',
@@ -297,38 +299,38 @@ window.PROFILES = {
     id: '02',
     star: '124,245,190',
     label: 'Full stack portfolio / 2026',
-    title: 'Tarun Singh Gohil | Full Stack Developer (MERN)',
+    title: 'Tarun Singh Gohil | AI Full Stack Developer (MERN)',
     headline:
-      'Full Stack Developer (MERN) | React.js · Node.js · Express.js · MongoDB | UI/UX',
-    role: 'Full stack developer.',
-    console: 'Full Stack Developer',
-    mode: 'MERN / APIs / Product systems',
-    focus: 'MERN architecture',
+      'AI Full Stack Developer | MERN · React.js · Node.js · Express.js · Python · PostgreSQL',
+    role: 'AI Full stack developer.',
+    console: 'AI Full Stack Developer',
+    mode: 'MERN / APIs / AI workflows',
+    focus: 'MERN + AI systems',
     one: 'MERN Stack',
-    two: 'API Systems',
-    years: '5+ years shipping production systems',
-    meta: 'MERN / API systems / secure data flows',
-    resume: 'Tarun-Singh-Gohil-Full-Stack-Resume-2026.pdf',
+    two: 'LLM & RAG',
+    years: '6+ years shipping production systems',
+    meta: 'MERN / Python APIs / AI-enabled workflows',
+    resume: 'Tarun-Singh-Gohil-AI-Powered-Full-Stack-Developer-Resume-2026.pdf',
     portfolio: false,
-    hero: 'Full Stack Developer with 5+ years building and shipping production MERN applications with TypeScript, RESTful APIs, modern UI/UX, secure workflows and database-backed product features.',
+    hero: 'AI Full Stack Developer with 6+ years building production MERN applications with TypeScript, Python/Django, REST APIs and modern UI/UX — plus hands-on OpenAI GPT/LLM, RAG, OCR and speech-to-text workflows.',
     stats: [
-      ['5+', 'years in full-stack delivery'],
+      ['6+', 'years in full-stack delivery'],
       ['60+', 'sites & applications'],
       ['9+', 'modules shipped end-to-end'],
-      ['100s', 'REST endpoints integrated'],
+      ['RAG', 'LLM, OCR & speech workflows'],
     ],
     manifestTitle: 'Every useful interface has a dependable system behind it.',
     manifest:
-      'Great products are a conversation between the screen, the service and the data. I design each layer to make that conversation fast, secure and understandable.',
-    signal: 'Signal: frontend, services & data in sync',
+      'Great products are a conversation between the screen, the service, the data and now the model. I design each layer to make that conversation fast, secure and understandable.',
+    signal: 'Signal: frontend, services, data & AI in sync',
 
     summary:
-      'Full Stack Developer with 5+ years of experience building and shipping production web applications on the MERN stack (MongoDB, Express.js, React.js, Node.js) with TypeScript, RESTful APIs and modern UI/UX. Currently Lead Developer on a multi-tenant, AI-powered Hospital Information Management System, owning React.js frontend architecture while building and integrating backend services, authentication and role-based access control. Delivered enterprise modules across healthcare, retail/ERP and EV-charging platforms, and has built or maintained 60+ production websites and applications. Strong in reusable component architecture, REST API integration, database-backed features and frontend performance optimization, with day-to-day use of AI-assisted development tools (GitHub Copilot, Claude, Cursor, ChatGPT).',
+      'AI Full Stack Developer with over 6 years of experience building production web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js), TypeScript, Python, Django, PostgreSQL, REST APIs, and modern UI/UX technologies. Practical Generative AI / AI engineering exposure across OpenAI GPT/LLM integrations, prompt engineering, RAG-style retrieval, embeddings/vector search, OCR/document understanding, and speech-to-text workflows. Currently working as a Lead Developer on a multi-tenant, AI-powered Hospital Information Management System, owning React.js architecture while integrating Node.js/Python backend services, authentication, RBAC, APIs, databases, and AI-enabled workflows. Strong in reusable architecture, scalable application design, reliable APIs, debugging, production problem solving, cloud/container fundamentals, and Agile/Scrum delivery.',
 
     capKicker: 'Capability matrix',
     capTitle: 'Full-stack delivery, without losing product detail.',
     capCopy:
-      'MERN-first engineering that pairs thoughtful frontend architecture with secure APIs, well-modelled data and real operational workflows.',
+      'MERN-first engineering that pairs thoughtful frontend architecture with secure APIs, well-modelled data, Python services and AI-enabled workflows.',
     caps: [
       [
         'MERN delivery',
@@ -337,13 +339,18 @@ window.PROFILES = {
       ],
       [
         'Service design',
-        'REST APIs with validation, pagination, error handling and practical contracts that make integrations predictable.',
-        ['RESTful APIs', 'Mongoose', 'Axios', 'JSON'],
+        'REST APIs in Node.js/Express and Django REST Framework with validation, pagination, error handling and practical contracts that make integrations predictable.',
+        ['Express', 'Django REST', 'Mongoose', 'Axios'],
       ],
       [
         'Secure workflows',
-        'Authentication and authorization designed around real user roles, protected routes and permission-driven product behaviour.',
+        'Authentication and authorization designed around real user roles, protected routes and permission-driven, tenant-aware product behaviour.',
         ['JWT', 'RBAC', 'Validation', 'Tenants'],
+      ],
+      [
+        'AI-enabled workflows',
+        'OpenAI GPT/LLM integrations, RAG-style retrieval, OCR and speech-to-text wired into business flows with structured outputs, retries and safe fallbacks.',
+        ['OpenAI GPT', 'RAG', 'OCR', 'Whisper'],
       ],
       [
         'Data-driven UI',
@@ -355,35 +362,34 @@ window.PROFILES = {
         'Better end-user performance through rendering discipline, API optimisation, caching and targeted profiling across the stack.',
         ['Caching', 'Lighthouse', 'Lazy load', 'Docker'],
       ],
-      [
-        'Integrated engineering',
-        'MERN as the core, with practical contributions to Django REST integrations, cloud deployment and AI-assisted workflows.',
-        ['Django REST', 'AWS', 'Git', 'AI tooling'],
-      ],
     ],
 
     experienceTitle: 'Built through increasingly complex products.',
     experienceCopy:
-      'Five-plus years of MERN delivery across product interfaces, backend services, secure workflows and database-backed features.',
+      'Six-plus years of delivery across product interfaces, Node.js and Python services, secure workflows, databases and AI-enabled features.',
     jobs: [
       {
         dates: 'Aug 2025 – Aug 2026',
         title: 'Lead Developer',
-        company: 'Growit.ai Technology Private Limited · Jaipur',
+        company: 'Growit.ai India Private Limited · Jaipur',
         tagline:
           'Full-stack (MERN) development and frontend ownership for AI-powered enterprise SaaS products.',
         points: [
-          'Led full-stack development of a scalable, multi-tenant, AI-powered Hospital Information Management System (HIMS/HMS), with primary ownership of the React.js frontend and Node.js/Express.js services, while also contributing to Python/Django-based backend integrations.',
-          'Architected and developed enterprise-grade applications using the MERN stack — MongoDB, Express.js, React.js and Node.js — with React 19, TypeScript, JavaScript (ES6+), React Hooks, React Router, Redux Toolkit and Tailwind CSS, following scalable component and frontend architecture patterns.',
-          'Delivered 9+ complex healthcare modules end to end, including Patient Management, OPD, IPD, Emergency, Laboratory, Radiology, Pharmacy, Billing, Inventory, Analytics, Reporting and NABH Compliance, covering API integration, data flows, business workflows and production-ready UI.',
-          'Designed and developed reusable React component architecture and UI systems, including forms, data tables, dashboards, filters, validation flows and role-based interfaces, using Redux Toolkit, Redux, React Redux, Context API, Tailwind CSS, Material UI and Bootstrap to maintain consistency and accelerate feature development.',
-          'Developed and integrated Node.js/Express.js REST APIs with MongoDB/Mongoose, implementing backend services, API flows, request validation, pagination, error handling, authentication workflows and data operations for large-scale enterprise features.',
-          'Worked extensively with hundreds of REST API endpoints, integrating React applications with Node.js/Express.js and Python/Django REST Framework services using Axios, JSON and asynchronous programming, while collaborating with backend engineers on API contracts, payload structures, response handling and performance optimization.',
-          'Implemented secure authentication and authorization mechanisms using JWT, protected routes and Role-Based Access Control (RBAC), supporting multiple hospital tenants, user roles and complex permission-driven workflows across the application.',
-          'Contributed hands-on to Python-based backend development and integrations using Python, Django and Django REST Framework, including API consumption, business-workflow integration, data handling and integration with the React frontend, while maintaining MERN as the primary application stack.',
-          'Improved application performance and scalability through code splitting, lazy loading, reusable component architecture, memoization, caching strategies, efficient rendering, API optimization and bundle optimization, while using Chrome DevTools, Lighthouse and performance profiling to identify and resolve bottlenecks.',
-          'Collaborated closely with product managers, UI/UX designers, QA engineers and backend developers throughout Agile/Scrum sprints, participating in technical discussions, code reviews, debugging, release activities and production issue resolution.',
-          'Managed Git-based development and deployment workflows, including branching, pull requests, code reviews, release coordination and frontend/backend deployment support across cloud environments.',
+          'Led full-stack development of a scalable, multi-tenant, AI-powered Hospital Information Management System (HIMS/HMS), working hands-on across React.js/MERN frontend architecture, Node.js/Express.js services and Python/Django backend integrations, while contributing to OpenAI GPT/LLM-powered document understanding, summarization, content generation and assisted data-entry workflows.',
+          'Architected enterprise applications across MERN and Python-based backend technologies, using MongoDB, Express.js, React 19, Node.js, Python, Django, Django REST Framework, TypeScript, JavaScript, Redux Toolkit, React Router and Tailwind CSS.',
+          'Built and integrated Python/Django REST Framework APIs for enterprise healthcare workflows, including serializers, viewsets, middleware, authentication, permissions, ORM queries, migrations, validation, pagination, filtering and request/response handling.',
+          'Developed and integrated Node.js/Express.js REST APIs with MongoDB/Mongoose, implementing backend services, request validation, authentication workflows, pagination, error handling, business logic and data operations for large-scale enterprise features.',
+          'Worked across Python/Django/DRF and Node.js/Express.js services, designing API contracts, payload structures, response models and frontend integrations while troubleshooting authentication, data, API and deployment issues throughout the application lifecycle.',
+          'Delivered 9+ complex healthcare modules end to end, including Patient Management, OPD, IPD, Emergency, Laboratory, Radiology, Pharmacy, Billing, Inventory, Analytics, Reporting and NABH-related workflows, covering business logic, APIs, data flows and production-ready UI.',
+          'Contributed to AI/OCR-enabled document workflows, connecting document extraction and LLM-assisted capabilities with clinical, reporting and billing-oriented application flows, including OCR, document understanding and speech-to-text workflows using Whisper/Faster-Whisper where applicable.',
+          'Implemented RAG-style retrieval workflows covering document ingestion, chunking, embeddings, similarity/vector search and grounded response generation, integrating retrieved context into Python/API-driven business workflows.',
+          'Exposed AI capabilities through Python/Django REST services using structured JSON outputs, request validation, error handling, retries, timeouts, usage controls and safe fallback patterns for reliable downstream application integration.',
+          'Designed reusable React 19/TypeScript component architecture including forms, dashboards, data tables, filters, validation flows and role-based interfaces using Redux Toolkit, Context API, Tailwind CSS, Material UI and Bootstrap.',
+          'Implemented secure JWT authentication, protected routes, RBAC and tenant-aware authorization, supporting multiple hospital organizations, user roles and permission-driven business workflows.',
+          'Worked with MySQL and MongoDB/Mongoose for application data operations, schema design, indexing, query optimization and caching strategies across data-intensive healthcare workflows.',
+          'Improved application performance and scalability through code splitting, lazy loading, memoization, caching, efficient rendering, API optimization and bundle optimization, using Chrome DevTools, Lighthouse and performance profiling to identify bottlenecks.',
+          'Managed Git-based development and deployment workflows including branching, pull requests, code reviews, release coordination, Docker-based development environments and deployment support across cloud environments.',
+          'Collaborated with product managers, UI/UX designers, QA engineers and backend developers in Agile/Scrum teams, participating in technical discussions, debugging, production issue resolution and release activities.',
         ],
       },
       {
@@ -391,16 +397,21 @@ window.PROFILES = {
         title: 'UI Developer',
         company: 'Formidium India Private Limited · Jaipur',
         points: [
-          'Developed and maintained production-grade MERN stack applications using React.js, JavaScript (ES6+), TypeScript, Node.js, Express.js and MongoDB, with primary ownership of frontend architecture and UI development across multiple enterprise and customer-facing products.',
-          'Architected scalable, reusable React applications using modular components, custom hooks, Redux, Redux Toolkit and Context API, building maintainable frontend systems for multiple products, dashboards, business workflows and high-traffic web applications.',
-          'Built and integrated Node.js / Express.js backend services and REST APIs with React applications, working with MongoDB for data-driven features, API workflows and application functionality while collaborating with backend teams on API contracts, data structures and performance.',
-          'Developed responsive, pixel-perfect and accessible interfaces by converting Figma designs into production-ready applications using React.js, TypeScript, Tailwind CSS, Material UI, Bootstrap, HTML5 and CSS3, ensuring consistent UI/UX across desktop, tablet and mobile devices.',
-          'Worked across multiple MERN-based projects to develop interactive dashboards, analytics interfaces, product pages and business applications, integrating REST APIs and visualization libraries such as Chart.js and Recharts to present KPIs, financial data, operational metrics and real-time business insights.',
-          'Managed and optimized 12+ high-traffic production websites and applications, improving performance, scalability and reliability through code splitting, lazy loading, caching, API optimization, efficient rendering and build optimization using Webpack.',
-          'Integrated custom and third-party REST APIs using Axios, JSON and asynchronous JavaScript, implementing dynamic data flows, error handling and frontend-backend communication while contributing to API response-time and database/query performance improvements.',
-          'Built and maintained HubSpot CRM/CMS marketing pages, product pages and customer-facing interfaces, while also contributing UI/UX improvements, reusable design patterns and conversion-focused experiences across multiple web properties.',
-          'Collaborated with backend engineers, UI/UX designers, QA engineers and product managers in Agile/Scrum teams, contributing to Git-based development, code reviews, debugging, testing, deployment workflows and continuous improvements across MERN applications.',
-          'Leveraged AI-assisted development tools to improve coding productivity, debugging, documentation and feature delivery while maintaining clean, reusable, well-documented code and frontend engineering best practices.',
+          'Developed and maintained production-grade MERN and Python-supported enterprise SaaS/fintech applications, working across React.js, TypeScript, Node.js, Express.js, Python, Django and REST APIs.',
+          'Built and integrated Python/Django-based backend services and REST APIs for business workflows, including request validation, authentication, ORM-based database operations, data processing and third-party system integrations.',
+          'Developed Python utilities and backend workflows for data extraction, transformation, validation and reporting, helping automate repetitive business processes and improve consistency of data-driven operations.',
+          'Worked on AI/LLM-enabled application capabilities and RAG-oriented workflows, integrating retrieved context, structured model outputs and AI-assisted functionality into existing React, Node.js and API-driven business applications.',
+          'Applied prompt engineering, document-understanding and AI-assisted automation patterns for reporting and business-data workflows, including response validation, error handling and practical model-integration debugging.',
+          'Developed and maintained scalable React/TypeScript applications using reusable components, custom hooks, Redux, Redux Toolkit and Context API for dashboards, operational tools, business workflows and customer-facing products.',
+          'Built and integrated Node.js/Express.js REST services with React applications and MongoDB, working across API contracts, data structures, asynchronous workflows, error handling and backend/frontend communication.',
+          'Worked with backend teams on API design, pagination, response handling, database/query performance and production debugging across frontend, backend and data layers.',
+          'Developed responsive and accessible interfaces from Figma designs using React.js, TypeScript, Tailwind CSS, Material UI, Bootstrap, HTML5 and CSS3, maintaining consistent UI/UX across desktop, tablet and mobile devices.',
+          'Built analytics and operational dashboards using Chart.js and Recharts, presenting KPIs, financial information, operational metrics and business insights sourced from backend APIs.',
+          'Managed and optimized 12+ production websites and applications through code splitting, lazy loading, caching, API optimization, efficient rendering and Webpack/build optimization.',
+          'Integrated custom and third-party APIs using Axios, REST/JSON and asynchronous JavaScript, implementing dynamic data flows, validation, error handling and reliable frontend-backend communication.',
+          'Worked across MySQL/MongoDB-backed applications and supported database-driven workflows, query optimization and application-level data handling.',
+          'Collaborated with backend engineers, QA, UI/UX designers and product managers in Agile/Scrum teams, contributing to Git-based development, code reviews, testing, debugging, deployment and continuous improvement.',
+          'Leveraged AI-assisted development tools including GitHub Copilot, Claude, Cursor and ChatGPT to improve coding productivity, debugging, documentation and feature delivery while maintaining clean, reusable and production-ready code.',
         ],
       },
       {
@@ -441,9 +452,9 @@ window.PROFILES = {
       {
         id: '01 / HEALTHCARE',
         name: 'Zonov — Multi-Tenant Hospital Management System (HIMS/HMS)',
-        type: 'Multi-tenant MERN platform',
-        text: 'End-to-end enterprise modules across React, Node/Express, MongoDB and Django REST integrations, including JWT, RBAC and AI/OCR workflows.',
-        stack: ['React.js', 'React 19', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'Django REST Framework', 'REST APIs', 'JWT', 'RBAC', 'AI/OCR'],
+        type: 'Multi-tenant MERN + AI platform',
+        text: 'End-to-end enterprise modules across React, Node/Express, MongoDB and Django REST integrations, including JWT, RBAC, OpenAI GPT, RAG, AI/OCR and speech-to-text workflows.',
+        stack: ['React.js', 'React 19', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'Django REST Framework', 'REST APIs', 'JWT', 'RBAC', 'OpenAI GPT', 'RAG', 'AI/OCR', 'Whisper/Faster-Whisper'],
       },
       {
         id: '02 / OPERATIONS',
@@ -463,68 +474,73 @@ window.PROFILES = {
 
     skillTitle: 'A practical, end-to-end engineering stack.',
     skillCopy:
-      'MERN is the core, supported by frontend systems, databases, quality tooling, cloud fundamentals and the integrations needed by real products.',
+      'MERN is the core, supported by Python services, Generative AI and agentic tooling, databases, cloud fundamentals, quality tooling and the integrations needed by real products.',
     skillGroups: [
       [
+        'Python & Backend',
+        ['Python 3.x', 'Python 3.11', 'OOP', 'Abstraction', 'Encapsulation', 'Inheritance', 'Polymorphism', 'Decorators', 'Decorator chaining', 'Generators', 'Iterators', 'Comprehensions', 'Slicing', 'Mutability', 'Context managers', 'Custom exceptions', 'Type hints', 'async/await', 'Threading vs multiprocessing', 'Clean-code practices', 'Django', 'Django REST Framework (DRF)', 'Django ORM', 'Serializers', 'Viewsets', 'Middleware', 'Authentication', 'Permissions', 'Migrations', 'Signals', 'Validation', 'Pagination', 'Filtering', 'Request/response handling', 'FastAPI', 'Pydantic', 'Dependency injection', 'Auto-generated API documentation', 'Flask', 'Celery-style background and asynchronous task processing'],
+      ],
+      [
+        'Generative AI / LLM / ML / NLP',
+        ['OpenAI GPT models', 'Azure OpenAI concepts', 'AWS Bedrock concepts', 'Google Vertex AI concepts', 'Prompt engineering', 'Prompt templates', 'System/role prompts', 'Few-shot examples', 'Structured JSON outputs', 'Function/tool calling', 'RAG workflows', 'Document ingestion', 'Document chunking', 'Embeddings', 'Similarity/vector search', 'Grounded generation', 'Token and cost optimization', 'LLM evaluation', 'Guardrails', 'scikit-learn', 'NumPy', 'Pandas', 'NLP concepts', 'Computer vision', 'OCR', 'Hugging Face', 'Document understanding', 'Whisper', 'Faster-Whisper', 'Speech-to-text workflows'],
+      ],
+      [
+        'Agentic AI',
+        ['LangChain', 'LangGraph', 'CrewAI', 'AutoGen', 'Google ADK', 'Agent routing', 'Tool calling and orchestration', 'Multi-agent workflows', 'Memory and state handling', 'Workflow routing', 'Human-in-the-loop review and approval patterns'],
+        'LangChain, LangGraph, CrewAI, AutoGen and Google ADK working knowledge.',
+      ],
+      [
         'Frontend',
-        ['React.js', 'React 19', 'JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'React Hooks', 'Component Lifecycle', 'Reusable Components', 'React Router', 'Next.js', 'Responsive Web Design', 'Responsive Design', 'Accessibility', 'Cross-Browser Compatibility'],
+        ['React.js', 'React 19', 'JavaScript ES6+', 'TypeScript', 'React Hooks', 'Component lifecycle', 'Reusable component architecture', 'React Router', 'Next.js', 'Redux', 'Redux Toolkit', 'React Redux', 'Context API', 'Zustand', 'TanStack Query (React Query)', 'Form and API state management', 'Angular fundamentals', 'HTML5', 'CSS3', 'Responsive web design', 'Accessibility-aware implementation', 'Cross-browser compatibility'],
       ],
       [
-        'State & Data Management',
-        ['Redux', 'Redux Toolkit', 'React Redux', 'Context API', 'Zustand', 'TanStack Query (React Query)', 'State Architecture', 'Form State Management & Validation'],
+        'UI / Styling / Design',
+        ['Tailwind CSS', 'Material UI (MUI)', 'Bootstrap', 'Sass', 'LESS', 'jQuery', 'Radix UI', 'Lucide React', 'React Icons', 'Figma', 'Adobe XD', 'UI/UX principles', 'Design systems', 'Component library patterns', 'Figma-to-UI implementation', 'Figma/PSD-to-pixel-perfect UI development', 'Wireframing', 'Accessibility-focused UI development'],
       ],
       [
-        'UI / Styling & Design',
-        ['Tailwind CSS', 'Material UI (MUI)', 'Bootstrap', 'Sass', 'LESS', 'jQuery', 'Radix UI', 'Lucide React', 'React Icons', 'Figma', 'Adobe XD', 'UI/UX Principles', 'Design Systems', 'Component Library Patterns', 'Figma-to-UI Implementation', 'Figma/PSD to Pixel-Perfect UI Development', 'Accessibility-Focused UI Development', 'Wireframing'],
+        'APIs & Architecture',
+        ['REST APIs', 'RESTful API architecture', 'REST/JSON', 'API versioning', 'GraphQL', 'Axios', 'Asynchronous programming', 'Microservices concepts', 'JWT authentication', 'Role-Based Access Control (RBAC)', 'Multi-tenancy', 'Pagination', 'Validation', 'Filtering', 'Error handling', 'Retries', 'Timeouts', 'Rate limiting', 'Webhooks', 'WebSockets', 'Third-party API integrations', 'Payment integrations', 'Healthcare technology integrations', 'WhatsApp Business API'],
       ],
       [
-        'APIs & Integration',
-        ['REST APIs', 'RESTful APIs', 'REST API Architecture', 'GraphQL', 'JSON', 'Axios', 'Asynchronous Programming', 'Third-Party API Integration', 'API Integration', 'JWT Authentication', 'Role-Based Access Control (RBAC)', 'Payment Integrations', 'Healthcare Technology Integrations', 'WhatsApp Business API'],
+        'Databases & Data',
+        ['MongoDB', 'Mongoose', 'MySQL', 'PostgreSQL', 'Redis', 'SQL joins', 'Subqueries', 'Normalization', 'Indexing', 'Transactions', 'Schema and data modelling', 'ORM-based database operations', 'Caching strategies', 'Query optimization'],
+      ],
+      [
+        'Cloud / DevOps / Infrastructure',
+        ['AWS', 'AWS Lambda', 'EC2', 'S3', 'CloudWatch', 'IAM basics', 'Serverless concepts and concurrency limits', 'Azure fundamentals', 'GCP fundamentals', 'Google Cloud', 'Docker', 'Docker Compose', 'Linux', 'Git', 'GitHub', 'GitLab', 'CI/CD workflows', 'Environment and release management', 'Deployment workflows', 'Cloud deployment fundamentals', 'Vercel'],
       ],
       [
         'Build, Tooling & Testing',
-        ['Vite', 'Webpack', 'Babel', 'npm', 'Yarn', 'ESLint', 'Chrome DevTools', 'Browser Debugging', 'Debugging', 'Performance Profiling', 'Vitest', 'Jest', 'React Testing Library', 'Cypress', 'Playwright', 'End-to-End (E2E) Testing'],
+        ['Vite', 'Webpack', 'Babel', 'npm', 'Yarn', 'ESLint', 'Chrome DevTools', 'Browser debugging', 'Debugging', 'Performance profiling', 'Postman', 'pytest', 'unittest', 'Fixtures and mocking', 'Jest', 'React Testing Library', 'Vitest', 'Cypress', 'Playwright', 'End-to-End (E2E) testing'],
       ],
       [
-        'Backend / Server-Side',
-        ['Node.js', 'Express.js', 'Python', 'Python 3.11', 'Django', 'Django REST Framework'],
-      ],
-      [
-        'Databases & Caching',
-        ['MongoDB', 'Mongoose', 'MySQL', 'PostgreSQL', 'Redis', 'Database Fundamentals', 'Caching Strategies'],
-      ],
-      [
-        'Cloud & Infrastructure',
-        ['AWS', 'AWS S3', 'Google Cloud', 'Vercel', 'Docker', 'Docker Compose', 'Linux', 'Cloud Deployment Fundamentals', 'Frontend Deployment', 'Deployment Workflows', 'Release Workflows', 'CI/CD Workflows'],
-      ],
-      [
-        'Performance & SEO',
-        ['Code Splitting', 'Lazy Loading', 'Bundle Optimization', 'Core Web Vitals', 'Lighthouse', 'Performance Profiling', 'On-Page Search Engine Optimization (SEO)'],
+        'Performance / SEO',
+        ['Code splitting', 'Lazy loading', 'Memoization', 'Caching', 'Bundle optimization', 'API optimization', 'Core Web Vitals', 'Lighthouse', 'Performance profiling', 'Responsive optimization', 'On-page Search Engine Optimization (SEO)'],
       ],
       [
         'CMS & Platforms',
-        ['WordPress', 'WordPress Theme and Plugin Customization', 'Elementor', 'HubSpot CRM', 'HubSpot CMS'],
+        ['WordPress', 'WordPress theme and plugin customization', 'Elementor', 'HubSpot CRM', 'HubSpot CMS'],
       ],
       [
-        'Version Control & Engineering',
-        ['Git', 'GitHub', 'GitLab', 'Git-Based Version Control', 'Code Reviews', 'Agile', 'Scrum', 'Software Debugging', 'Release Management', 'Deployment Support', 'Frontend Architecture', 'Component Architecture', 'Design-System Architecture', 'API Integration Patterns', 'Authentication & Authorization'],
+        'AI Automation & Engineering Tools',
+        ['OpenAI GPT integrations', 'OCR-enabled document workflows', 'Speech-to-text workflows', 'Deepgram Speech-to-Text', 'Whisper', 'Faster-Whisper', 'AI-assisted development using GitHub Copilot, Claude, Cursor and ChatGPT'],
       ],
       [
-        'AI / Automation & Emerging Technologies',
-        ['OpenAI GPT Models', 'Deepgram Speech-to-Text', 'Whisper', 'Faster-Whisper', 'OCR Workflows', 'AI-Assisted Development Tools (GitHub Copilot, Claude, Cursor, ChatGPT)'],
+        'Version Control & Engineering Practices',
+        ['Git', 'GitHub', 'GitLab', 'Git-based version control', 'Code reviews', 'Agile', 'Scrum', 'Software debugging', 'Production issue triage', 'Release management', 'Deployment support', 'Frontend architecture', 'Backend architecture', 'Component architecture', 'Design-system architecture', 'API integration patterns', 'Authentication & authorization'],
       ],
     ],
 
     archTitle: 'From intent to production, end to end.',
     archCopy:
-      'I build with clean contracts between the interface, service and data layers - so a product can be extended with confidence after the first release.',
+      'I build with clean contracts between the interface, service, data and AI layers - so a product can be extended with confidence after the first release.',
     pipeline: [
       ['Experience', 'React UI, state & product workflows'],
-      ['Services', 'Express APIs, auth & business rules'],
-      ['Data', 'MongoDB models, queries & operations'],
+      ['Services', 'Express & Django APIs, auth & AI workflows'],
+      ['Data', 'MongoDB/MySQL models, queries & retrieval'],
     ],
     toolsTitle: 'Full-stack toolkit',
-    tools: ['React 19', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'TypeScript', 'Docker', 'Django REST'],
+    tools: ['React 19', 'Node.js', 'Express.js', 'MongoDB', 'TypeScript', 'Python', 'Django REST', 'OpenAI GPT'],
 
     education: [
       ['Bachelor’s Degree in CSE', 'Global Institute of Technology, Jaipur', 'Aug 2016 – Aug 2020'],

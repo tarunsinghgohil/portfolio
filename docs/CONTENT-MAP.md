@@ -44,17 +44,20 @@ Enterprise Web Platforms), combining the resume's Selected Project Highlights
 with the Key project contributions. Skills: 11 groups / 105 items. Portfolio
 teaser: **on** (links to `portfolio.html`).
 
-### `fullstack` — Tarun-Singh-Gohil-Full-Stack-Resume-2026.pdf
+### `fullstack` — Tarun-Singh-Gohil-AI-Powered-Full-Stack-Developer-Resume-2026.pdf
+
+(Replaced `Tarun-Singh-Gohil-Full-Stack-Resume-2026.pdf`, which is no longer linked.)
 
 | Job | Points |
 | --- | --- |
-| Lead Developer — Growit.ai (+ tagline) | 11 |
-| UI Developer — Formidium | 10 |
+| Lead Developer — Growit.ai (+ tagline) | 15 |
+| UI Developer — Formidium | 15 |
 | Web Developer — i3Techs | 9 |
 | Web Development Trainee — i3Techs | 3 |
 
-Projects: 3 key projects, each with the resume's full stack list. Skills: 12
-groups / 129 items.
+Projects: 3 key projects, each with the resume's full stack list. Skills: 13
+groups / 240 items (no separate GenAI section — AI content is in the
+bullets and skill groups).
 
 ### `python-ai` — Tarun-Singh-Gohil-Python-AI-Resume-2026.pdf
 
